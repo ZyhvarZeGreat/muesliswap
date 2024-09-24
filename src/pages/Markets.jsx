@@ -1,5 +1,6 @@
 import React from "react";
 import "./Markets.css";
+import img from "../assets/ada.webp";
 const Markets = () => {
   return (
     <div id="root">
@@ -52,9 +53,9 @@ const Markets = () => {
                     style={{ height: "24px", width: "24px" }}
                   >
                     <img
-                      src="https://tokens.muesliswap.com/static/img/tokens/cc8d1b026353022abbfcc2e1e71159f9e308d9c6e905ac1db24c7fb6.50617269627573_scaled_100.webp"
+                      src={img}
                       crossOrigin="anonymous"
-                      alt="https://tokens.muesliswap.com/static/img/tokens/cc8d1b026353022abbfcc2e1e71159f9e308d9c6e905ac1db24c7fb6.50617269627573_scaled_100.webp"
+                      alt={img}
                       className="sc-gEvEer fFqlxh"
                     />
                   </div>
@@ -179,9 +180,9 @@ const Markets = () => {
                     style={{ height: "24px", width: "24px" }}
                   >
                     <img
-                      src="https://tokens.muesliswap.com/static/img/tokens/cc8d1b026353022abbfcc2e1e71159f9e308d9c6e905ac1db24c7fb6.50617269627573_scaled_100.webp"
+                      src={img}
                       crossOrigin="anonymous"
-                      alt="https://tokens.muesliswap.com/static/img/tokens/cc8d1b026353022abbfcc2e1e71159f9e308d9c6e905ac1db24c7fb6.50617269627573_scaled_100.webp"
+                      alt={img}
                       className="sc-gEvEer fFqlxh"
                     />
                   </div>
@@ -657,9 +658,9 @@ const Markets = () => {
                           className="sc-cWSHoV dazaWi"
                         >
                           <img
-                            src="https://tokens.muesliswap.com/static/img/tokens/cc8d1b026353022abbfcc2e1e71159f9e308d9c6e905ac1db24c7fb6.50617269627573_scaled_100.webp"
+                            src={img}
                             crossOrigin="anonymous"
-                            alt="https://tokens.muesliswap.com/static/img/tokens/cc8d1b026353022abbfcc2e1e71159f9e308d9c6e905ac1db24c7fb6.50617269627573_scaled_100.webp"
+                            alt={img}
                             className="sc-gEvEer ceiwSH"
                           />
                           <img

@@ -40,7 +40,7 @@ const MobileNav = () => {
             width="100%"
             className="sc-gEvEer w-full flex items-center justify-between sc-eqUAAy jSyvpJ fgprtA"
           >
-            <a className="" to="/">
+            <Link className="" to="/">
               <svg width="167" height="38" xmlns="http://www.w3.org/2000/svg">
                 <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                   <path
@@ -247,7 +247,7 @@ const MobileNav = () => {
                   </g>
                 </g>
               </svg>
-            </a>
+            </Link>
             <SheetClose>
               <button className="sc-gEvEer gbgnDO">
                 <svg
@@ -273,7 +273,7 @@ const MobileNav = () => {
                 to="/markets"
                 className="sc-gFqAkR border rounded-lg p-3 mb-4 kmtpjP"
               >
-                Markets
+                <SheetClose>Markets</SheetClose>
               </Link>
               <Link
                 to="/swap"

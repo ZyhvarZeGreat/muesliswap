@@ -47,7 +47,7 @@ const Home = () => {
         <main className="sc-kOPcWz mb-0 hierkx">
           <div className="sc-iHGNWf mb-0 hQvJpi">
             <div className="sc-gEvEer mb-0   gap-8 jAgWcu">
-              <div className="sc-gEvEer  sc-eqUAAy eUTSiE fgprtA">
+              <div className="sc-gEvEer hidden xl:flex  sc-eqUAAy eUTSiE fgprtA">
                 <nav width="fit-content" className="sc-gEvEer bBbSyu">
                   <div className="sc-gEvEer MVEyt">
                     <p className="sc-gEvEer dTIZMK">1H</p>
@@ -67,7 +67,7 @@ const Home = () => {
                   <span className="sc-gEvEer fuLCfR"></span>
                 </nav>
               </div>
-              <div className="sc-gEvEer col-span-3 lg:col-span-1  sc-eqUAAy bugrHU fgprtA">
+              <div className="sc-gEvEer col-span-2  w-full   xl:w-auto lg:mx-auto  xl:col-span-1  sc-eqUAAy bugrHU fgprtA">
                 <div width="100%" className="sc-gEvEer sc-eqUAAy jiukso fgprtA">
                   <div
                     width="100%"
@@ -146,11 +146,30 @@ const Home = () => {
                           You pay
                         </p>
                       </div>
-                      <AssetPopup
-                        topInputValue={topInputValue}
-                        totalAssets={totalAssets}
-                        setTopInputValue={setTopInputValue}
-                      />
+                      <div className="w-full bPnuvt flex">
+                        <AssetPopup
+                          topInputValue={topInputValue}
+                          totalAssets={totalAssets}
+                          setTopInputValue={setTopInputValue}
+                        />
+                        <div className="sc-gEvEer sc-eqUAAy bmYucd fgprtA">
+                          <input
+                            type="string"
+                            placeholder="0"
+                            inputMode="decimal"
+                            autoComplete="off"
+                            autoCorrect="off"
+                            spellCheck="false"
+                            minLength="1"
+                            maxLength="79"
+                            pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
+                            className="sc-fTFjTM dvGUNi"
+                          />
+                          <span fontSize="12px" className="sc-gEvEer gINIKT">
+                            0 $
+                          </span>
+                        </div>
+                      </div>
                     </div>
                     <div
                       color="main"
@@ -177,11 +196,30 @@ const Home = () => {
                           You get
                         </p>
                       </div>
-                      <BottomAssetPopup
-                        setBottomInputValue={setBottomInputValue}
-                        bottomInputValue={bottomInputValue}
-                        totalAssets={totalAssets}
-                      />
+                      <div className="w-full bPnuvt flex">
+                        <BottomAssetPopup
+                          setBottomInputValue={setBottomInputValue}
+                          bottomInputValue={bottomInputValue}
+                          totalAssets={totalAssets}
+                        />
+                        <div className="sc-gEvEer sc-eqUAAy bmYucd fgprtA">
+                          <input
+                            type="numeric"
+                            placeholder="0"
+                            inputMode="decimal"
+                            autoComplete="off"
+                            autoCorrect="off"
+                            spellCheck="false"
+                            minLength="1"
+                            maxLength="79"
+                            pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
+                            className="sc-fTFjTM dvGUNi"
+                          />
+                          <span fontSize="12px" className="sc-gEvEer gINIKT">
+                            0 $
+                          </span>
+                        </div>
+                      </div>
                     </div>
                     <div
                       display="none"
@@ -283,7 +321,6 @@ const Home = () => {
                             maxLength="79"
                             pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
                             className="sc-guJBdh iPWtKo"
-                            value="0"
                           />
                           <button type="button" className="sc-hZDyAQ gqFsoE">
                             <svg

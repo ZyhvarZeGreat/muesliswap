@@ -8,8 +8,8 @@ import Ada from "../../assets/ada.webp";
 const AssetPopup = ({ totalAssets, setTopInputValue, topInputValue }) => {
   return (
     <Dialog>
-      <DialogTrigger className="w-full">
-        <div className="sc-gEvEer sc-eqUAAy bPnuvt fgprtA">
+      <DialogTrigger className="w-1/2">
+        <div className="sc-gEvEer sc-eqUAAy  ">
           {topInputValue ? (
             <button
               type="button"
@@ -53,7 +53,7 @@ const AssetPopup = ({ totalAssets, setTopInputValue, topInputValue }) => {
           ) : (
             <button
               type="button"
-              className="sc-krNlru gzaCtt"
+              className="sc-krNlru p-1 gzaCtt"
               style={{ cursor: "pointer" }}
             >
               <div width="16px" className="sc-gEvEer jDNYAs">
@@ -91,24 +91,6 @@ const AssetPopup = ({ totalAssets, setTopInputValue, topInputValue }) => {
               </div>
             </button>
           )}
-          <div className="sc-gEvEer sc-eqUAAy bmYucd fgprtA">
-            <input
-              type="string"
-              placeholder="0"
-              inputMode="decimal"
-              autoComplete="off"
-              autoCorrect="off"
-              spellCheck="false"
-              minLength="1"
-              maxLength="79"
-              pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
-              className="sc-fTFjTM dvGUNi"
-              value=""
-            />
-            <span fontSize="12px" className="sc-gEvEer gINIKT">
-              0 $
-            </span>
-          </div>
         </div>
       </DialogTrigger>
       <DialogContent className="p-0">

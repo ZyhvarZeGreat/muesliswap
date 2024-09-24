@@ -59,7 +59,7 @@ const BottomAssetPopup = ({
           ) : (
             <button
               type="button"
-              className="sc-krNlru gzaCtt"
+              className="sc-krNlru p-1 gzaCtt"
               style={{ cursor: "pointer" }}
             >
               <div width="16px" className="sc-gEvEer jDNYAs">
