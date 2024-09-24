@@ -5,7 +5,15 @@ import {
   DialogClose,
 } from "../../components/ui/dialog";
 import Ada from "../../assets/ada.webp";
-const AssetPopup = ({ totalAssets, setTopInputValue, topInputValue }) => {
+import useStore from "../store/store";
+const AssetPopup = (props) => {
+  const { totalAssets, setTopInputValue, topInputValue } = props;
+  const { state } = useStore();
+  console.log(state.assets);
+  const filteredAssets = state.assets
+    ? state.assets.filter((asset) => asset.unit !== "lovelace")
+    : [];
+  console.log(filteredAssets);
   return (
     <Dialog>
       <DialogTrigger className="w-1/2">
@@ -33,7 +41,7 @@ const AssetPopup = ({ totalAssets, setTopInputValue, topInputValue }) => {
                 <img
                   src={topInputValue.info.image}
                   crossOrigin="anonymous"
-                  alt="https://static.muesliswap.com/images/tokens/ada.png"
+                  alt=""
                   className="sc-gEvEer kxeTOB"
                 />
               </div>
@@ -125,9 +133,8 @@ const AssetPopup = ({ totalAssets, setTopInputValue, topInputValue }) => {
                 className="sc-gEvEer   relative sc-eqUAAy hcpIXP fgprtA"
               >
                 <input
-                  placeholder="Search  tokens"
-                  className="sc-JrDLc bg-transparent border border-[#5364ff] py-2 rounded-full px-8  w-[303px] "
-                  value=""
+                  placeholder="Search tokens"
+                  className="sc-JrDLc focus-within:outline-none focus:outline-none z-20 bg-transparent border border-[#5364ff] py-2 rounded-full px-8  w-[303px] "
                 />
                 <div className="sc-fjvvzt px-2 flex bottom-0 top-0 items-center justify-between w-full absolute jXmKLn">
                   <svg
@@ -218,22 +225,22 @@ const AssetPopup = ({ totalAssets, setTopInputValue, topInputValue }) => {
                   >
                     <div className="sc-gEvEer flex items-center gap-4 sc-eqUAAy jQCsrt fgprtA">
                       <img
-                        src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                        src={Ada}
                         crossOrigin="anonymous"
-                        alt="https://static.muesliswap.com/images/tokens/ada.png"
+                        alt=""
                         className="sc-gEvEer jmJMSZ"
                       />
                       <div className="sc-gEvEer flex flex-col gap-1 sc-eqUAAy ecOcir fgprtA">
                         <div className="sc-gEvEer flex items-center gap-2 sc-eqUAAy kDTRUy fgprtA">
                           <p fontSize="16.5px" className="sc-gEvEer jIQBMP">
-                            ADA
+                            {state.assets && state.assets[0].name}
                           </p>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
                             height="16"
                             viewBox="0 0 512 512"
-                            color="blue400"
+                            color="#5346ff"
                             className="sc-gEvEer dJsuph"
                           >
                             <g>
@@ -255,12 +262,79 @@ const AssetPopup = ({ totalAssets, setTopInputValue, topInputValue }) => {
                     </div>
                     <div overflow="hidden" className="sc-gEvEer isMjq">
                       <span fontSize="13.5px" className="sc-gEvEer cbkCMp">
-                        1.2
+                        {state.assets &&
+                          (Number(state.assets[0].quantity) / 1000000).toFixed(
+                            2
+                          )}
                       </span>
                     </div>
                   </button>
+                  {filteredAssets &&
+                    filteredAssets?.map((asset, i) => {
+                      return (
+                        <button
+                          key={i}
+                          type="button"
+                          className="sc-lcIPJg  hover:bg-slate-400/30 rounded-xl p-4 mt-4 flex items-center justify-between w-full hbvxMe"
+                        >
+                          <div className="sc-gEvEer flex items-center gap-4 sc-eqUAAy jQCsrt fgprtA">
+                            <img
+                              src={`data:image/png;base64,${asset.icon}`}
+                              alt={"img"}
+                              crossOrigin="anonymous"
+                              className="sc-gEvEer jmJMSZ"
+                            />
+                            <div className="sc-gEvEer flex flex-col gap-1 sc-eqUAAy ecOcir fgprtA">
+                              <div className="sc-gEvEer flex items-center gap-2 sc-eqUAAy kDTRUy fgprtA">
+                                <p
+                                  fontSize="16.5px"
+                                  className="sc-gEvEer jIQBMP"
+                                >
+                                  {asset.name}
+                                </p>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16"
+                                  height="16"
+                                  viewBox="0 0 512 512"
+                                  color="#5346ff"
+                                  className="sc-gEvEer dJsuph"
+                                >
+                                  <g>
+                                    <path
+                                      fill="currentcolor"
+                                      d="M201.22,3.73c2.85,0.97,5.63,2.12,8.33,3.45l32.47,15.99c8.81,4.34,19.14,4.34,27.95,0l32.47-15.99 c34.49-16.98,76.22-2.79,93.2,31.71l1.86,4.11l1.59,4.22l11.66,34.26c3.16,9.3,10.47,16.6,19.76,19.77l34.26,11.66 c36.4,12.38,55.87,51.93,43.49,88.32c-0.97,2.85-2.12,5.63-3.45,8.33l-15.99,32.47c-4.34,8.81-4.34,19.14,0,27.95l15.99,32.47 c16.98,34.49,2.79,76.22-31.71,93.2c-2.7,1.33-5.48,2.48-8.33,3.45l-34.26,11.66c-9.3,3.16-16.6,10.47-19.76,19.76l-11.66,34.26 c-12.38,36.4-51.92,55.87-88.32,43.49c-2.85-0.97-5.63-2.12-8.33-3.45l-32.47-15.99c-8.81-4.34-19.14-4.34-27.95,0l-32.47,15.99 c-34.49,16.98-76.22,2.79-93.2-31.71c-1.33-2.7-2.48-5.48-3.45-8.33l-11.66-34.26c-3.16-9.3-10.47-16.6-19.77-19.76L47.21,399.1 c-36.4-12.38-55.87-51.92-43.48-88.32c0.97-2.85,2.12-5.63,3.45-8.33l15.99-32.47c4.34-8.81,4.34-19.14,0-27.95L7.18,209.55 c-16.98-34.49-2.79-76.22,31.7-93.2c2.7-1.33,5.48-2.48,8.33-3.45l34.26-11.66c9.3-3.16,16.6-10.47,19.77-19.77l11.66-34.26 C125.28,10.81,164.82-8.65,201.22,3.73z M343.83,179.29L206.65,316.47l-49.98-59.97c-6.71-8.06-18.68-9.15-26.74-2.43 c-8.06,6.71-9.14,18.68-2.43,26.74l63.28,75.94c7.15,8.58,20.12,9.17,28.01,1.27l151.88-151.88c7.41-7.41,7.41-19.43,0-26.85 C363.27,171.88,351.25,171.88,343.83,179.29z"
+                                    ></path>
+                                  </g>
+                                </svg>
+                              </div>
+                              <p
+                                fontSize="13px"
+                                color="textSubtle"
+                                className="sc-gEvEer cLEGAT"
+                              >
+                                {`${asset.unit
+                                  .split(".")[0]
+                                  .slice(0, 10)}...${asset.unit
+                                  .split(".")[0]
+                                  .slice(-10)}`}
+                              </p>
+                            </div>
+                          </div>
+                          <div overflow="hidden" className="sc-gEvEer isMjq">
+                            <span
+                              fontSize="13.5px"
+                              className="sc-gEvEer cbkCMp"
+                            >
+                              {Number(asset.quantity) / 1000000}
+                            </span>
+                          </div>
+                        </button>
+                      );
+                    })}
+
                   {totalAssets &&
-                    totalAssets.map((asset, i) => {
+                    totalAssets?.map((asset, i) => {
                       return (
                         <DialogClose className="w-full" key={i}>
                           <button
@@ -275,7 +349,7 @@ const AssetPopup = ({ totalAssets, setTopInputValue, topInputValue }) => {
                               <img
                                 src={asset.info.image}
                                 crossOrigin="anonymous"
-                                alt="https://static.muesliswap.com/images/tokens/ada.png"
+                                alt=""
                                 className="sc-gEvEer jmJMSZ"
                               />
                               <div className="sc-gEvEer flex flex-col gap-1 sc-eqUAAy ecOcir fgprtA">

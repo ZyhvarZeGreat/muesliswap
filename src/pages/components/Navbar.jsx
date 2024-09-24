@@ -4,38 +4,28 @@ import ConnectWallet from "./ConnectWallet";
 import Dropdown from "./Dropdown";
 import MobileLogo from "../../assets/muesliswap.86e5affdd1cbde9ed769.webp";
 import MobileNav from "./MobileNav";
+import useStore from "../store/store";
 const Navbar = () => {
-  const initialState = {
-    address: "",
-    network: "",
-    balance: 0,
-    usdBalance: 0,
-    isWalletConnected: false,
-    walletName: "",
-  };
-  const [walletState, setWalletState] = React.useState(initialState);
-  React.useEffect(() => {
-    console.log(JSON.stringify(walletState, null, 2));
-  }, [walletState]);
-
-  const walletStateProps = { walletState, setWalletState };
-  console.log(walletStateProps);
+  const setState = useStore((state) => state.setState);
+  const { state } = useStore();
   const disconnectWallet = () => {
     try {
       if (window.cardano && window.cardano.selectedWallet) {
         window.cardano.selectedWallet = null;
       }
-      setWalletState({
-        isWalletConnected: false,
-        usdBalance: null,
-        address: null,
+      setState({
+        state: {
+          isWalletConnected: false,
+          usdBalance: null,
+          address: null,
+        },
       });
       console.log("Wallet disconnected successfully");
     } catch (error) {
       console.error("Error disconnecting the wallet:", error);
     }
   };
-  console.log(walletState);
+
   return (
     <>
       <header opacity="1" className="sc-gEvEer  sc-eqUAAy cyoWIZ fgprtA">
@@ -376,13 +366,10 @@ const Navbar = () => {
           </div>
         </nav>
         <div className="sc-gEvEer sc-eqUAAy eNyVQd fgprtA">
-          {walletState.isWalletConnected === true ? (
-            <Dropdown disconnect={disconnectWallet} walletState={walletState} />
+          {state.isWalletConnected === true ? (
+            <Dropdown disconnect={disconnectWallet} />
           ) : (
-            <ConnectWallet
-              walletState={walletState}
-              setIsWalletState={setWalletState}
-            />
+            <ConnectWallet />
           )}
           <MobileNav />
           <div className="sc-gEvEer hidden lg:block eiqrtu">

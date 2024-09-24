@@ -313,7 +313,7 @@ const Liquidity = () => {
                           <img
                             src="/static/media/ada.ae3e320f25e324286ae2.webp"
                             crossOrigin="anonymous"
-                            alt="https://static.muesliswap.com/images/tokens/ada.png"
+                            alt=""
                             className="sc-gEvEer gUHNA-d"
                           />
                         </div>
@@ -418,7 +418,7 @@ const Liquidity = () => {
                           <img
                             src="/static/media/ada.ae3e320f25e324286ae2.webp"
                             crossOrigin="anonymous"
-                            alt="https://static.muesliswap.com/images/tokens/ada.png"
+                            alt=""
                             className="sc-gEvEer gUHNA-d"
                           />
                         </div>
@@ -626,7 +626,7 @@ const Liquidity = () => {
                           <img
                             src="/static/media/ada.ae3e320f25e324286ae2.webp"
                             crossOrigin="anonymous"
-                            alt="https://static.muesliswap.com/images/tokens/ada.png"
+                            alt=""
                             className="sc-gEvEer gUHNA-d"
                           />
                         </div>
@@ -914,7 +914,7 @@ const Liquidity = () => {
                           <img
                             src="/static/media/ada.ae3e320f25e324286ae2.webp"
                             crossOrigin="anonymous"
-                            alt="https://static.muesliswap.com/images/tokens/ada.png"
+                            alt=""
                             className="sc-gEvEer gUHNA-d"
                           />
                         </div>
@@ -1009,7 +1009,7 @@ const Liquidity = () => {
                           <img
                             src="/static/media/ada.ae3e320f25e324286ae2.webp"
                             crossOrigin="anonymous"
-                            alt="https://static.muesliswap.com/images/tokens/ada.png"
+                            alt=""
                             className="sc-gEvEer gUHNA-d"
                           />
                         </div>
@@ -1104,7 +1104,7 @@ const Liquidity = () => {
                           <img
                             src="/static/media/ada.ae3e320f25e324286ae2.webp"
                             crossOrigin="anonymous"
-                            alt="https://static.muesliswap.com/images/tokens/ada.png"
+                            alt=""
                             className="sc-gEvEer gUHNA-d"
                           />
                         </div>
@@ -1199,7 +1199,7 @@ const Liquidity = () => {
                           <img
                             src="/static/media/ada.ae3e320f25e324286ae2.webp"
                             crossOrigin="anonymous"
-                            alt="https://static.muesliswap.com/images/tokens/ada.png"
+                            alt=""
                             className="sc-gEvEer gUHNA-d"
                           />
                         </div>

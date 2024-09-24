@@ -7,9 +7,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../../components/ui/dropdown-menu";
+import useStore from "../store/store";
 
-const Dropdown = ({ walletState, disconnect }) => {
-  console.log(walletState);
+const Dropdown = ({ disconnect }) => {
+  const { state } = useStore();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -28,11 +29,8 @@ const Dropdown = ({ walletState, disconnect }) => {
             ></path>
           </svg>
           <div className="sc-gEvEer qzmtu">
-            {walletState.address
-              ? `${walletState?.address.slice(
-                  0,
-                  3
-                )}...${walletState?.address.slice(-4)}`
+            {state.address
+              ? `${state?.address.slice(0, 3)}...${state?.address.slice(-4)}`
               : ""}
           </div>
           <div className="sc-aXZVg jrzA-dM">
@@ -89,7 +87,7 @@ const Dropdown = ({ walletState, disconnect }) => {
             <div className="sc-gEvEer sc-eqUAAy kgXXzQ  w-full items-center justify-between  fgprtA">
               <div className="sc-gEvEer kpVmdW">Balance</div>
               <div style={{ fontWeight: 500 }} className="sc-gEvEer cFqvxQ">
-                {walletState.balance} ₳
+                {state.balance} ₳
               </div>
             </div>
           </DropdownMenuItem>

@@ -8,7 +8,7 @@ const Home = () => {
   const [bottomInputValue, setBottomInputValue] = useState(null);
 
   const [totalAssets, setTotalAssets] = useState();
-
+  const [walletBalance, setWalletBalance] = useState(null);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     const getAllPossibleAssets = async () => {
@@ -67,7 +67,7 @@ const Home = () => {
                   <span className="sc-gEvEer fuLCfR"></span>
                 </nav>
               </div>
-              <div className="sc-gEvEer col-span-2  w-full   xl:w-auto lg:mx-auto  xl:col-span-1  sc-eqUAAy bugrHU fgprtA">
+              <div className="sc-gEvEer col-span-3  w-full   xl:w-auto lg:mx-auto  xl:col-span-1  sc-eqUAAy bugrHU fgprtA">
                 <div width="100%" className="sc-gEvEer sc-eqUAAy jiukso fgprtA">
                   <div
                     width="100%"
@@ -148,6 +148,7 @@ const Home = () => {
                       </div>
                       <div className="w-full bPnuvt flex">
                         <AssetPopup
+                          walletBalance={walletBalance}
                           topInputValue={topInputValue}
                           totalAssets={totalAssets}
                           setTopInputValue={setTopInputValue}
@@ -198,6 +199,7 @@ const Home = () => {
                       </div>
                       <div className="w-full bPnuvt flex">
                         <BottomAssetPopup
+                          walletBalance={walletBalance}
                           setBottomInputValue={setBottomInputValue}
                           bottomInputValue={bottomInputValue}
                           totalAssets={totalAssets}
@@ -572,7 +574,10 @@ const Home = () => {
                       </span>
                     </div>
                   </div>
-                  <ConnectWallet />
+                  <ConnectWallet
+                    walletBalance={walletBalance}
+                    setWalletBalance={setWalletBalance}
+                  />
                 </div>
                 <div className="sc-gEvEer flex flex-col items-center justify-center sc-eqUAAy eFyWOq fgprtA">
                   <div width="90%" className="sc-gEvEer gyzkDw"></div>

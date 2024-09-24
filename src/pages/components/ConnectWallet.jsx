@@ -5,19 +5,55 @@ import {
   DialogHeader,
   DialogTrigger,
   DialogClose,
+  DialogTitle,
 } from "../../components/ui/dialog";
-import { X } from "lucide-react";
 import "../../App.css";
 import { Buffer } from "buffer";
+import axios from "axios";
 import {
   BigNum,
   Value,
   Address,
 } from "@emurgo/cardano-serialization-lib-asmjs";
+import useStore from "../store/store";
 
-const ConnectWallet = ({ setIsWalletState, walletState }) => {
+const ConnectWallet = (props) => {
+  // eslint-disable-next-line react/prop-types
+
   const [walletsArray, setWalletsArray] = React.useState([]);
+  const setState = useStore((state) => state.setState);
+  const { state, assets } = useStore();
 
+  const fetchAssetMetadata = async (policyId) => {
+    const response = await axios.get(
+      `https://cardano-mainnet.blockfrost.io/api/v0/assets/${policyId}`,
+      {
+        headers: {
+          Project_id: "mainnet57aezXJWEvbj2kmR3ChtC3Iwm5tAIdgt", // Replace with your Blockfrost project ID
+        },
+      }
+    );
+    console.log(response.data);
+    return response.data;
+  };
+
+  // Function to enrich assets with icons
+  const enrichAssetsWithIcons = async (assets) => {
+    const enrichedAssets = await Promise.all(
+      assets.map(async (asset) => {
+        if (asset.unit === "lovelace") {
+          return asset; // Return ADA asset as is
+        }
+        console.log(asset.assetId);
+        const assetInfo = await fetchAssetMetadata(asset.assetId);
+        return {
+          ...asset,
+          icon: assetInfo.metadata.logo, // Adjust based on actual metadata structure
+        };
+      })
+    );
+    return enrichedAssets;
+  };
   React.useEffect(() => {
     const pollWallets = (count = 0) => {
       const wallets = [];
@@ -83,8 +119,11 @@ const ConnectWallet = ({ setIsWalletState, walletState }) => {
     ) {
       try {
         const wallet = await window.cardano[walletKey].enable();
+        const assets = await getWalletAssets(wallet);
 
+        console.log("Assets available are", assets);
         console.log(`Connected to ${walletKey}`);
+        console.log(`Assets available are ${assets}`);
 
         // Get balance
         const balance = await updateBalance(wallet);
@@ -103,22 +142,155 @@ const ConnectWallet = ({ setIsWalletState, walletState }) => {
           Buffer.from(address, "hex")
         ).to_bech32();
         console.log(`Normal Address: ${normalAddress}`);
-        setIsWalletState({
-          address: normalAddress,
-          walletName: walletKey,
-          isWalletConnected: true,
-          balance: balance.toPrecision(3),
+        setState({
+          state: {
+            address: normalAddress,
+            walletName: walletKey,
+            isWalletConnected: true,
+            balance: balance.toPrecision(3),
+            assets: assets,
+          },
         });
 
         return wallet;
       } catch (error) {
         console.error(`Failed to connect to ${walletKey}:`, error);
-        setIsWalletState({ isWalletConnected: false }, ...walletState);
+        setState({ state: { isWalletConnected: false, ...state } });
       }
     } else {
       console.error(`Wallet ${walletKey} is not available`);
-      setIsWalletState({ isWalletConnected: false }, ...walletState);
+      setState({ state: { isWalletConnected: false, ...state } });
     }
+  };
+
+  const getWalletAssets = async (api) => {
+    if (!api) return;
+    console.log(api);
+
+    const balanceHex = await api.getBalance();
+    const balance = Value.from_bytes(Buffer.from(balanceHex, "hex"));
+
+    let assets = [];
+
+    // Handle ADA (Lovelace)
+    const lovelace = balance.coin().to_str();
+    assets.push({ unit: "lovelace", quantity: lovelace, name: "ADA" });
+
+    // Handle native tokens
+    const multiAsset = balance.multiasset();
+    console.log(multiAsset);
+    if (multiAsset) {
+      const policyIds = multiAsset.keys();
+
+      for (let i = 0; i < policyIds.len(); i++) {
+        const policyId = policyIds.get(i);
+        const assetsUnderPolicy = multiAsset.get(policyId);
+        const assetNames = assetsUnderPolicy.keys();
+
+        for (let j = 0; j < assetNames.len(); j++) {
+          const assetName = assetNames.get(j);
+          const quantity = assetsUnderPolicy.get(assetName).to_str();
+          const policyIdHex = Buffer.from(policyId.to_bytes(), "utf8").toString(
+            "hex"
+          );
+          // Decode the asset name from hex to string
+          const assetNameHex = Buffer.from(assetName.name(), "utf8").toString(
+            "hex"
+          );
+
+          const name = Buffer.from(assetName.name()).toString("utf-8");
+          const unit = `${policyIdHex}.${name}`;
+          const assetId = `${policyIdHex}${assetNameHex}`;
+          assets.push({
+            unit,
+            quantity,
+            name,
+            policyIdHex,
+            assetsUnderPolicy,
+            assetNameHex,
+            assetId,
+          });
+        }
+      }
+    }
+
+    const enrichedAssets = await enrichAssetsWithIcons(assets);
+    return enrichedAssets;
+  };
+  const getTokenPrice = async (tokenId) => {
+    const id = tokenId.toLowerCase();
+
+    // Check if the token is USDC or USDT and return the price as 0.9998
+    if (id === "usdc" || id === "usdt") {
+      return 0.9998;
+    }
+
+    try {
+      const response = await axios.get(
+        `https://api.coingecko.com/api/v3/simple/price?ids=${id}&vs_currencies=usd`,
+        {
+          headers: {
+            accept: "application/json",
+            "x-cg-demo-api-key": "CG-YqW9nsT8UL3259noMc3Tkzah",
+          },
+        }
+      );
+
+      console.log(tokenId);
+      const price = response.data[id]?.usd;
+      console.log(price);
+
+      return price;
+    } catch (error) {
+      console.error("Error fetching token price:", error);
+    }
+  };
+
+  const getAdaPrice = async () => {
+    const response = await axios.get(
+      "https://api.coingecko.com/api/v3/simple/price?ids=cardano&vs_currencies=usd",
+      {
+        headers: {
+          accept: "application/json",
+          "x-cg-demo-api-key": "CG-YqW9nsT8UL3259noMc3Tkzah",
+        },
+      }
+    );
+    const price = response.data.cardano.usd;
+    console.log(price);
+    return price;
+  };
+
+  const calculateAssetValues = async (assets) => {
+    if (!assets) return;
+
+    const adaPrice = await getAdaPrice();
+
+    let assetValuesPromises = assets.map(async (asset) => {
+      let valueInUsd = 0;
+
+      if (asset.unit === "lovelace") {
+        console.log(asset.unit, asset.quantity, adaPrice);
+        valueInUsd = (parseFloat(asset.quantity) / 1000000) * adaPrice;
+      } else {
+        // Assuming you have a way to get the USD price for the native token
+        const tokenPriceInUsd = await getTokenPrice(asset.name);
+        console.log(tokenPriceInUsd);
+        const assetQuantity = (asset.quantity / 1000000).toPrecision(2);
+        valueInUsd = parseFloat(assetQuantity) * tokenPriceInUsd;
+        console.log(asset.name + " " + assetQuantity); // Replace with actual method
+        console.log(`${asset.name} price in usd: ` + valueInUsd);
+      }
+      return {
+        name: asset.name,
+        unit: asset.unit,
+        quantity: asset.quantity,
+        valueInUsd,
+      };
+    });
+    const assetValues = await Promise.all(assetValuesPromises);
+    console.log(assetValues);
+    return assetValues;
   };
 
   const filteredWalletNames = walletsArray
@@ -128,7 +300,7 @@ const ConnectWallet = ({ setIsWalletState, walletState }) => {
     .filter((wallet) => order.includes(wallet.toLowerCase()));
 
   console.log(filteredWalletNames);
-
+  console.log(assets);
   return (
     <Dialog>
       <DialogTrigger className="w-full">
@@ -139,6 +311,7 @@ const ConnectWallet = ({ setIsWalletState, walletState }) => {
         </div>
       </DialogTrigger>
       <DialogContent className="max-w-[412px]  rounded-lg p-0 ">
+        <DialogTitle className="hidden">ss</DialogTitle>
         <DialogHeader className="  rounded-lg  text-sm lg:text-base p-5 border-b border-[#e5e9f1]">
           <div className="sc-gEvEer sc-eqUAAy flex justify-between items-center  fgprtA">
             <div className="sc-gEvEer ihQBzN">Connect your Wallet</div>
