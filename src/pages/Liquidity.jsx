@@ -1,5 +1,6 @@
 import EarnTab from "./components/EarnTab";
 import "./Liquidity.css";
+import Ada from "../assets/ada.webp";
 const Liquidity = () => {
   return (
     <main className="sc-kOPcWz hierkx">
@@ -288,11 +289,11 @@ const Liquidity = () => {
                   </th>
                 </tr>
               </thead>
-              <tbody role="rowgroup" className="sc-gEvEer eUgFaS">
-                <tr role="row" className="sc-gEvEer gFEUUI">
+              <tbody role="rowgroup" className="sc-gEvEer px-4 eUgFaS">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=8db269c3ec630e06ae29f74bc39edd1f87c819f1056206e879a1cd61.5368656e4d6963726f555344"
                     >
                       <div
@@ -311,7 +312,7 @@ const Liquidity = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -394,10 +395,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=8db269c3ec630e06ae29f74bc39edd1f87c819f1056206e879a1cd61.446a65644d6963726f555344"
                     >
                       <div
@@ -416,7 +417,7 @@ const Liquidity = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -499,10 +500,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=8db269c3ec630e06ae29f74bc39edd1f87c819f1056206e879a1cd61.446a65644d6963726f555344&amp;quote=f66d78b4a3cb3d37afa0ec36461e51ecbde00f26c8f0a68f94b69880.69555344"
                     >
                       <div
@@ -602,10 +603,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=94cbb4fcbcaa2975779f273b263eb3b5f24a9951e446d6dc4c135864.52455655"
                     >
                       <div
@@ -624,7 +625,7 @@ const Liquidity = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -889,15 +890,15 @@ const Liquidity = () => {
                   </th>
                 </tr>
               </thead>
-              <tbody role="rowgroup" className="sc-gEvEer eUgFaS">
-                <tr role="row" className="sc-gEvEer gFEUUI">
-                  <td role="cell" className="sc-gEvEer faiYBU">
+              <tbody role="rowgroup" className="sc-gEvEer  ">
+                <tr role="row" className="sc-gEvEer gFEUUI  ">
+                  <td role="cell" className="sc-gEvEer faiYBU ">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=afbe91c0b44b3040e360057bf8354ead8c49c4979ae6ab7c4fbdc9eb.4d494c4b7632"
                     >
                       <div
-                        className="LazyLoad is-visible"
+                        className="LazyLoad is-visible "
                         style={{ height: "32px", width: "59.2px" }}
                       >
                         <div
@@ -912,7 +913,7 @@ const Liquidity = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -985,10 +986,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=1ddcb9c9de95361565392c5bdff64767492d61a96166cb16094e54be.4f5054"
                     >
                       <div
@@ -1007,7 +1008,7 @@ const Liquidity = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -1080,10 +1081,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=7914fae20eb2903ed6fd5021a415c1bd2626b64a2d86a304cb40ff5e.4c494649"
                     >
                       <div
@@ -1102,7 +1103,7 @@ const Liquidity = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -1175,10 +1176,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=edfd7a1d77bcb8b884c474bdc92a16002d1fb720e454fa6e99344479.4e5458"
                     >
                       <div
@@ -1197,7 +1198,7 @@ const Liquidity = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -1270,10 +1271,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=a0028f350aaabe0545fdcb56b039bfb08e4bb4d8c4d7c3c7d481c235.484f534b59"
                     >
                       <div
@@ -1346,10 +1347,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=cc8d1b026353022abbfcc2e1e71159f9e308d9c6e905ac1db24c7fb6.50617269627573"
                     >
                       <div
@@ -1422,10 +1423,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=8a1cfae21368b8bebbbed9800fec304e95cce39a2a57dc35e2e3ebaa.4d494c4b"
                     >
                       <div
@@ -1498,10 +1499,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=1d7f33bd23d85e1a25d87d86fac4f199c3197a2f7afeb662a0f34e1e.776f726c646d6f62696c65746f6b656e"
                     >
                       <div
@@ -1574,10 +1575,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=6c8642400e8437f737eb86df0fc8a8437c760f48592b1ba8f5767e81.456d706f7761"
                     >
                       <div
@@ -1650,10 +1651,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=a2944573e99d2ed3055b808eaa264f0bf119e01fc6b18863067c63e4.4d454c44"
                     >
                       <div
@@ -1726,10 +1727,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=f43a62fdc3965df486de8a0d32fe800963589c41b38946602a0dc535.41474958"
                     >
                       <div
@@ -1802,10 +1803,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=f66d78b4a3cb3d37afa0ec36461e51ecbde00f26c8f0a68f94b69880.69555344"
                     >
                       <div
@@ -1878,10 +1879,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=db30c7905f598ed0154de14f970de0f61f0cb3943ed82c891968480a.434c4150"
                     >
                       <div
@@ -1952,10 +1953,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=804f5544c1962a40546827cab750a88404dc7108c0f588b72964754f.56594649"
                     >
                       <div
@@ -2028,10 +2029,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=8f9c32977d2bacb87836b64f7811e99734c6368373958da20172afba.4d5949454c44"
                     >
                       <div
@@ -2104,10 +2105,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=533bb94a8850ee3ccbe483106489399112b74c905342cb1792a797a0.494e4459"
                     >
                       <div
@@ -2180,10 +2181,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=da8c30857834c6ae7203935b89278c532b3995245295456f993e1d24.4c51"
                     >
                       <div
@@ -2256,10 +2257,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=8f52f6a88acf6127bc4758a16b6047afc4da7887feae121ec217b75a.534e4f57"
                     >
                       <div
@@ -2332,10 +2333,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=5dac8536653edc12f6f5e1045d8164b9f59998d3bdc300fc92843489.4e4d4b52"
                     >
                       <div
@@ -2408,10 +2409,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=af2e27f580f7f08e93190a81f72462f153026d06450924726645891b.44524950"
                     >
                       <div
@@ -2484,10 +2485,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=10a49b996e2402269af553a8a96fb8eb90d79e9eca79e2b4223057b6.4745524f"
                     >
                       <div
@@ -2560,10 +2561,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=6ac8ef33b510ec004fe11585f7c5a9f0c07f0c23428ab4f29c1d7d10.4d454c44"
                     >
                       <div
@@ -2636,10 +2637,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=2a80c713e0d518f84e0553957e3d581c9326cfc5931ea1f4dd0fb292.0014df107374616b65636f696e"
                     >
                       <div
@@ -2710,10 +2711,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=20cd68533b47565f3c61efb39c30fdace9963bfa4c0060b613448e3c.50524f584945"
                     >
                       <div
@@ -2786,10 +2787,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=8db269c3ec630e06ae29f74bc39edd1f87c819f1056206e879a1cd61.446a65644d6963726f555344&amp;quote=a0028f350aaabe0545fdcb56b039bfb08e4bb4d8c4d7c3c7d481c235.484f534b59"
                     >
                       <div
@@ -2860,10 +2861,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=078eafce5cd7edafdf63900edef2c1ea759e77f30ca81d6bbdeec924.79756d6d69"
                     >
                       <div
@@ -2936,10 +2937,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=279f842c33eed9054b9e3c70cd6a3b32298259c24b78b895cb41d91a.54554e41"
                     >
                       <div
@@ -3012,10 +3013,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=c48cbb3d5e57ed56e276bc45f99ab39abe94e6cd7ac39fb402da47ad.0014df105553444d"
                     >
                       <div
@@ -3088,10 +3089,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=8fef2d34078659493ce161a6c7fba4b56afefa8535296a5743f69587.41414441"
                     >
                       <div
@@ -3164,10 +3165,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=b8b57f3bb13f0d4c1cbf8a1a89432b1e117778c49feec29102ea044b.564953494f4e"
                     >
                       <div
@@ -3238,10 +3239,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=b34b3ea80060ace9427bda98690a73d33840e27aaa8d6edb7f0c757a.634e455441"
                     >
                       <div
@@ -3314,10 +3315,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=32cc9c6c3456bc048d14a4a8e4ee3592e9664e8daac921a8ef52d92a.4752415353"
                     >
                       <div
@@ -3390,10 +3391,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=f66d78b4a3cb3d37afa0ec36461e51ecbde00f26c8f0a68f94b69880.69425443"
                     >
                       <div
@@ -3464,10 +3465,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=43b07d4037f0d75ee10f9863097463fc02ff3c0b8b705ae61d9c75bf.4d796e746820546f6b656e"
                     >
                       <div
@@ -3540,10 +3541,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=9a9693a9a37912a5097918f97918d15240c92ab729a0b7c4aa144d77.53554e444145"
                     >
                       <div
@@ -3616,10 +3617,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=29d222ce763455e3d7a09a665ce554f00ac89d2e99a1a83d267170c6.4d494e"
                     >
                       <div
@@ -3692,10 +3693,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=d030b626219d81673bd32932d2245e0c71ae5193281f971022b23a78.436172646f67656f"
                     >
                       <div
@@ -3766,10 +3767,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=5612bee388219c1b76fd527ed0fa5aa1d28652838bcab4ee4ee63197.446973636f696e"
                     >
                       <div
@@ -3840,10 +3841,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=a8a1dccea2e378081f2d500d98d022dd3c0bd77afd9dbc7b55a9d21b.63544f5349"
                     >
                       <div
@@ -3916,10 +3917,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=dda5fdb1002f7389b33e036b6afee82a8189becb6cba852e8b79b4fb.0014df1047454e53"
                     >
                       <div
@@ -3992,10 +3993,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=b6a7467ea1deb012808ef4e87b5ff371e85f7142d7b356a40d9b42a0.436f726e75636f70696173205b76696120436861696e506f72742e696f5d"
                     >
                       <div
@@ -4066,10 +4067,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=f66d78b4a3cb3d37afa0ec36461e51ecbde00f26c8f0a68f94b69880.69455448"
                     >
                       <div
@@ -4142,10 +4143,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=279c909f348e533da5808898f87f9a14bb2c3dfbbacccd631d927a3f.534e454b"
                     >
                       <div
@@ -4218,10 +4219,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=a8102151506a8a81dc1763ee05cdd01d787f50dfeb6f843071e1c6a0.484f5749"
                     >
                       <div
@@ -4294,10 +4295,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=048ee598172481f98d613fc9fb6a03fd6ec3edccb75f8e4afc993b66.45584f"
                     >
                       <div
@@ -4368,10 +4369,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=884892bcdc360bcef87d6b3f806e7f9cd5ac30d999d49970e7a903ae.5041564941"
                     >
                       <div
@@ -4442,10 +4443,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=420000029ad9527271b1b1e3c27ee065c18df70a4a4cfc3093a41a44.41584f"
                     >
                       <div
@@ -4516,10 +4517,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=6cfbfedd8c8ea23d264f5ae3ef039217100c210bb66de8711f21c903.434e4654"
                     >
                       <div
@@ -4590,10 +4591,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=8e51398904a5d3fc129fbf4f1589701de23c7824d5c90fdb9490e15a.434841524c4933"
                     >
                       <div
@@ -4664,10 +4665,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=2d420236ffaada336c21e3f4520b799f6e246d8618f2fc89a4907da6.4564756c6164646572546f6b656e"
                     >
                       <div
@@ -4738,10 +4739,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=75fcc276057db5fc48eae0e11453c773c8a54604c3086bf9d95ac1b7.43485259"
                     >
                       <div
@@ -4812,10 +4813,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=38ad9dc3aec6a2f38e220142b9aa6ade63ebe71f65e7cc2b7d8a8535.434c4159"
                     >
                       <div
@@ -4886,10 +4887,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=961f2cac0bb1967d74691af179350c1e1062c7298d1f7be1e4696e31.2444455250"
                     >
                       <div
@@ -4960,10 +4961,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=cd5b9dd91319edbb19477ad00cbef673a221e70a17ef043951fc6786.52656465656d61626c65"
                     >
                       <div
@@ -5034,10 +5035,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=9abf0afd2f236a19f2842d502d0450cbcd9c79f123a9708f96fd9b96.454e4353"
                     >
                       <div
@@ -5108,10 +5109,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=c5609c4800c05e82c4219ccf14c7fdf5212e11f83dbbb57ac716e98e.666c756666"
                     >
                       <div
@@ -5182,10 +5183,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=628436be6fa349ebf4ac3d749e87a36981b930d4bb4319c11e64042c.464c5a"
                     >
                       <div
@@ -5256,10 +5257,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=52489ea87bbceaf6375cc22f74c19382a3d5da3f8b9b15d2537044b9.5052535052"
                     >
                       <div
@@ -5330,10 +5331,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=c88bbd1848db5ea665b1fffbefba86e8dcd723b5085348e8a8d2260f.44414e41"
                     >
                       <div
@@ -5404,10 +5405,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=25f0fc240e91bd95dcdaebd2ba7713fc5168ac77234a3d79449fc20c.534f4349455459"
                     >
                       <div
@@ -5478,10 +5479,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=ce5b9e0f8a88255b65f2e4d065c6e716e9fa9a8a86dfb86423dd1ac0.44494e47"
                     >
                       <div
@@ -5552,10 +5553,10 @@ const Liquidity = () => {
                     </div>
                   </td>
                 </tr>
-                <tr role="row" className="sc-gEvEer gFEUUI">
+                <tr role="row" className="sc-gEvEer gFEUUI ">
                   <td role="cell" className="sc-gEvEer faiYBU">
                     <a
-                      className="sc-iHbSHJ bwYSnM"
+                      className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=5b01968867e13432afaa2f814e1d15e332d6cd0aa77e350972b0967d.4144414f476f7665726e616e6365546f6b656e"
                     >
                       <div

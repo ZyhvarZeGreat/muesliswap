@@ -15,7 +15,7 @@ const MobileNav = () => {
   return (
     <Sheet>
       <SheetTrigger>
-        <button className="sc-gEvEer flex items-center  lg:hidden  justify-center mr-4 oxpCW">
+        <button className="sc-gEvEer flex items-center  lg:hidden  justify-center mx-3 oxpCW">
           <svg
             viewBox="0 0 28 28"
             xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent
         side={"left"}
-        className=" top-0 font-gilroy_bold  font-normal p-4 left-0 w-[90%] flex flex-col gap-8 h-[98%] rounded-xl bottom-0 right-0 mx-auto self-center my-4 bg-white   "
+        className=" top-0  font-gilroy font-semibold  font-normal p-4 left-0 w-[90%] flex flex-col gap-8 h-[98%] rounded-xl bottom-0 right-0 mx-auto self-center my-4 bg-white   "
       >
         <SheetHeader className="w-full ">
           <div

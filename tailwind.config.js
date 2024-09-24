@@ -17,11 +17,8 @@ module.exports = {
         sm: 'calc(var(--radius) - 4px)'
       },
       fontFamily: {
-        gilroy: ['Gilroy-Regular', 'san-serif'],
-        gilroy_medium: ['Gilroy-Medium', 'san-serif'],
-        gilroy_bold: ['Gilroy-Bold', 'san-serif'],
-        gilroy_light: ['Gilroy-Light', 'san-serif'],
-        gilroy_heavy: ['Gilroy-Heavy', 'san-serif'],
+        gilroy: ['Gilroy', 'san-serif'],
+        inter: ['Inter', 'san-serif']
       },
       colors: {
         background: 'hsl(var(--background))',

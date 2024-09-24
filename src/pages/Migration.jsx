@@ -1,5 +1,8 @@
 import React from "react";
 import "./Migration.css";
+import Milk from "../assets/MilkOld.webp";
+import Ada from "../assets/ada.webp";
+import MilkBowl from "../assets/afbe91c0b44b3040e360057bf8354ead8c49c4979ae6ab7c4fbdc9eb.4d494c4b7632_scaled_100.webp";
 const Migration = () => {
   return (
     <main className="sc-kOPcWz hierkx">
@@ -14,12 +17,12 @@ const Migration = () => {
         >
           MILK Token Migration
         </h2>
-        <div display="grid" className="sc-gEvEer imuoSR">
+        <div className="sc-gEvEer flex flex-col xl:grid imuoSR">
           <div className="sc-gEvEer sc-eqUAAy bJVedh fgprtA">
             <div height="fit-content" className="sc-gEvEer iMPxgv">
               <h2 className="sc-gEvEer lfJIAb">Event Details</h2>
               <div width="100%" className="sc-gEvEer sc-eqUAAy eHSPzd fgprtA">
-                <div className="sc-gEvEer cIgxWe">
+                <div className="sc-gEvEer flex items-center text-[14.7px] mb-1 cIgxWe">
                   Converted MILK: 91.358%
                   <div display="inline-flex" className="sc-gEvEer jXZgNG">
                     <svg
@@ -38,7 +41,7 @@ const Migration = () => {
                       ></path>
                     </svg>
                     <div
-                      className="sc-hIUJlX kfowhQ"
+                      className="sc-hIUJlX  text-[14.7px] kfowhQ"
                       style={{ transform: "translate(-12px, -100%)" }}
                     >
                       Corresponds to how much MILK has been converted to MILKv2.{" "}
@@ -50,7 +53,7 @@ const Migration = () => {
                   <div className="sc-jnOGJG egxinN"></div>
                 </div>
               </div>
-              <div className="sc-gEvEer hJfpbv">
+              <div className="sc-gEvEer text-[14.7px] hJfpbv">
                 Migrate to our new MILK Token after the 26/01/2024.
                 <br />
                 Migration will always stay open and there is no end date,
@@ -58,13 +61,13 @@ const Migration = () => {
                 MILK Token. <br />
               </div>
               <h2 className="sc-gEvEer cEaYmR">Questions?</h2>
-              <div className="sc-gEvEer jVsTBr">
+              <div className="sc-gEvEer flex items-center  gap-1 text-[14.7px] jVsTBr">
                 Take a look at our
                 <a
                   href="https://docs.muesliswap.com/cardano/milk-token-migration-faq"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="sc-gEvEer jOwCyM"
+                  className="sc-gEvEer  text-[14.7px] flex items-center gap-1 jOwCyM"
                 >
                   FAQ page
                   <svg
@@ -145,7 +148,7 @@ const Migration = () => {
               <div width="100%" className="sc-gEvEer sc-eqUAAy UXpxn fgprtA">
                 <div width="100%" className="sc-gEvEer sc-eqUAAy EfEBM fgprtA">
                   <h2 className="sc-gEvEer biiixB">Migrate Tokens</h2>
-                  <p className="sc-gEvEer bunEFv">
+                  <p className="sc-gEvEer text-[14.7px] bunEFv">
                     <b>Recommended:</b> Migrate all MILK tokens in your wallet
                     to the updated version by clicking the button provided
                     below! <br />
@@ -174,7 +177,10 @@ const Migration = () => {
             </div>
           </div>
           <div className="sc-gEvEer dSOvFp">
-            <div height="fit-content" className="sc-gEvEer iMPxgv">
+            <div
+              height="fit-content"
+              className="sc-gEvEer max-w-[450px] mx-auto xl:max-w-auto iMPxgv"
+            >
               <h2 className="sc-gEvEer lfJIAb">Migrate your tokens</h2>
               <div className="sc-gEvEer sc-eqUAAy ejbbHR fgprtA">
                 <div width="100%" className="sc-gEvEer fzYVaO">
@@ -189,9 +195,9 @@ const Migration = () => {
                       style={{ height: "32px", width: "32px" }}
                     >
                       <img
-                        src="/static/media/MilkOld.271b03bf2b50497dcc66.webp"
+                        src={Milk}
                         crossOrigin="anonymous"
-                        alt="/static/media/MilkOld.271b03bf2b50497dcc66.webp"
+                        alt="milk"
                         className="sc-gEvEer jmJMSZ"
                       />
                     </div>
@@ -210,7 +216,6 @@ const Migration = () => {
                         maxLength="79"
                         pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
                         className="sc-fxwrCY eQWxdg"
-                        value="0"
                       />
                     </div>
                   </div>
@@ -244,7 +249,7 @@ const Migration = () => {
                     style={{ height: "48px", width: "48px" }}
                   >
                     <img
-                      src="/static/media/Milk.dcbf140ce23703c22293.webp"
+                      src={MilkBowl}
                       crossOrigin="anonymous"
                       alt="/static/media/Milk.dcbf140ce23703c22293.webp"
                       className="sc-gEvEer jkBxtx"
@@ -260,7 +265,10 @@ const Migration = () => {
                 </div>
               </div>
             </div>
-            <div height="fit-content" className="sc-gEvEer iMPxgv">
+            <div
+              height="fit-content"
+              className="sc-gEvEer max-w-[450px] mx-auto  xl:max-w-auto iMPxgv"
+            >
               <h2 className="sc-gEvEer lfJIAb">Migrate your LP</h2>
               <div className="sc-gEvEer sc-eqUAAy ejbbHR fgprtA">
                 <div width="100%" className="sc-gEvEer fzYVaO">
@@ -280,13 +288,13 @@ const Migration = () => {
                         className="sc-cWSHoV ijWdTp"
                       >
                         <img
-                          src="/static/media/MilkOld.271b03bf2b50497dcc66.webp"
+                          src={Milk}
                           crossOrigin="anonymous"
                           alt="/static/media/MilkOld.271b03bf2b50497dcc66.webp"
                           className="sc-gEvEer ceiwSH"
                         />
                         <img
-                          src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                          src={Ada}
                           crossOrigin="anonymous"
                           alt="/static/media/ada.ae3e320f25e324286ae2.webp"
                           className="sc-gEvEer cblopV"
@@ -347,13 +355,13 @@ const Migration = () => {
                       className="sc-cWSHoV ilCiXW"
                     >
                       <img
-                        src="/static/media/Milk.dcbf140ce23703c22293.webp"
+                        src={MilkBowl}
                         crossOrigin="anonymous"
                         alt="/static/media/Milk.dcbf140ce23703c22293.webp"
                         className="sc-gEvEer gBTSOX"
                       />
                       <img
-                        src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                        src={Ada}
                         crossOrigin="anonymous"
                         alt="/static/media/ada.ae3e320f25e324286ae2.webp"
                         className="sc-gEvEer gtBJvN"

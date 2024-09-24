@@ -16,7 +16,7 @@ const AssetPopup = (props) => {
   console.log(filteredAssets);
   return (
     <Dialog>
-      <DialogTrigger className="w-1/2">
+      <DialogTrigger className="w-1/2 ">
         <div className="sc-gEvEer sc-eqUAAy  ">
           {topInputValue ? (
             <button
@@ -61,7 +61,7 @@ const AssetPopup = (props) => {
           ) : (
             <button
               type="button"
-              className="sc-krNlru p-1 gzaCtt"
+              className="sc-krNlru font-inter font-semibold  gzaCtt"
               style={{ cursor: "pointer" }}
             >
               <div width="16px" className="sc-gEvEer jDNYAs">
@@ -102,7 +102,7 @@ const AssetPopup = (props) => {
         </div>
       </DialogTrigger>
       <DialogContent className="p-0">
-        <div className="w-full">
+        <div className="w-full font-gilroy">
           <div className="w-full flex gap-4 flex-col">
             <div className="sc-gEvEer p-4 border-b border-b-gray-300/40 flex py-6 items-center justify-between w-full ">
               <h2 className="sc-gEvEer ihQBzN">Select a token</h2>
@@ -228,12 +228,15 @@ const AssetPopup = (props) => {
                         src={Ada}
                         crossOrigin="anonymous"
                         alt=""
-                        className="sc-gEvEer jmJMSZ"
+                        className=" h-8 w-8 rounded-full object-cover "
                       />
-                      <div className="sc-gEvEer flex flex-col gap-1 sc-eqUAAy ecOcir fgprtA">
+                      <div className="sc-gEvEer flex flex-col sc-eqUAAy ecOcir fgprtA">
                         <div className="sc-gEvEer flex items-center gap-2 sc-eqUAAy kDTRUy fgprtA">
-                          <p fontSize="16.5px" className="sc-gEvEer jIQBMP">
-                            {state.assets && state.assets[0].name}
+                          <p
+                            fontSize="16.5px"
+                            className="sc-gEvEer font-inter font-semibold jIQBMP"
+                          >
+                            {state.assets ? state.assets[0].name : "ADA"}
                           </p>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -282,13 +285,13 @@ const AssetPopup = (props) => {
                               src={`data:image/png;base64,${asset.icon}`}
                               alt={"img"}
                               crossOrigin="anonymous"
-                              className="sc-gEvEer jmJMSZ"
+                              className="sc-gEvEer jmJMSZ h-8 w-8 rounded-full"
                             />
-                            <div className="sc-gEvEer flex flex-col gap-1 sc-eqUAAy ecOcir fgprtA">
+                            <div className="sc-gEvEer flex flex-col sc-eqUAAy ecOcir fgprtA">
                               <div className="sc-gEvEer flex items-center gap-2 sc-eqUAAy kDTRUy fgprtA">
                                 <p
                                   fontSize="16.5px"
-                                  className="sc-gEvEer jIQBMP"
+                                  className="sc-gEvEer font-inter font-semibold jIQBMP"
                                 >
                                   {asset.name}
                                 </p>
@@ -350,13 +353,13 @@ const AssetPopup = (props) => {
                                 src={asset.info.image}
                                 crossOrigin="anonymous"
                                 alt=""
-                                className="sc-gEvEer jmJMSZ"
+                                className="sc-gEvEer jmJMSZ h-8 w-8 rounded-full"
                               />
-                              <div className="sc-gEvEer flex flex-col gap-1 sc-eqUAAy ecOcir fgprtA">
+                              <div className="sc-gEvEer flex flex-col sc-eqUAAy ecOcir fgprtA">
                                 <div className="sc-gEvEer flex items-center gap-2 sc-eqUAAy kDTRUy fgprtA">
                                   <p
                                     fontSize="16.5px"
-                                    className="sc-gEvEer jIQBMP"
+                                    className="sc-gEvEer font-inter font-semibold jIQBMP"
                                   >
                                     {asset.info.symbol}
                                   </p>

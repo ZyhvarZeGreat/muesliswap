@@ -17,54 +17,52 @@ const AssetPopup = ({ totalAssets, setBottomInputValue, bottomInputValue }) => {
   console.log(filteredAssets);
   return (
     <Dialog>
-      <DialogTrigger className="w-1/2">
-        <div className="sc-gEvEer sc-eqUAAy bPnuvt fgprtA">
+      <DialogTrigger className="w-1/2 ">
+        <div className="sc-gEvEer font-inter sc-eqUAAy  ">
           {bottomInputValue ? (
-            <div className="sc-gEvEer w-full sc-eqUAAy bPnuvt fgprtA">
-              <button
-                type="button"
-                className="sc-krNlru gzaCtt"
-                style={{ cursor: "pointer" }}
-              >
-                <div width="16px" className="sc-gEvEer jDNYAs">
-                  <svg
-                    viewBox="0 0 24 24"
-                    width="100%"
-                    height="100%"
-                    fill="var(--toastify-icon-color-error)"
-                  >
-                    <path d="M23.32 17.191L15.438 2.184C14.728.833 13.416 0 11.996 0c-1.42 0-2.733.833-3.443 2.184L.533 17.448a4.744 4.744 0 000 4.368C1.243 23.167 2.555 24 3.975 24h16.05C22.22 24 24 22.044 24 19.632c0-.904-.251-1.746-.68-2.44zm-9.622 1.46c0 1.033-.724 1.823-1.698 1.823s-1.698-.79-1.698-1.822v-.043c0-1.028.724-1.822 1.698-1.822s1.698.79 1.698 1.822v.043zm.039-12.285l-.84 8.06c-.057.581-.408.943-.897.943-.49 0-.84-.367-.896-.942l-.84-8.065c-.057-.624.25-1.095.779-1.095h1.91c.528.005.84.476.784 1.1z"></path>
-                  </svg>
-                </div>
-                <div
-                  className="LazyLoad is-visible"
-                  style={{ height: "26px", width: "26px" }}
+            <button
+              type="button"
+              className="sc-krNlru gzaCtt"
+              style={{ cursor: "pointer" }}
+            >
+              <div width="16px" className="sc-gEvEer jDNYAs">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="100%"
+                  height="100%"
+                  fill="var(--toastify-icon-color-error)"
                 >
-                  <img
-                    src={bottomInputValue.info.image}
-                    crossOrigin="anonymous"
-                    alt=""
-                    className="sc-gEvEer kxeTOB"
-                  />
-                </div>
-                <p fontSize="16px" className="sc-gEvEer p-1 ivXQsU">
-                  {bottomInputValue.info.symbol}
-                </p>
-                <div color="text" className="sc-gEvEer QQCIb">
-                  <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z"
-                      fill="currentColor"
-                      fillRule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-              </button>
-            </div>
+                  <path d="M23.32 17.191L15.438 2.184C14.728.833 13.416 0 11.996 0c-1.42 0-2.733.833-3.443 2.184L.533 17.448a4.744 4.744 0 000 4.368C1.243 23.167 2.555 24 3.975 24h16.05C22.22 24 24 22.044 24 19.632c0-.904-.251-1.746-.68-2.44zm-9.622 1.46c0 1.033-.724 1.823-1.698 1.823s-1.698-.79-1.698-1.822v-.043c0-1.028.724-1.822 1.698-1.822s1.698.79 1.698 1.822v.043zm.039-12.285l-.84 8.06c-.057.581-.408.943-.897.943-.49 0-.84-.367-.896-.942l-.84-8.065c-.057-.624.25-1.095.779-1.095h1.91c.528.005.84.476.784 1.1z"></path>
+                </svg>
+              </div>
+              <div
+                className="LazyLoad is-visible"
+                style={{ height: "26px", width: "26px" }}
+              >
+                <img
+                  src={bottomInputValue.info.image}
+                  crossOrigin="anonymous"
+                  alt=""
+                  className="sc-gEvEer kxeTOB"
+                />
+              </div>
+              <p className="sc-gEvEer font-inter p-1 ivXQsU">
+                {bottomInputValue.info.symbol}
+              </p>
+              <div color="text" className="sc-gEvEer QQCIb">
+                <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z"
+                    fill="currentColor"
+                    fillRule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+            </button>
           ) : (
             <button
               type="button"
-              className="sc-krNlru p-1 gzaCtt"
+              className="sc-krNlru  gzaCtt"
               style={{ cursor: "pointer" }}
             >
               <div width="16px" className="sc-gEvEer jDNYAs">
@@ -88,9 +86,7 @@ const AssetPopup = ({ totalAssets, setBottomInputValue, bottomInputValue }) => {
                   className="sc-gEvEer kxeTOB"
                 />
               </div>
-              <p fontSize="16px" className="sc-gEvEer p-1 ivXQsU">
-                MILK{" "}
-              </p>
+              <p className="sc-gEvEer p-1 ivXQsU">MILK </p>
               <div color="text" className="sc-gEvEer QQCIb">
                 <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -105,7 +101,7 @@ const AssetPopup = ({ totalAssets, setBottomInputValue, bottomInputValue }) => {
         </div>
       </DialogTrigger>
       <DialogContent className="p-0">
-        <div className="w-full">
+        <div className="w-full font-gilroy">
           <div className="w-full flex gap-4 flex-col">
             <div className="sc-gEvEer p-4 border-b border-b-gray-300/40 flex py-6 items-center justify-between w-full ">
               <h2 className="sc-gEvEer ihQBzN">Select a token</h2>
@@ -235,8 +231,11 @@ const AssetPopup = ({ totalAssets, setBottomInputValue, bottomInputValue }) => {
                       />
                       <div className="sc-gEvEer flex flex-col gap-1 sc-eqUAAy ecOcir fgprtA">
                         <div className="sc-gEvEer flex items-center gap-2 sc-eqUAAy kDTRUy fgprtA">
-                          <p fontSize="16.5px" className="sc-gEvEer jIQBMP">
-                            {state.assets && state.assets[0].name}
+                          <p
+                            fontSize="16.5px"
+                            className="sc-gEvEer font-inter font-semibold text-[#3c4555]  jIQBMP"
+                          >
+                            {state.assets ? state.assets[0].name : "Ada"}
                           </p>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -257,7 +256,7 @@ const AssetPopup = ({ totalAssets, setBottomInputValue, bottomInputValue }) => {
                         <p
                           fontSize="13px"
                           color="textSubtle"
-                          className="sc-gEvEer cLEGAT"
+                          className=" font-inter font-normal text-sm "
                         >
                           Cardano native token
                         </p>
@@ -280,18 +279,18 @@ const AssetPopup = ({ totalAssets, setBottomInputValue, bottomInputValue }) => {
                           type="button"
                           className="sc-lcIPJg hover:bg-slate-400/30 rounded-xl p-4 mt-4 flex items-center justify-between w-full hbvxMe"
                         >
-                          <div className="sc-gEvEer flex items-center gap-4 sc-eqUAAy jQCsrt fgprtA">
+                          <div className="sc-gEvEer flex items-center gap-2 sc-eqUAAy jQCsrt fgprtA">
                             <img
                               src={`data:image/png;base64,${asset.icon}`}
                               alt={"img"}
                               crossOrigin="anonymous"
                               className="sc-gEvEer jmJMSZ"
                             />
-                            <div className="sc-gEvEer flex flex-col gap-1 sc-eqUAAy ecOcir fgprtA">
-                              <div className="sc-gEvEer flex items-center gap-2 sc-eqUAAy kDTRUy fgprtA">
+                            <div className="sc-gEvEer flex flex-col sc-eqUAAy ecOcir fgprtA">
+                              <div className="sc-gEvEer flex items-center gap-1 sc-eqUAAy kDTRUy fgprtA">
                                 <p
-                                  fontSize="16.5px"
-                                  className="sc-gEvEer jIQBMP"
+                                  fontSize=""
+                                  className="sc-gEvEer text-lg font-inter font-semibold  jIQBMP"
                                 >
                                   {asset.name}
                                 </p>
@@ -314,7 +313,7 @@ const AssetPopup = ({ totalAssets, setBottomInputValue, bottomInputValue }) => {
                               <p
                                 fontSize="13px"
                                 color="textSubtle"
-                                className="sc-gEvEer cLEGAT"
+                                className=" font-inter text-[#3c4555] font-normal text-sm "
                               >
                                 {`${asset.unit
                                   .split(".")[0]
@@ -354,11 +353,11 @@ const AssetPopup = ({ totalAssets, setBottomInputValue, bottomInputValue }) => {
                                 alt=""
                                 className="sc-gEvEer jmJMSZ"
                               />
-                              <div className="sc-gEvEer flex flex-col gap-1 sc-eqUAAy ecOcir fgprtA">
+                              <div className="sc-gEvEer flex flex-col sc-eqUAAy ecOcir fgprtA">
                                 <div className="sc-gEvEer flex items-center gap-2 sc-eqUAAy kDTRUy fgprtA">
                                   <p
                                     fontSize="16.5px"
-                                    className="sc-gEvEer jIQBMP"
+                                    className="sc-gEvEer font-inter font-semibold jIQBMP"
                                   >
                                     {asset.info.symbol}
                                   </p>
@@ -381,7 +380,7 @@ const AssetPopup = ({ totalAssets, setBottomInputValue, bottomInputValue }) => {
                                 <p
                                   fontSize="13px"
                                   color="textSubtle"
-                                  className="sc-gEvEer cLEGAT"
+                                  className=" font-inter font-normal text-sm "
                                 >
                                   {`${asset.info.address.policyId.slice(
                                     0,

@@ -4,7 +4,7 @@ const Governance = () => {
   return (
     <main className="sc-kOPcWz hierkx">
       <div className="sc-iHGNWf hQvJpi">
-        <h2 className="sc-gEvEer cVDVVO">
+        <h2 className="m-0 min-w-0 mb-1 text-[#0c1629] font-semibold font-['Gilroy',sans-serif] text-[calc(12.4615px+1.53846vw)] leading-[1.12] tracking-[0px]">
           MuesliSwap Governance
           <span className="sc-gEvEer cOubBw">&nbsp;- Get Involved Now</span>
         </h2>
@@ -62,12 +62,12 @@ const Governance = () => {
                 improving MuesliSwap. Create an account now to participate and
                 help form Muesliswap to your liking!
               </p>
-              <div className="sc-gEvEer sc-eqUAAy Azlyy fgprtA">
+              <div className="sc-gEvEer sc-eqUAAy Azlyy gap-4 fgprtA">
                 <a
                   href="https://gov.muesliswap.com/signup"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="sc-gEvEer hhqOQT sc-gEvEer hhqOQT"
+                  className="sc-gEvEer flex items-center bg-[#5643ff] text-white px-4 h-12 rounded-xl font-semibold gap-2 shadow-[0_2px_0_0_rgb(33,18,218)]"
                 >
                   Register now
                   <svg
@@ -75,6 +75,7 @@ const Governance = () => {
                     height="18px"
                     viewBox="0 0 18 18"
                     xmlns="http://www.w3.org/2000/svg"
+                    // xmlns:xlink="http://www.w3.org/1999/xlink"
                   >
                     <title>Shape</title>
                     <g
@@ -113,7 +114,7 @@ const Governance = () => {
                   href="https://gov.muesliswap.com/top"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="sc-gEvEer bnTaAp sc-gEvEer bnTaAp"
+                  className="sc-gEvEer bnTaAp flex items-center gap-2 font-semibold text-[#5346ff]  sc-gEvEer bnTaAp"
                 >
                   Check out top ideas
                   <svg
@@ -148,33 +149,80 @@ const Governance = () => {
             </div>
           </div>
         </div>
-        <div className="sc-gEvEer sc-eqUAAy hvIPBg fgprtA">
-          <div id="delegate" className="sc-gEvEer sc-eqUAAy eVoNRf fgprtA">
-            <h2 width="100%" className="sc-gEvEer krWMZj">
+        <div className="sc-gEvEer sc-eqUAAy m-0 min-w-0 gap-10 flex flex-wrap-reverse justify-center fgprtA">
+          <div className="sc-gEvEer sc-eqUAAy m-0 min-w-0 rounded-3xl flex flex-col justify-between items-start p-[30px_30px_50px] max-w-[600px] bg-white fgprtA">
+            <h2
+              width="100%"
+              className="sc-gEvEer box-border m-0 mb-5 min-w-0 text-[#0c1629] font-semibold font-gilroy text-[calc(13.9487px+0.940171vw)] leading-[1.12] tracking-[-0.33px] text-center w-full"
+            >
+              Delegate Now
+            </h2>
+            <div className="box-border min-w-0 text-[#0c1629] font-gilroy font-semibold leading-6 text-[calc(14.7179px+0.17094vw)] tracking-normal text-center mx-5 my-3">
+              <span fontSize="24px" color="main" className="sc-gEvEer fGVfra">
+                1. &nbsp;
+              </span>
+              Appoint a delegation wallet address to represent you:
+            </div>
+            <div
+              width="100%"
+              className="m-0 min-w-0 rounded-2xl box-border justify-between items-center p-[6px_8px] max-h-[75px] bg-[#e5e9f1] w-full"
+            >
+              <input
+                type="text"
+                placeholder="addr1qtxy...emu8"
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck="false"
+                minLength="1"
+                maxLength="200"
+                className="bg-transparent border-none text-right text-lg w-full h-full py-2.5 px-0 text-[#0c1629]"
+                value=""
+              />
+            </div>
+            <button className="sc-gEvEer mt-2.5 ml-auto min-w-0 appearance-none inline-block text-center no-underline border-none text-base h-10 leading-6 font-gilroy font-semibold transition-all duration-250 rounded-xl overflow-hidden text-white bg-[#5346FF] shadow-[0_2px_0_0_#2112DA] px-2.5 py-1.25">
+              Delegate
+            </button>
+            <div className="box-border min-w-0 text-[#0c1629] font-gilroy font-semibold leading-6 text-[calc(14.7179px+0.17094vw)] tracking-normal text-center mx-5 my-3">
+              <span fontSize="24px" color="main" className="sc-gEvEer fGVfra">
+                2. &nbsp;
+              </span>
+              Vote with that delegation address!
+            </div>
+          </div>
+          <div
+            id="delegate"
+            className="sc-gEvEer sc-eqUAAy m-0 min-w-0 rounded-3xl flex flex-col justify-between items-start p-[30px_30px_50px] max-w-[600px] bg-white fgprtA"
+          >
+            <h2
+              width="100%"
+              className="sc-gEvEer box-border m-0 mb-5 min-w-0 text-[#0c1629] font-semibold font-gilroy text-[calc(13.9487px+0.940171vw)] leading-[1.12] tracking-[-0.33px] text-center w-full"
+            >
               Guide to Delegated Voting
             </h2>
-            <div width="100%" className="sc-gEvEer ghSxbf">
+            <div
+              width="100%"
+              className="sc-gEvEer m-0 mb-4 min-w-0 text-[#0c1629] font-gilroy font-semibold leading-6 text-[calc(14.7179px+0.17094vw)] tracking-normal text-center w-full
+            "
+            >
               Empower Your Wallets through Delegation!
             </div>
-            <div className="sc-gEvEer jVsTBr">
+            <div className="sc-gEvEer  m-0 min-w-0 text-[#0c1629] font-inter font-normal leading-normal text-[calc(12.7179px+0.17094vw)] tracking-[0px]">
               Choosing to delegate your votes from Wallet X to Wallet Y
-              essentially empowers Wallet Y to cast votes on Wallet X`&apos;`s
-              behalf. This mechanism enables hardware wallets to engage actively
-              in voting processes. Furthermore, you can amplify the voting
-              strength of multiple wallets by assigning their voting rights to
-              one single wallet. This means, rather than using each wallet
-              individually to cast votes, you can conveniently vote with just
-              one wallet that represents all of your wallets combined.
+              essentially empowers Wallet Y to cast votes on Wallet X's behalf.
+              This mechanism enables hardware wallets to engage actively in
+              voting processes. Furthermore, you can amplify the voting strength
+              of multiple wallets by assigning their voting rights to one single
+              wallet. This means, rather than using each wallet individually to
+              cast votes, you can conveniently vote with just one wallet that
+              represents all of your wallets combined.
             </div>
-            <div fontWeight="800" className="sc-gEvEer kSnxLv">
+            <div
+              fontWeight="800"
+              className="sc-gEvEer mt-5 min-w-0 text-[#0c1629] font-inter leading-normal text-[calc(12.7179px+0.17094vw)] tracking-[0px] font-extrabold"
+            >
               Harness the power of delegated voting, streamlining
               decision-making with the convenience of casting impactful votes
               from a single wallet!
-            </div>
-            <div width="100%" className="sc-gEvEer sc-eqUAAy jfSNFp fgprtA">
-              <button className="sc-gEvEer eWXwvT">
-                Connect wallet to start delegating
-              </button>
             </div>
           </div>
         </div>
