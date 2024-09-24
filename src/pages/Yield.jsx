@@ -1,5 +1,6 @@
 import EarnTab from "./components/EarnTab";
 import "./Yield.css";
+import Milk from "../assets/muesliswap.86e5affdd1cbde9ed769.webp";
 const Yield = () => {
   return (
     <main className="sc-kOPcWz hierkx">
@@ -241,7 +242,7 @@ const Yield = () => {
                     style={{ height: "38px", width: "38px" }}
                   >
                     <img
-                      src="/static/media/Milk.dcbf140ce23703c22293.webp"
+                      src={Milk}
                       crossOrigin="anonymous"
                       alt="/static/media/Milk.dcbf140ce23703c22293.webp"
                       className="sc-gEvEer fBgywl"

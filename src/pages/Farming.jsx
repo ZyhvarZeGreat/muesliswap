@@ -1,5 +1,6 @@
 import "./Farming.css";
 import EarnTab from "./components/EarnTab";
+import Ada from "../assets/ada.webp";
 const Farming = () => {
   return (
     <>
@@ -238,7 +239,7 @@ const Farming = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -361,7 +362,7 @@ const Farming = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -429,7 +430,7 @@ const Farming = () => {
                           style={{ height: "24px", width: "24px" }}
                         >
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer fFqlxh"
@@ -501,7 +502,7 @@ const Farming = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -607,7 +608,7 @@ const Farming = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -836,7 +837,7 @@ const Farming = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -959,7 +960,7 @@ const Farming = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -1065,7 +1066,7 @@ const Farming = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -1171,7 +1172,7 @@ const Farming = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
@@ -1277,7 +1278,7 @@ const Farming = () => {
                             className="sc-gEvEer ceiwSH"
                           />
                           <img
-                            src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                            src={Ada}
                             crossOrigin="anonymous"
                             alt=""
                             className="sc-gEvEer gUHNA-d"
