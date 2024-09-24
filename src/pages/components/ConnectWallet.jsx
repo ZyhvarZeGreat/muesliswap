@@ -138,8 +138,8 @@ const ConnectWallet = ({ setIsWalletState, walletState }) => {
           </button>
         </div>
       </DialogTrigger>
-      <DialogContent className="max-w-[412px]  p-0 ">
-        <DialogHeader className="   p-5 border-b border-[#e5e9f1]">
+      <DialogContent className="max-w-[412px]  rounded-lg p-0 ">
+        <DialogHeader className="  rounded-lg  text-sm lg:text-base p-5 border-b border-[#e5e9f1]">
           <div className="sc-gEvEer sc-eqUAAy flex justify-between items-center  fgprtA">
             <div className="sc-gEvEer ihQBzN">Connect your Wallet</div>
             <DialogClose>
@@ -206,7 +206,7 @@ const ConnectWallet = ({ setIsWalletState, walletState }) => {
             ))}
           </div>
         </div>
-        <div className=" py-3 border-t border-[#e5e9f1] text-center">
+        <div className=" py-3 border-t rounded-lg border-[#e5e9f1] text-center">
           <p className="text-sm text-gray-500">New to Cardano?</p>
           <a
             href="https://docs.muesliswap.com/cardano/cardano-wallets"
