@@ -1,15 +1,53 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import AssetPopup from "./components/AssetPopup";
+import BottomAssetPopup from "./components/BottomAssetPopup";
+import ConnectWallet from "./components/ConnectWallet";
+import img from "../assets/muesliswap.86e5affdd1cbde9ed769.webp";
 const Home = () => {
+  const [topInputValue, setTopInputValue] = useState(null);
+  const [bottomInputValue, setBottomInputValue] = useState(null);
+
+  const [totalAssets, setTotalAssets] = useState();
+
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    const getAllPossibleAssets = async () => {
+      try {
+        const response = await fetch("https://api.muesliswap.com/list", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+        });
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        // const result = data.sort((a, b) =>
+        //   a.info.symbol.localeCompare(b.info.symbol)
+        // );
+        setTotalAssets(data);
+        // return data.assets;
+        console.log(data);
+      } catch (error) {
+        console.error("Error fetching assts:", error);
+        return [];
+      }
+    };
+    getAllPossibleAssets();
+  }, []);
+  // console.log(totalAssets);
   return (
     <div>
       <div>
         <div className="Toastify"></div>
 
-        <div height="56" className="sc-gEvEer kvHQza"></div>
-        <main className="sc-kOPcWz hierkx">
-          <div className="sc-iHGNWf hQvJpi">
-            <div className="sc-gEvEer jAgWcu">
-              <div className="sc-gEvEer sc-eqUAAy eUTSiE fgprtA">
+        <div height="56" className="sc-gEvEer kvHQza hidden lg:flex "></div>
+        <main className="sc-kOPcWz mb-0 hierkx">
+          <div className="sc-iHGNWf mb-0 hQvJpi">
+            <div className="sc-gEvEer mb-0   gap-8 jAgWcu">
+              <div className="sc-gEvEer  sc-eqUAAy eUTSiE fgprtA">
                 <nav width="fit-content" className="sc-gEvEer bBbSyu">
                   <div className="sc-gEvEer MVEyt">
                     <p className="sc-gEvEer dTIZMK">1H</p>
@@ -29,7 +67,7 @@ const Home = () => {
                   <span className="sc-gEvEer fuLCfR"></span>
                 </nav>
               </div>
-              <div width="100%" className="sc-gEvEer sc-eqUAAy bugrHU fgprtA">
+              <div className="sc-gEvEer col-span-3 lg:col-span-1  sc-eqUAAy bugrHU fgprtA">
                 <div width="100%" className="sc-gEvEer sc-eqUAAy jiukso fgprtA">
                   <div
                     width="100%"
@@ -102,75 +140,17 @@ const Home = () => {
                     </button>
                   </div>
                   <div className="sc-gEvEer sc-eqUAAy eLudzR fgprtA">
-                    <div width="100%" className="sc-gEvEer fzYVaO">
-                      <div className="sc-gEvEer sc-eqUAAy gWGqxJ fgprtA">
+                    <div width="100%" className="sc-gEvEer w-full  fzYVaO">
+                      <div className="sc-gEvEer sc-eqUAAy gWGqxJ w-full fgprtA">
                         <p fontSize="12px" className="sc-gEvEer gkVEcg">
                           You pay
                         </p>
                       </div>
-                      <div className="sc-gEvEer sc-eqUAAy bPnuvt fgprtA">
-                        <button
-                          type="button"
-                          className="sc-krNlru gzaCtt"
-                          style={{ cursor: "pointer" }}
-                        >
-                          <div width="16px" className="sc-gEvEer jDNYAs">
-                            <svg
-                              viewBox="0 0 24 24"
-                              width="100%"
-                              height="100%"
-                              fill="var(--toastify-icon-color-error)"
-                            >
-                              <path d="M23.32 17.191L15.438 2.184C14.728.833 13.416 0 11.996 0c-1.42 0-2.733.833-3.443 2.184L.533 17.448a4.744 4.744 0 000 4.368C1.243 23.167 2.555 24 3.975 24h16.05C22.22 24 24 22.044 24 19.632c0-.904-.251-1.746-.68-2.44zm-9.622 1.46c0 1.033-.724 1.823-1.698 1.823s-1.698-.79-1.698-1.822v-.043c0-1.028.724-1.822 1.698-1.822s1.698.79 1.698 1.822v.043zm.039-12.285l-.84 8.06c-.057.581-.408.943-.897.943-.49 0-.84-.367-.896-.942l-.84-8.065c-.057-.624.25-1.095.779-1.095h1.91c.528.005.84.476.784 1.1z"></path>
-                            </svg>
-                          </div>
-                          <div
-                            className="LazyLoad is-visible"
-                            style={{ height: "26px", width: "26px" }}
-                          >
-                            <img
-                              src="/static/media/ada.ae3e320f25e324286ae2.webp"
-                              crossOrigin="anonymous"
-                              alt="https://static.muesliswap.com/images/tokens/ada.png"
-                              className="sc-gEvEer kxeTOB"
-                            />
-                          </div>
-                          <p fontSize="16px" className="sc-gEvEer ivXQsU">
-                            ADA
-                          </p>
-                          <div color="text" className="sc-gEvEer QQCIb">
-                            <svg
-                              width="10"
-                              height="6"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z"
-                                fill="currentColor"
-                                fillRule="evenodd"
-                              ></path>
-                            </svg>
-                          </div>
-                        </button>
-                        <div className="sc-gEvEer sc-eqUAAy bmYucd fgprtA">
-                          <input
-                            type="string"
-                            placeholder="0"
-                            inputMode="decimal"
-                            autoComplete="off"
-                            autoCorrect="off"
-                            spellCheck="false"
-                            minLength="1"
-                            maxLength="79"
-                            pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
-                            className="sc-fTFjTM dvGUNi"
-                            value=""
-                          />
-                          <span fontSize="12px" className="sc-gEvEer gINIKT">
-                            0 $
-                          </span>
-                        </div>
-                      </div>
+                      <AssetPopup
+                        topInputValue={topInputValue}
+                        totalAssets={totalAssets}
+                        setTopInputValue={setTopInputValue}
+                      />
                     </div>
                     <div
                       color="main"
@@ -191,72 +171,17 @@ const Home = () => {
                         ></path>
                       </svg>
                     </div>
-                    <div width="100%" className="sc-gEvEer fzYVaO">
-                      <div className="sc-gEvEer sc-eqUAAy gWGqxJ fgprtA">
+                    <div width="100%" className="sc-gEvEer w-full fzYVaO">
+                      <div className="sc-gEvEer sc-eqUAAy w-full gWGqxJ fgprtA">
                         <p fontSize="12px" className="sc-gEvEer gkVEcg">
                           You get
                         </p>
                       </div>
-                      <div className="sc-gEvEer sc-eqUAAy bPnuvt fgprtA">
-                        <button
-                          type="button"
-                          className="sc-krNlru gzaCtt"
-                          style={{ cursor: "pointer" }}
-                        >
-                          <div width="16px" className="sc-gEvEer jDNYAs">
-                            <svg
-                              viewBox="0 0 24 24"
-                              width="100%"
-                              height="100%"
-                              fill="var(--toastify-icon-color-error)"
-                            >
-                              <path d="M23.32 17.191L15.438 2.184C14.728.833 13.416 0 11.996 0c-1.42 0-2.733.833-3.443 2.184L.533 17.448a4.744 4.744 0 000 4.368C1.243 23.167 2.555 24 3.975 24h16.05C22.22 24 24 22.044 24 19.632c0-.904-.251-1.746-.68-2.44zm-9.622 1.46c0 1.033-.724 1.823-1.698 1.823s-1.698-.79-1.698-1.822v-.043c0-1.028.724-1.822 1.698-1.822s1.698.79 1.698 1.822v.043zm.039-12.285l-.84 8.06c-.057.581-.408.943-.897.943-.49 0-.84-.367-.896-.942l-.84-8.065c-.057-.624.25-1.095.779-1.095h1.91c.528.005.84.476.784 1.1z"></path>
-                            </svg>
-                          </div>
-                          <div
-                            className="LazyLoad is-visible"
-                            style={{ height: "26px", width: "26px" }}
-                          >
-                            <img
-                              src="https://tokens.muesliswap.com/static/img/tokens/afbe91c0b44b3040e360057bf8354ead8c49c4979ae6ab7c4fbdc9eb.4d494c4b7632_scaled_100.webp"
-                              crossOrigin="anonymous"
-                              alt="https://tokens.muesliswap.com/static/img/tokens/afbe91c0b44b3040e360057bf8354ead8c49c4979ae6ab7c4fbdc9eb.4d494c4b7632_scaled_100.webp"
-                              className="sc-gEvEer kxeTOB"
-                            />
-                          </div>
-                          <p fontSize="16px" className="sc-gEvEer ivXQsU">
-                            MILK
-                          </p>
-                          <div color="text" className="sc-gEvEer QQCIb">
-                            <svg
-                              width="10"
-                              height="6"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z"
-                                fill="currentColor"
-                                fillRule="evenodd"
-                              ></path>
-                            </svg>
-                          </div>
-                        </button>
-                        <div className="sc-gEvEer sc-eqUAAy bmYucd fgprtA">
-                          <input
-                            type="string"
-                            placeholder="0"
-                            inputMode="decimal"
-                            autoComplete="off"
-                            autoCorrect="off"
-                            spellCheck="false"
-                            minLength="1"
-                            maxLength="79"
-                            pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
-                            className="sc-fTFjTM dvGUNi"
-                            value=""
-                          />
-                        </div>
-                      </div>
+                      <BottomAssetPopup
+                        setBottomInputValue={setBottomInputValue}
+                        bottomInputValue={bottomInputValue}
+                        totalAssets={totalAssets}
+                      />
                     </div>
                     <div
                       display="none"
@@ -405,10 +330,10 @@ const Home = () => {
                           <button
                             type="button"
                             disabled=""
-                            className="sc-krNlru gzaCtt"
+                            className="sc-krNlru p-2 gzaCtt"
                             style={{ cursor: "pointer" }}
                           >
-                            <div width="16px" className="sc-gEvEer jDNYAs">
+                            <div width="16px" className="sc-gEvEer  jDNYAs">
                               <svg
                                 viewBox="0 0 24 24"
                                 width="100%"
@@ -423,7 +348,7 @@ const Home = () => {
                               style={{ height: "26px", width: "26px" }}
                             >
                               <img
-                                src="/static/media/muesliswap.86e5affdd1cbde9ed769.webp"
+                                src={img}
                                 crossOrigin="anonymous"
                                 alt="/static/media/muesliswap.86e5affdd1cbde9ed769.webp"
                                 className="sc-gEvEer kxeTOB"
@@ -610,16 +535,14 @@ const Home = () => {
                       </span>
                     </div>
                   </div>
-                  <button
-                    title="Connect your wallet first to start trading"
-                    className="sc-gEvEer eWXwvT"
-                  >
-                    Connect wallet
-                  </button>
+                  <ConnectWallet />
                 </div>
-                <div className="sc-gEvEer sc-eqUAAy eFyWOq fgprtA">
+                <div className="sc-gEvEer flex flex-col items-center justify-center sc-eqUAAy eFyWOq fgprtA">
                   <div width="90%" className="sc-gEvEer gyzkDw"></div>
-                  <button width="98%" className="sc-gEvEer dkqKlv">
+                  <button
+                    width="98%"
+                    className="sc-gEvEer flex items-center justify-center dkqKlv"
+                  >
                     <svg
                       width="10"
                       height="6"
@@ -641,7 +564,7 @@ const Home = () => {
           </div>
         </main>
 
-        <div className="sc-gEvEer sc-eqUAAy fSNpul fgprtA"></div>
+        <div className="sc-gEvEer sc-eqUAAy hidden lg:block  fSNpul fgprtA"></div>
       </div>
     </div>
   );

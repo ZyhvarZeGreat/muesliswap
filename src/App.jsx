@@ -9,9 +9,10 @@ import Governance from "./pages/Governance";
 import Footer from "./pages/components/Footer";
 import Liquidity from "./pages/Liquidity";
 import Yield from "./pages/Yield";
+import "./App.css";
 function App() {
   return (
-    <>
+    <div className="font-gilroy">
       <Navbar />
       <div height="56" className="sc-gEvEer kvHQza"></div>
       <Routes>
@@ -24,9 +25,9 @@ function App() {
         <Route path="/earn/myield" element={<Yield />} />
         <Route path="/governance" element={<Governance />} />
       </Routes>
-      <div height="56" className="sc-gEvEer kvHQza"></div>
+      <div height="56" className="sc-gEvEer hidden lg:block kvHQza"></div>
       <Footer />
-    </>
+    </div>
   );
 }
 
