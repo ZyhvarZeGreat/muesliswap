@@ -46,32 +46,29 @@ const Dropdown = ({ disconnect }) => {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-[300px] p-2  mt-4 rounded-xl">
         <div className="w-full flex flex-col items-center  justify-center gap-0.5">
-          <DropdownMenuItem className="w-full">
+          <DropdownMenuItem className="w-full font-inter">
             <div className="sc-gEvEer sc-eqUAAy w-full  flex items-center justify-between  fgprtA">
               <div className="sc-gEvEer kpVmdW">Connected with</div>
-              <div className="sc-gEvEer sc-eqUAAy iqGkHt fgprtA">
+              <div className="sc-gEvEer sc-eqUAAy iqGkHt fgprtA gap-1">
                 <div className="sc-gEvEer sc-eqUAAy iRguQF fgprtA">
-                  <svg
-                    viewBox="0 0 500 500"
-                    width="25px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="25px"
-                    alt="Nami Wallet-icon"
-                    className="sc-gEvEer hAepJE"
-                  >
-                    <g fill="#349ea3">
-                      <path d="m130.77 110.64-8.29-8.51a16.86 16.86 0 0 1-14.23 15.36l8.49 7.91 304.54 283.91zm20.1 82.28v169.49a16.75 16.75 0 0 1 22.64-1.51V247.19L357 426.1h31.62zm213.75-39.15a16.85 16.85 0 0 1-11.72-4.71v114.71L172.76 84.87h-34.89l237.69 232.67V149.71a16.75 16.75 0 0 1-10.94 4.06z"></path>
-                      <path d="M105.68 73.9a26.95 26.95 0 1 0 26.93 27 27 27 0 0 0-26.93-27zm2.57 43.54a15.81 15.81 0 0 1-2.57.2 16.87 16.87 0 1 1 16.85-16.88v1.32a16.86 16.86 0 0 1-14.28 15.36zM364.62 110a26.95 26.95 0 0 0 0 53.88 26.45 26.45 0 0 0 10.94-2.33A26.93 26.93 0 0 0 364.62 110zm10.94 39.74a16.85 16.85 0 1 1 5.91-12.81 16.84 16.84 0 0 1-5.91 12.78zM173.55 349.26A27 27 0 1 0 190 374.08a26.95 26.95 0 0 0-16.44-24.82zM163 390.93a16.85 16.85 0 1 1 16.86-16.85A16.85 16.85 0 0 1 163 390.93z"></path>
-                    </g>
-                  </svg>
+                  <img
+                    className=" rounded-full "
+                    src={window.cardano[state.walletName].icon}
+                    width={24}
+                    height={24}
+                    alt={window.cardano[state.walletName].icon}
+                  />
                 </div>
-                <div style={{ fontWeight: 500 }} className="sc-gEvEer cFqvxQ">
-                  Nami Wallet
+                <div
+                  style={{ fontWeight: 500 }}
+                  className="sc-gEvEer capitalize cFqvxQ"
+                >
+                  {state.walletName}
                 </div>
               </div>
             </div>
           </DropdownMenuItem>
-          <DropdownMenuItem className="w-full">
+          <DropdownMenuItem className="w-full font-inter">
             <div className="sc-gEvEer sc-eqUAAy w-full flex items-center justify-between   fgprtA">
               <div className="sc-gEvEer kpVmdW">Network</div>
               <div style={{ fontWeight: 500 }} className="sc-gEvEer cFqvxQ">
@@ -83,7 +80,7 @@ const Dropdown = ({ disconnect }) => {
               </div>
             </div>
           </DropdownMenuItem>
-          <DropdownMenuItem className="w-full">
+          <DropdownMenuItem className="w-full font-inter">
             <div className="sc-gEvEer sc-eqUAAy kgXXzQ  w-full items-center justify-between  fgprtA">
               <div className="sc-gEvEer kpVmdW">Balance</div>
               <div style={{ fontWeight: 500 }} className="sc-gEvEer cFqvxQ">
@@ -96,13 +93,13 @@ const Dropdown = ({ disconnect }) => {
         <DropdownMenuSeparator className="p-0 mt-0 my-1" />
         <DropdownMenuItem>
           {" "}
-          <div className="sc-gEvEer sc-eqUAAy bfNBmO w-full flex items-center justify-center fgprtA">
+          <div className="sc-gEvEer sc-eqUAAy font-gilroy font-semibold bfNBmO w-full flex items-center justify-center fgprtA">
             <button
               onClick={() => {
                 disconnect();
               }}
               style={{ width: "100%" }}
-              className="sc-gEvEer w-full flex items-center justify-center  py-3 text-white text-base  rounded-lg bg-[#5364ff] dDooPC"
+              className="sc-gEvEer w-full flex  items-center justify-center  py-3 text-white text-base  rounded-lg bg-[#5364ff] dDooPC"
             >
               <svg
                 width="24px"
@@ -138,7 +135,7 @@ const Dropdown = ({ disconnect }) => {
         </DropdownMenuItem>
         <DropdownMenuItem className="p-3">
           <a
-            className="sc-gEvEer fRAMSJ text-base font-semibold text-[#5364ff] flex w-full items-center justify-center gap-2 "
+            className="sc-gEvEer fRAMSJ font-gilroy  text-base font-semibold text-[#5364ff] flex w-full items-center justify-center gap-2 "
             href="https://docs.muesliswap.com/cardano/cardano-wallets#4.-disconnecting"
             target="_blank"
             rel="noopener noreferrer"

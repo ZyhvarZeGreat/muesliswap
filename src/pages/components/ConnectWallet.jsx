@@ -326,8 +326,8 @@ const ConnectWallet = (props) => {
             </DialogClose>
           </div>
         </DialogHeader>
-        <div className="px-5  ">
-          <p className="text-sm text-gray-500 mb-4">
+        <div className="px-5 font-inter  ">
+          <p className="text-sm text-gray-500 mb-2">
             By connecting your wallet, you agree to our{" "}
             <a href="/terms" className="text-blue-500 hover:underline">
               Terms of Service
@@ -379,7 +379,7 @@ const ConnectWallet = (props) => {
             ))}
           </div>
         </div>
-        <div className=" py-3 border-t rounded-lg border-[#e5e9f1] text-center">
+        <div className=" py-3 border-t rounded-lg font-inter border-[#e5e9f1] text-center">
           <p className="text-sm text-gray-500">New to Cardano?</p>
           <a
             href="https://docs.muesliswap.com/cardano/cardano-wallets"

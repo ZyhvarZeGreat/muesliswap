@@ -1,6 +1,7 @@
 import EarnTab from "./components/EarnTab";
 import "./Liquidity.css";
 import Ada from "../assets/ada.webp";
+import { Link } from "react-router-dom";
 const Liquidity = () => {
   return (
     <main className="sc-kOPcWz hierkx">
@@ -20,7 +21,7 @@ const Liquidity = () => {
               height="18px"
               viewBox="0 0 18 18"
               xmlns="http://www.w3.org/2000/svg"
-              // The 'xmlns:xlink' attribute is not needed and should be removed.
+            // The 'xmlns:xlink' attribute is not needed and should be removed.
             >
               <title>Shape</title>
               <g
@@ -60,26 +61,17 @@ const Liquidity = () => {
                 fees.
               </div>
             </div>
-            <a
-              className="sc-gEvEer gpcgAQ"
-              style={{ padding: "10px 16px 10px 12px", marginTop: "24px" }}
-              href="/earn/liquidity/add"
+
+            <Link
+              className="sc-gEvEer flex h-6 mt-12 px-4  py-6 items-center rounded-xl text-white font-semibold bg-[#5346ff]"
+              // style={{ padding: "10px 16px 10px 12px", marginTop: "24px" }}
+              to="/earn/liquidity/add"
             >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                style={{ margin: "0px 8px 0px 0px", color: "white" }}
-              >
-                <path
-                  d="M12 4c.55 0 1 .51 1 1.14V11h6a1 1 0 0 1 0 2h-6v5.86c0 .63-.45 1.14-1 1.14s-1-.51-1-1.14V13H5a1 1 0 0 1 0-2h6V5.14c0-.63.45-1.14 1-1.14Z"
-                  fill="currentColor"
-                  fillRule="evenodd"
-                ></path>
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{ margin: "0px 8px 0px 0px", color: "white" }}>
+                <path d="M12 4c.55 0 1 .51 1 1.14V11h6a1 1 0 0 1 0 2h-6v5.86c0 .63-.45 1.14-1 1.14s-1-.51-1-1.14V13H5a1 1 0 0 1 0-2h6V5.14c0-.63.45-1.14 1-1.14Z" fill="currentColor" fillRule="evenodd" />
               </svg>
-              Add Liquidity
-            </a>
+              Add Liqudity
+            </Link>
           </div>
           <div width="100%" className="sc-gEvEer fOzfof">
             <div className="sc-gEvEer sc-eqUAAy fiUlZI fgprtA">

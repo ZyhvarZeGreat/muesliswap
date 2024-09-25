@@ -49,7 +49,7 @@ const EarnTab = () => {
           </button>
         </li>
       </ul>
-      <div className="sc-gEvEer fekvdd"></div>
+      <div className="sc-gEvEer    fekvdd"></div>
       <div
         id="selector-tab-underline-reference-1727008588833"
         className="sc-gEvEer xgTHf"

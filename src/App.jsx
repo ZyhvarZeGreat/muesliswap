@@ -9,6 +9,9 @@ import Governance from "./pages/Governance";
 import Footer from "./pages/components/Footer";
 import Liquidity from "./pages/Liquidity";
 import Yield from "./pages/Yield";
+import AddLiquidity from "./pages/AddLiquidity";
+import Watchlist from "./pages/Watchlist";
+import Expert from "./pages/Expert";
 import "./App.css";
 function App() {
   return (
@@ -21,7 +24,11 @@ function App() {
         <Route path="/earn/staking" element={<Staking />} />
         <Route path="/token-migration" element={<Migration />} />
         <Route path="/earn/farming" element={<Farming />} />
+        <Route path="/watchlist" element={<Watchlist />} />
+
         <Route path="/earn/liquidity" element={<Liquidity />} />
+        <Route path="/expert" element={<Expert />} />
+        <Route path="/earn/liquidity/add" element={<AddLiquidity />} />
         <Route path="/earn/myield" element={<Yield />} />
         <Route path="/governance" element={<Governance />} />
       </Routes>

@@ -178,15 +178,8 @@ const AssetPopup = (props) => {
                 width="100%"
                 className="sc-gEvEer flex items-center gap-2 sc-eqUAAy hqatpm fgprtA"
               >
-                <label
-                  aria-label="Toggle show only verified"
-                  className="sc-bmzYkS cgGqnT"
-                >
-                  <input
-                    type="checkbox"
-                    className="sc-eeDRCY fotkZP"
-                    checked=""
-                  />
+                <label className="sc-bmzYkS iWLcNb">
+                  <input type="checkbox" className="sc-eeDRCY fotkZP" />
                   <span className="sc-koXPp kAqvkZ"></span>
                 </label>
                 <div className="sc-gEvEer kpVmdW">Only verified</div>
