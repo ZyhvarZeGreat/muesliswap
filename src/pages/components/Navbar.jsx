@@ -377,8 +377,8 @@ const Navbar = () => {
             <ConnectWallet />
           )}
           <MobileNav />
-          <div className="sc-gEvEer hidden lg:block eiqrtu">
-            <button className="sc-dcJsrY cWNorh">
+          <div className="sc-gEvEer hidden w-48 border rounded-xl lg:flex ">
+            <button className="flex justify-center items-center bg-transparent rounded-xl p-2.5 border border-gray-200 text-gray-900 font-medium text-sm">
               <span style={{ paddingRight: "16px" }}>USD ($)</span>
               <div className="sc-aXZVg jrzA-dM">
                 <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
@@ -483,7 +483,7 @@ const Navbar = () => {
           </div>
           <label
             aria-label="theme switcher"
-            className="sc-fUnMCh hidden lg:block hJhxto"
+            className="sc-fUnMCh hidden lg:flex items-center justify-center p-1 m-2 rounded-2xl box-border cursor-pointer relative bg-[#e5e9f1]"
           >
             <input type="checkbox" className="sc-ikkxIA gDzmSa" />
             <div className="sc-dAbbOL fAtBHn"></div>
@@ -493,6 +493,7 @@ const Navbar = () => {
                 viewBox="0 0 20 20"
                 height="18px"
                 width="18px"
+                color="#5364ff"
                 className="sc-gEvEer dHEfzU"
               >
                 <path

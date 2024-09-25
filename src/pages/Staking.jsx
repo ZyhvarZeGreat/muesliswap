@@ -1,5 +1,6 @@
 import EarnTab from "./components/EarnTab";
 import "./Staking.css";
+import Milk from "../assets/afbe91c0b44b3040e360057bf8354ead8c49c4979ae6ab7c4fbdc9eb.4d494c4b7632_scaled_100.webp";
 const Staking = () => {
   return (
     <main className="sc-kOPcWz hierkx">
@@ -56,7 +57,6 @@ const Staking = () => {
                     maxLength="79"
                     pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
                     className="sc-gEvEer dmPgbw"
-                    value="0"
                   />
                   <div className="sc-gEvEer sc-eqUAAy hpsLIh fgprtA">
                     <div
@@ -170,7 +170,7 @@ const Staking = () => {
                     style={{ height: "32px", width: "32px" }}
                   >
                     <img
-                      src="/static/media/Milk.dcbf140ce23703c22293.webp"
+                      src={Milk}
                       crossOrigin="anonymous"
                       alt="/static/media/Milk.dcbf140ce23703c22293.webp"
                       className="sc-gEvEer jmJMSZ"
