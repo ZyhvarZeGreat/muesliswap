@@ -1,5 +1,6 @@
 import React from "react";
 import "./Expert.css";
+import Ada from '../assets/ada.webp'
 const Expert = () => {
   return (
     <main className="sc-kOPcWz hierkx">
@@ -19,7 +20,7 @@ const Expert = () => {
                       className="sc-gEvEer hIxjBf"
                     />
                     <img
-                      src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                      src={Ada}
                       alt="https://static.muesliswap.com/images/tokens/ada.png"
                       className="sc-gEvEer gEsZMt"
                     />
@@ -107,7 +108,7 @@ const Expert = () => {
               href="https://cardanoscan.io/token/afbe91c0b44b3040e360057bf8354ead8c49c4979ae6ab7c4fbdc9eb.4d494c4b7632"
               target="_blank"
               rel="noopener noreferrer"
-              className="sc-gEvEer ciRmAg"
+              className="sc-gEvEer flex gap-1 items-center ciRmAg"
             >
               View on Cardanoscan
               <svg
@@ -439,7 +440,7 @@ const Expert = () => {
                         style={{ height: "26px", width: "26px" }}
                       >
                         <img
-                          src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                          src={Ada}
                           alt="https://static.muesliswap.com/images/tokens/ada.png"
                           className="sc-gEvEer kxeTOB"
                         />

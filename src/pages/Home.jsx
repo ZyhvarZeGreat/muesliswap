@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import AssetPopup from "./components/AssetPopup";
 import BottomAssetPopup from "./components/BottomAssetPopup";
 import ConnectWallet from "./components/ConnectWallet";
 import img from "../assets/muesliswap.86e5affdd1cbde9ed769.webp";
 import useStore from "./store/store";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
   const [topInputValue, setTopInputValue] = useState(null);
   const [bottomInputValue, setBottomInputValue] = useState(null);
@@ -11,33 +12,35 @@ const Home = () => {
   const [totalAssets, setTotalAssets] = useState();
   const [walletBalance, setWalletBalance] = useState(null);
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    const getAllPossibleAssets = async () => {
-      try {
-        const response = await fetch("/api/list", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          },
-        });
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        // const result = data.sort((a, b) =>
-        //   a.info.symbol.localeCompare(b.info.symbol)
-        // );
-        setTotalAssets(data);
-        // return data.assets;
-        console.log(data);
-      } catch (error) {
-        console.error("Error fetching assts:", error);
-        return [];
+  const [buyValue, setBuyValue] = useState("")
+  const [sellValue, setSellValue] = useState("")
+  const navigate = useNavigate()
+  console.log(topInputValue)
+  const getAllPossibleAssets = useCallback(async () => {
+    try {
+      const response = await fetch("https://api.muesliswap.com/list", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      });
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
       }
-    };
+      const data = await response.json();
+      setTotalAssets(data);
+      console.log(data);
+    } catch (error) {
+      console.error("Error fetching assets:", error);
+      return [];
+    }
+  }, []);
+
+  useEffect(() => {
     getAllPossibleAssets();
-  }, [state.assets, topInputValue, bottomInputValue, walletBalance]);
+  }, [getAllPossibleAssets]);
+
   // console.log(totalAssets);
   return (
     <div>
@@ -158,22 +161,31 @@ const Home = () => {
                                 fontWeight="500"
                                 className="sc-gEvEer p-0 dsiPeK"
                               >
-                                {Number(state.balance)}
+                                {topInputValue && Number(topInputValue.quantity) / 1000000}
                               </span>
                             </p>
                             <button
+                              onClick={() => {
+                                topInputValue && setBuyValue((Number((topInputValue.quantity) / 1000000) * 0.1).toFixed(2))
+                              }}
                               color="main"
                               className="sc-gEvEer bg-[#dfddff] text-[#5346ff] rounded-md  h-[18px] w-[35.02px] jYQNMQ"
                             >
                               1%
                             </button>
                             <button
+                              onClick={() => {
+                                topInputValue && setBuyValue((Number((topInputValue.quantity) / 1000000) * 0.75).toFixed(2))
+                              }}
                               color="main"
                               className="sc-gEvEer bg-[#dfddff] text-[#5346ff] rounded-md  h-[18px] w-[35.02px] jYQNMQ"
                             >
                               75%
                             </button>
                             <button
+                              onClick={() => {
+                                topInputValue && setBuyValue((Number(topInputValue.quantity) / 1000000).toFixed(2))
+                              }}
                               color="main"
                               className="sc-gEvEer bg-[#dfddff] text-[#5346ff] rounded-md  h-[18px] w-[35.02px] jYQNMQ"
                             >
@@ -201,6 +213,7 @@ const Home = () => {
                             maxLength="79"
                             pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
                             className="sc-fTFjTM dvGUNi"
+                            value={buyValue}
                           />
                           <span fontSize="12px" className="sc-gEvEer gINIKT">
                             0 $
@@ -232,11 +245,55 @@ const Home = () => {
                         ></path>
                       </svg>
                     </div>
-                    <div width="100%" className="sc-gEvEer w-full fzYVaO">
-                      <div className="sc-gEvEer sc-eqUAAy w-full gWGqxJ fgprtA">
+                    <div width="100%" className="sc-gEvEer  w-full mt-4  fzYVaO">
+                      <div className="sc-gEvEer sc-eqUAAy gWGqxJ w-full fgprtA">
                         <p fontSize="12px" className="sc-gEvEer gkVEcg">
                           You get
                         </p>
+                        {state.isWalletConnected && (
+                          <div className="sc-gEvEer sc-eqUAAy text-sm items-center flex gap-2 dtTpup fgprtA">
+                            <p
+                              fontSize="12px"
+                              className="sc-gEvEer  mt-[0.7px]  hCjJOA"
+                            >
+                              Balance:{" "}
+                              <span
+                                fontSize="12px"
+                                fontWeight="500"
+                                className="sc-gEvEer p-0 dsiPeK"
+                              >
+                                {bottomInputValue && Number(bottomInputValue.quantity) / 1000000}
+                              </span>
+                            </p>
+                            <button
+                              onClick={() => {
+                                bottomInputValue && setSellValue(Number(((bottomInputValue.quantity) / 1000000) * 0.1).toFixed(2))
+                              }}
+                              color="main"
+                              className="sc-gEvEer bg-[#dfddff] text-[#5346ff] rounded-md  h-[18px] w-[35.02px] jYQNMQ"
+                            >
+                              1%
+                            </button>
+                            <button
+                              onClick={() => {
+                                bottomInputValue && setSellValue(Number(((bottomInputValue.quantity) / 1000000) * 0.75).toFixed(2))
+                              }}
+                              color="main"
+                              className="sc-gEvEer bg-[#dfddff] text-[#5346ff] rounded-md  h-[18px] w-[35.02px] jYQNMQ"
+                            >
+                              75%
+                            </button>
+                            <button
+                              onClick={() => {
+                                bottomInputValue && setSellValue(Number((bottomInputValue.quantity) / 1000000).toFixed(2))
+                              }}
+                              color="main"
+                              className="sc-gEvEer bg-[#dfddff] text-[#5346ff] rounded-md  h-[18px] w-[35.02px] jYQNMQ"
+                            >
+                              MAX
+                            </button>
+                          </div>
+                        )}
                       </div>
                       <div className="w-full bPnuvt flex">
                         <BottomAssetPopup
@@ -252,11 +309,13 @@ const Home = () => {
                             inputMode="decimal"
                             autoComplete="off"
                             autoCorrect="off"
+
                             spellCheck="false"
                             minLength="1"
                             maxLength="79"
                             pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
                             className="sc-fTFjTM dvGUNi"
+                            value={sellValue}
                           />
                           <span fontSize="12px" className="sc-gEvEer gINIKT">
                             0 $
@@ -616,6 +675,7 @@ const Home = () => {
                     </div>
                   </div>
                   <ConnectWallet
+                    // width='full'
                     walletBalance={walletBalance}
                     setWalletBalance={setWalletBalance}
                   />
@@ -623,6 +683,9 @@ const Home = () => {
                 <div className="sc-gEvEer flex flex-col items-center justify-center sc-eqUAAy eFyWOq fgprtA">
                   <div width="90%" className="sc-gEvEer gyzkDw"></div>
                   <button
+                    onClick={() => {
+                      navigate('/expert')
+                    }}
                     width="98%"
                     className="sc-gEvEer flex items-center justify-center dkqKlv"
                   >

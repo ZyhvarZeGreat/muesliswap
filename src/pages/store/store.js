@@ -9,6 +9,8 @@ const useStore = create((set) => ({
         isWalletConnected: false,
         walletName: "",
         assets: null,
+        topInputValue: null,
+        bottomInputValue: null
     },
     setState: (newState) => set((state) => ({ ...state, ...newState })),
 }));
