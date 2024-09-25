@@ -4,6 +4,7 @@ import ConnectWallet from "./ConnectWallet";
 import Dropdown from "./Dropdown";
 import MobileLogo from "../../assets/muesliswap.86e5affdd1cbde9ed769.webp";
 import MobileNav from "./MobileNav";
+import MilkBowl from "../../assets/afbe91c0b44b3040e360057bf8354ead8c49c4979ae6ab7c4fbdc9eb.4d494c4b7632_scaled_100.webp";
 import useStore from "../store/store";
 const Navbar = () => {
   const setState = useStore((state) => state.setState);
@@ -370,14 +371,27 @@ const Navbar = () => {
             </div>
           </div>
         </nav>
-        <div className="sc-gEvEer sc-eqUAAy eNyVQd fgprtA">
+
+        <div className="sc-gEvEer sc-eqUAAy flex gap-2 eNyVQd fgprtA">
+          {state.isWalletConnected && (
+            <div className="flex justify-center py-3  items-center transition-all duration-400 no-underline border border-[#e5e9f1] rounded-xl px-2.5 gap-2">
+              <img
+                src={MilkBowl}
+                crossOrigin="anonymous"
+                alt="Milk token image"
+                className="sc-gEvEer h-6 w-6 fJLtsk"
+              />
+              <div className="sc-gEvEer iARsrA">0</div>
+            </div>
+          )}
           {state.isWalletConnected === true ? (
             <Dropdown disconnect={disconnectWallet} />
           ) : (
             <ConnectWallet />
           )}
           <MobileNav />
-          <div className="sc-gEvEer hidden w-48 border rounded-xl lg:flex ">
+
+          <div className="sc-gEvEer hidden  border rounded-xl lg:flex ">
             <button className="flex justify-center items-center bg-transparent rounded-xl p-2.5 border border-gray-200 text-gray-900 font-medium text-sm">
               <span style={{ paddingRight: "16px" }}>USD ($)</span>
               <div className="sc-aXZVg jrzA-dM">
