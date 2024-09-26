@@ -30,6 +30,7 @@ const Liquidity = () => {
   }, [getLiquidityPools]);
 
   console.log(liquidityPools)
+  
   return (
     <main className="sc-kOPcWz hierkx">
       <div className="sc-iHGNWf hQvJpi">
@@ -968,16 +969,16 @@ const Liquidity = () => {
                       </div>
                     </td>
                     <td role="cell" className="sc-gEvEer faiYBU">
-                      <div className="sc-gEvEer jVsTBr">{(Number(asset.lpToken.amount)/1000000).toLocaleString()}₳</div>
+                      <div className="sc-gEvEer jVsTBr">{(Number(asset.lpToken.amount)/1000000).toFixed(1).toLocaleString()}₳</div>
                       <p className="sc-gEvEer jLfEph">~{((Number(asset.lpToken.amount)/1000000)*0.3).toFixed(1).toLocaleString() } $</p>
                     </td>
                     <td role="cell" className="sc-gEvEer faiYBU">
-                      <div className="sc-gEvEer jVsTBr">4,795 ₳</div>
-                      <p className="sc-gEvEer jLfEph">~1,690 $</p>
+                      <div className="sc-gEvEer jVsTBr">{(Number(asset.volume24h)).toFixed().toLocaleString()} ₳</div>
+                      <p className="sc-gEvEer jLfEph">~{(Number(asset.volume24h) * 0.3).toFixed().toLocaleString()} $</p>
                     </td>
                     <td role="cell" className="sc-gEvEer faiYBU">
                       <div color="text" className="sc-gEvEer VQoKn">
-                        1.18 %
+                        {asset.liquidityApy.toFixed(1)} %
                       </div>
                     </td>
                     <td role="cell" className="sc-gEvEer faiYBU">
