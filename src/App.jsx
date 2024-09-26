@@ -25,7 +25,6 @@ function App() {
         <Route path="/token-migration" element={<Migration />} />
         <Route path="/earn/farming" element={<Farming />} />
         <Route path="/watchlist" element={<Watchlist />} />
-
         <Route path="/earn/liquidity" element={<Liquidity />} />
         <Route path="/expert" element={<Expert />} />
         <Route path="/earn/liquidity/add" element={<AddLiquidity />} />

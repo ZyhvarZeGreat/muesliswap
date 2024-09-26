@@ -397,13 +397,13 @@ const Markets = () => {
                         style={{ height: "20px", width: "20px" }}
                       >
                         <img
-                          src="/static/media/ada.ae3e320f25e324286ae2.webp"
+                          src={img}
                           crossOrigin="anonymous"
                           alt="/static/media/ada.ae3e320f25e324286ae2.webp"
                           className="sc-gEvEer iYGsOJ"
                         />
                       </div>
-                      <div font-weight="semiBold" className="sc-gEvEer fffdtI">
+                      <div className="sc-gEvEer font-semibold fffdtI">
                         ADA
                       </div>
                     </button>

@@ -71,7 +71,7 @@ const Home = () => {
                   <span className="sc-gEvEer fuLCfR"></span>
                 </nav>
               </div>
-              <div className="sc-gEvEer col-span-3  w-full   xl:w-auto lg:mx-auto  xl:col-span-1  sc-eqUAAy bugrHU fgprtA">
+              <div className="sc-gEvEer col-span-3  w-full   lg:w-auto xl:w-full  lg:mx-auto  xl:col-span-1  sc-eqUAAy bugrHU fgprtA">
                 <div width="100%" className="sc-gEvEer sc-eqUAAy jiukso fgprtA">
                   <div
                     width="100%"
