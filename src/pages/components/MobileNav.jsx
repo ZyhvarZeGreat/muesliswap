@@ -33,9 +33,9 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent
         side={"left"}
-        className=" top-0  font-gilroy font-semibold  font-normal p-4 left-0 w-[90%] flex flex-col gap-8 h-[98%] rounded-xl bottom-0 right-0 mx-auto self-center my-4 bg-white   "
+        className=" top-0  font-gilroy  font-normal p-4 left-0 w-full  flex flex-col gap-8 h-[98%] rounded-xl bottom-0 right-0 mx-auto self-center my-4 bg-white   "
       >
-        <SheetHeader className="w-full ">
+        <SheetHeader className="w-full">
           <div
             width="100%"
             className="sc-gEvEer w-full flex items-center justify-between sc-eqUAAy jSyvpJ fgprtA"

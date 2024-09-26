@@ -128,195 +128,8 @@ const MarketsTable = () => {
         </TableRow>
       </TableHeader>
       <TableBody className="bg-white">
+       
         <TableRow className="sc-gmPhUn FCgni">
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <label className="sc-eyvILC kyTavZ">
-              <input type="checkbox" className="sc-bpUBKd cpKzSL" />
-              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M5.91 18.32a1.68 1.68 0 0 1-1.65-1.95l.65-3.97-2.77-2.86a1.68 1.68 0 0 1 .95-2.82l3.74-.58 1.65-3.53a1.69 1.69 0 0 1 3.03 0l1.65 3.53 3.75.58a1.68 1.68 0 0 1 .95 2.82L15.1 12.4l.64 3.98a1.67 1.67 0 0 1-2.47 1.74L10 16.29l-3.27 1.82a1.67 1.67 0 0 1-.82.21Zm4.09-3.7c.28 0 .56.08.81.22l3.27 1.81-.63-3.98a1.69 1.69 0 0 1 .45-1.44l2.76-2.85-3.75-.6a1.67 1.67 0 0 1-1.26-.94l-1.64-3.52-1.66 3.52a1.67 1.67 0 0 1-1.26.95l-3.75.57 2.76 2.87c.37.38.54.91.45 1.44l-.64 3.97 3.28-1.8c.25-.14.53-.21.81-.22Z"
-                  fill="currentColor"
-                  fillRule="evenodd"
-                />
-              </svg>
-            </label>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <a className="sc-iHbSHJ bwYSnM" href="/swap?base=.&quote=1d7f33bd23d85e1a25d87d86fac4f199c3197a2f7afeb662a0f34e1e.776f726c646d6f62696c65746f6b656e">
-              <div className="LazyLoad is-visible" style={{ height: "32px", width: "59.2px" }}>
-                <div width="59.2px" height="32px" className="sc-cWSHoV dazaWi">
-                  <img
-                    src="https://tokens.muesliswap.com/static/img/tokens/1d7f33bd23d85e1a25d87d86fac4f199c3197a2f7afeb662a0f34e1e.776f726c646d6f62696c65746f6b656e_scaled_100.webp"
-                    crossOrigin="anonymous"
-                    alt="https://tokens.muesliswap.com/static/img/tokens/1d7f33bd23d85e1a25d87d86fac4f199c3197a2f7afeb662a0f34e1e.776f726c646d6f62696c65746f6b656e_scaled_100.webp"
-                    className="sc-gEvEer ceiwSH"
-                  />
-                  <img
-                    src={img}
-                    crossOrigin="anonymous"
-                    alt="https://static.muesliswap.com/images/tokens/img.png"
-                    className="sc-gEvEer gUHNA-d"
-                  />
-                </div>
-              </div>
-              <span className="sc-Nxspf ebZgeq">WMT</span>
-              <span className="sc-klVQfs cErbak">Verified</span>
-              <span className="sc-klVQfs bRcUix"> Popular </span>
-              <span className="sc-klVQfs bRcUix"> Other </span>
-            </a>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <p className="sc-gEvEer dSOvFp">0.710837</p>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <div value="7.984644317446188" className="sc-uVWWZ lcUsoT">↑&nbsp;7.98%</div>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <div value="22.10449868634332" className="sc-uVWWZ lcUsoT">↑&nbsp;22.1%</div>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <p className="sc-gEvEer dSOvFp">104,505</p>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <p className="sc-gEvEer dSOvFp">161,971,058</p>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <div className="sc-gEvEer fiARsy">
-              <canvas
-                height="48"
-                width="112"
-                id="markets-graph-cell-1d7f33bd23d85e1a25d87d86fac4f199c3197a2f7afeb662a0f34e1e.776f726c646d6f62696c65746f6b656e"
-                style={{ width: "112px", height: "48px" }}
-              />
-            </div>
-          </TableCell>
-        </TableRow>
-        <TableRow className="hover:bg-slate-200">
-          <TableCell>
-            <label className="sc-eyvILC kyTavZ">
-              <input type="checkbox" className="sc-bpUBKd cpKzSL" />
-              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M5.91 18.32a1.68 1.68 0 0 1-1.65-1.95l.65-3.97-2.77-2.86a1.68 1.68 0 0 1 .95-2.82l3.74-.58 1.65-3.53a1.69 1.69 0 0 1 3.03 0l1.65 3.53 3.75.58a1.68 1.68 0 0 1 .95 2.82L15.1 12.4l.64 3.98a1.67 1.67 0 0 1-2.47 1.74L10 16.29l-3.27 1.82a1.67 1.67 0 0 1-.82.21Zm4.09-3.7c.28 0 .56.08.81.22l3.27 1.81-.63-3.98a1.69 1.69 0 0 1 .45-1.44l2.76-2.85-3.75-.6a1.67 1.67 0 0 1-1.26-.94l-1.64-3.52-1.66 3.52a1.67 1.67 0 0 1-1.26.95l-3.75.57 2.76 2.87c.37.38.54.91.45 1.44l-.64 3.97 3.28-1.8c.25-.14.53-.21.81-.22Z"
-                  fill="currentColor"
-                  fillRule="evenodd"
-                />
-              </svg>
-            </label>
-          </TableCell>
-          <TableCell>
-            <Link className="sc-iHbSHJ bwYSnM" to="/swap?base=.&quote=f43a62fdc3965df486de8a0d32fe800963589c41b38946602a0dc535.41474958">
-              <div className="LazyLoad is-visible" style={{ height: "32px", width: "59.2px" }}>
-                <div width="59.2px" height="32px" className="sc-cWSHoV dazaWi">
-                  <img
-                    src="https://tokens.muesliswap.com/static/img/tokens/f43a62fdc3965df486de8a0d32fe800963589c41b38946602a0dc535.41474958_scaled_100.webp"
-                    crossOrigin="anonymous"
-                    alt="Token"
-                    className="sc-gEvEer ceiwSH"
-                  />
-                  <img
-                    src={img}
-                    crossOrigin="anonymous"
-                    alt="img"
-                    className="sc-gEvEer gUHNA-d"
-                  />
-                </div>
-              </div>
-              <span className="sc-Nxspf ebZgeq">AGIX</span>
-              <span className="sc-klVQfs cErbak">Verified</span>
-              <span className="sc-klVQfs bRcUix"> Other </span>
-            </Link>
-          </TableCell>
-          <TableCell>
-            <p className="sc-gEvEer dSOvFp">1.846819</p>
-          </TableCell>
-          <TableCell>
-            <div value="-0.7735586877345768" className="sc-uVWWZ ejrJPX">↓&nbsp;0.77%</div>
-          </TableCell>
-          <TableCell>
-            <div value="0.8274760705187845" className="sc-uVWWZ lcUsoT">↑&nbsp;0.83%</div>
-          </TableCell>
-          <TableCell>
-            <p className="sc-gEvEer dSOvFp">16,322</p>
-          </TableCell>
-          <TableCell>
-            <p className="sc-gEvEer dSOvFp">956,309,313</p>
-          </TableCell>
-          <TableCell>
-            <div className="sc-gEvEer fiARsy">
-              <canvas
-                height="48"
-                width="112"
-                id="markets-graph-cell-f43a62fdc3965df486de8a0d32fe800963589c41b38946602a0dc535.41474958"
-                style={{ width: "112px", height: "48px" }}
-              ></canvas>
-            </div>
-          </TableCell>
-        </TableRow>
-        <TableRow className="sc-gmPhUn FCgni">
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <label className="sc-eyvILC kyTavZ">
-              <input type="checkbox" className="sc-bpUBKd cpKzSL" />
-              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M5.91 18.32a1.68 1.68 0 0 1-1.65-1.95l.65-3.97-2.77-2.86a1.68 1.68 0 0 1 .95-2.82l3.74-.58 1.65-3.53a1.69 1.69 0 0 1 3.03 0l1.65 3.53 3.75.58a1.68 1.68 0 0 1 .95 2.82L15.1 12.4l.64 3.98a1.67 1.67 0 0 1-2.47 1.74L10 16.29l-3.27 1.82a1.67 1.67 0 0 1-.82.21Zm4.09-3.7c.28 0 .56.08.81.22l3.27 1.81-.63-3.98a1.69 1.69 0 0 1 .45-1.44l2.76-2.85-3.75-.6a1.67 1.67 0 0 1-1.26-.94l-1.64-3.52-1.66 3.52a1.67 1.67 0 0 1-1.26.95l-3.75.57 2.76 2.87c.37.38.54.91.45 1.44l-.64 3.97 3.28-1.8c.25-.14.53-.21.81-.22Z"
-                  fill="currentColor"
-                  fillRule="evenodd"
-                />
-              </svg>
-            </label>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <Link className="sc-iHbSHJ bwYSnM" to="/swap?base=.&quote=279c909f348e533da5808898f87f9a14bb2c3dfbbacccd631d927a3f.534e454b">
-              <div className="LazyLoad is-visible" style={{ height: "32px", width: "59.2px" }}>
-                <div width="59.2px" height="32px" className="sc-cWSHoV dazaWi">
-                  <img
-                    src="https://tokens.muesliswap.com/static/img/tokens/279c909f348e533da5808898f87f9a14bb2c3dfbbacccd631d927a3f.534e454b_scaled_100.webp"
-                    crossOrigin="anonymous"
-                    alt="Token"
-                    className="sc-gEvEer ceiwSH"
-                  />
-                  <img
-                    src={img}
-                    crossOrigin="anonymous"
-                    alt="img"
-                    className="sc-gEvEer gUHNA-d"
-                  />
-                </div>
-              </div>
-              <span className="sc-Nxspf ebZgeq">SNEK</span>
-              <span className="sc-klVQfs cErbak">Verified</span>
-              <span className="sc-klVQfs bRcUix"> Popular </span>
-              <span className="sc-klVQfs bRcUix"> Meme </span>
-            </Link>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <p className="sc-gEvEer dSOvFp">0.002214</p>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <div value="0" className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <div value="-0.27153173902587646" className="sc-uVWWZ ejrJPX">↓&nbsp;0.27%</div>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <p className="sc-gEvEer dSOvFp">15,573</p>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <p className="sc-gEvEer dSOvFp">164,147,101</p>
-          </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
-            <div className="sc-gEvEer fiARsy">
-              <canvas
-                height="48"
-                width="112"
-                id="markets-graph-cell-279c909f348e533da5808898f87f9a14bb2c3dfbbacccd631d927a3f.534e454b"
-                style={{ width: "112px", height: "48px" }}
-              ></canvas>
-            </div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
           <TableCell className="sc-hRJfrW iUJzLW">
             <label className="sc-kAkpmW cRPsKG">
               <input type="checkbox" className="sc-cmaqmh iwhYbG" />
@@ -382,7 +195,7 @@ const MarketsTable = () => {
             </div>
           </TableCell>
         </TableRow>
-        <TableRow>
+        <TableRow className="sc-gmPhUn FCgni">
           <TableCell className="sc-hRJfrW iUJzLW">
             <label className="sc-kAkpmW cRPsKG">
               <input type="checkbox" className="sc-cmaqmh iwhYbG" />
@@ -447,7 +260,7 @@ const MarketsTable = () => {
             </div>
           </TableCell>
         </TableRow>
-        <TableRow>
+        <TableRow className="sc-gmPhUn FCgni">
           <TableCell className="sc-hRJfrW iUJzLW">
             <label className="sc-kAkpmW cRPsKG">
               <input type="checkbox" className="sc-cmaqmh iwhYbG" />

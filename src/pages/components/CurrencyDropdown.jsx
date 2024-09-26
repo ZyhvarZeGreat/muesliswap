@@ -12,7 +12,7 @@ const CurrencyDropdown = () => {
   const [rotate, setRotate] = useState(false);
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className=" border  cursor-pointer w-auto">
+      <DropdownMenuTrigger className=" border hidden lg:block  cursor-pointer w-auto">
         <div
           onClick={() => {
             setRotate(!rotate);
