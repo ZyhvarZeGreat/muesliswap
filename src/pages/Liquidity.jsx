@@ -6,6 +6,17 @@ import { useCallback, useEffect, useState } from "react";
 
 const Liquidity = () => {
   const [liquidityPools, setLiquidityPools] = useState([]);
+  const [openDropdowns, setOpenDropdowns] = useState([]);
+
+  const toggleDropdown = (index) => {
+    setOpenDropdowns(prevState => {
+      if (prevState.includes(index)) {
+        return prevState.filter(i => i !== index);
+      } else {
+        return [...prevState, index];
+      }
+    });
+  };
   const getLiquidityPools = useCallback(async () => {
     try {
       const response = await fetch('https://api.muesliswap.com/liquidity/pools?perPage=100', {
@@ -30,7 +41,7 @@ const Liquidity = () => {
   }, [getLiquidityPools]);
 
   console.log(liquidityPools)
-  
+
   return (
     <main className="sc-kOPcWz hierkx">
       <div className="sc-iHGNWf hQvJpi">
@@ -912,100 +923,157 @@ const Liquidity = () => {
               </thead>
               <tbody role="rowgroup" className="sc-gEvEer  ">
                 {liquidityPools.map((asset, index) => (
-                  <tr key={index} role="row" className="sc-gEvEer gFEUUI  ">
-                    <td role="cell" className="sc-gEvEer faiYBU ">
-                      <a
-                        className="sc-iHbSHJ px-4 bwYSnM"
-                        href="/swap?base=.&amp;quote=afbe91c0b44b3040e360057bf8354ead8c49c4979ae6ab7c4fbdc9eb.4d494c4b7632"
-                      >
-                        <div
-                          className="LazyLoad is-visible "
-                          style={{ height: "32px", width: "59.2px" }}
+                  <>
+                    <tr key={index} role="row" className="sc-gEvEer gFEUUI  ">
+                      <td role="cell" className="sc-gEvEer faiYBU ">
+                        <a
+                          className="sc-iHbSHJ px-4 bwYSnM"
+                          href="/swap?base=.&amp;quote=afbe91c0b44b3040e360057bf8354ead8c49c4979ae6ab7c4fbdc9eb.4d494c4b7632"
                         >
                           <div
-                            width="59.2px"
-                            height="32px"
-                            className="sc-cWSHoV dazaWi"
+                            className="LazyLoad is-visible "
+                            style={{ height: "32px", width: "59.2px" }}
                           >
-                            <img
-                              src={asset.tokenB.image}
-                              crossOrigin="anonymous"
-                              alt={asset.tokenB.image} className="sc-gEvEer ceiwSH"
-                            />
-                            <img
-                              src={Ada}
-                              crossOrigin="anonymous"
-                              alt={asset.tokenA.image}
-                              className="sc-gEvEer gUHNA-d"
-                            />
+                            <div
+                              width="59.2px"
+                              height="32px"
+                              className="sc-cWSHoV dazaWi"
+                            >
+                              <img
+                                src={asset.tokenB.image}
+                                crossOrigin="anonymous"
+                                alt={asset.tokenB.image} className="sc-gEvEer ceiwSH"
+                              />
+                              <img
+                                src={Ada}
+                                crossOrigin="anonymous"
+                                alt={asset.tokenA.image}
+                                className="sc-gEvEer gUHNA-d"
+                              />
+                            </div>
+                          </div>
+                          <div className="sc-gEvEer fLROuh">
+                            <p
+                              display="inline-block"
+                              fontFamily="inter"
+                              color="text"
+                              fontWeight="500"
+                              className="sc-gEvEer jrlnEx"
+                            >
+                              {asset.tokenB.symbol}
+                            </p>
+                            <p
+                              display="inline-block"
+                              fontFamily="inter"
+                              color="text"
+                              fontWeight="500"
+                              fontSize="12"
+                              className="sc-gEvEer gTyoIZ"
+                            >
+                              /{asset.tokenA.symbol}
+                            </p>
+                          </div>
+                        </a>
+                      </td>
+                      <td role="cell" className="sc-gEvEer faiYBU">
+                        <div color="text" className="sc-gEvEer VQoKn">
+                          {(Number(asset.tokenB.priceAda) / 1000000).toFixed(1)} ADA
+                        </div>
+                      </td>
+                      <td role="cell" className="sc-gEvEer faiYBU">
+                        <div className="sc-gEvEer jVsTBr">{(Number(asset.lpToken.amount) / 1000000).toFixed(1).toLocaleString()}₳</div>
+                        <p className="sc-gEvEer jLfEph">~{((Number(asset.lpToken.amount) / 1000000) * 0.3).toFixed(1).toLocaleString()} $</p>
+                      </td>
+                      <td role="cell" className="sc-gEvEer faiYBU">
+                        <div className="sc-gEvEer jVsTBr">{(Number(asset.volume24h)).toFixed().toLocaleString()} ₳</div>
+                        <p className="sc-gEvEer jLfEph">~{(Number(asset.volume24h) * 0.3).toFixed().toLocaleString()} $</p>
+                      </td>
+                      <td role="cell" className="sc-gEvEer faiYBU">
+                        <div color="text" className="sc-gEvEer VQoKn">
+                          {asset.liquidityApy.toFixed(1)} %
+                        </div>
+                      </td>
+                      <td role="cell" className="sc-gEvEer faiYBU">
+                        <div
+                         onClick={() => toggleDropdown(index)}
+                         className="sc-gEvEer sc-eqUAAy gYGjHl fgprtA">
+                          <div
+                            color="inherit"
+                            fontWeight="semiBold"
+                            className="sc-gEvEer hcJuDx"
+                           
+                          >
+                            Details
+                          </div>
+                          <div className="sc-gEvEer eXsOiX">
+                            <svg
+                              height="12"
+                              viewBox="0 0 7 12"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M.3 11.7a1 1 0 0 1 0-1.4l4.05-4.06a.33.33 0 0 0 0-.48L.29 1.71A1 1 0 1 1 1.71.29l4.05 4.06a2.33 2.33 0 0 1 0 3.3l-4.05 4.06a1 1 0 0 1-1.42 0z"
+                                fill="currentColor"
+                                fillRule="evenodd"
+                              ></path>
+                            </svg>
                           </div>
                         </div>
-                        <div className="sc-gEvEer fLROuh">
-                          <p
-                            display="inline-block"
-                            fontFamily="inter"
-                            color="text"
-                            fontWeight="500"
-                            className="sc-gEvEer jrlnEx"
-                          >
-                            {asset.tokenB.symbol}
-                          </p>
-                          <p
-                            display="inline-block"
-                            fontFamily="inter"
-                            color="text"
-                            fontWeight="500"
-                            fontSize="12"
-                            className="sc-gEvEer gTyoIZ"
-                          >
-                            /{asset.tokenA.symbol}
-                          </p>
-                        </div>
-                      </a>
-                    </td>
-                    <td role="cell" className="sc-gEvEer faiYBU">
-                      <div color="text" className="sc-gEvEer VQoKn">
-                        {(Number(asset.tokenB.priceAda)/1000000).toFixed(1)} ADA
-                      </div>
-                    </td>
-                    <td role="cell" className="sc-gEvEer faiYBU">
-                      <div className="sc-gEvEer jVsTBr">{(Number(asset.lpToken.amount)/1000000).toFixed(1).toLocaleString()}₳</div>
-                      <p className="sc-gEvEer jLfEph">~{((Number(asset.lpToken.amount)/1000000)*0.3).toFixed(1).toLocaleString() } $</p>
-                    </td>
-                    <td role="cell" className="sc-gEvEer faiYBU">
-                      <div className="sc-gEvEer jVsTBr">{(Number(asset.volume24h)).toFixed().toLocaleString()} ₳</div>
-                      <p className="sc-gEvEer jLfEph">~{(Number(asset.volume24h) * 0.3).toFixed().toLocaleString()} $</p>
-                    </td>
-                    <td role="cell" className="sc-gEvEer faiYBU">
-                      <div color="text" className="sc-gEvEer VQoKn">
-                        {asset.liquidityApy.toFixed(1)} %
-                      </div>
-                    </td>
-                    <td role="cell" className="sc-gEvEer faiYBU">
-                      <div className="sc-gEvEer sc-eqUAAy gYGjHl fgprtA">
-                        <div
-                          color="inherit"
-                          fontWeight="semiBold"
-                          className="sc-gEvEer hcJuDx"
-                        >
-                          Details
-                        </div>
-                        <div className="sc-gEvEer eXsOiX">
-                          <svg
-                            height="12"
-                            viewBox="0 0 7 12"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M.3 11.7a1 1 0 0 1 0-1.4l4.05-4.06a.33.33 0 0 0 0-.48L.29 1.71A1 1 0 1 1 1.71.29l4.05 4.06a2.33 2.33 0 0 1 0 3.3l-4.05 4.06a1 1 0 0 1-1.42 0z"
-                              fill="currentColor"
-                              fillRule="evenodd"
-                            ></path>
-                          </svg>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
+                      </td>
+                    </tr>
+                    {openDropdowns.includes(index) && (
+                      <tr className="sc-gEvEer dSOvFp">
+                        <td colSpan="6">
+                          <div className="sc-gEvEer sc-eqUAAy caqVIz fgprtA">
+                            <div className="sc-gEvEer ipETLm">
+                              <h4 fontFamily="gilroy" color="text" fontSize="18px" fontWeight="600" className="sc-gEvEer jVEjPV">Your Liquidity Position</h4>
+                              <div className="sc-gEvEer sc-eqUAAy gsUTSe fgprtA">
+                                <p className="sc-gEvEer hBexKU">0 <span style={{ fontSize: '16px' }}>₳</span></p>
+                                <p className="sc-gEvEer bOSdkX">0 ADA <span className="sc-jnOGJG jQkNxn">50%</span></p>
+                                <p className="sc-gEvEer bOSdkX">0 OPT <span className="sc-jnOGJG jQkNxn">50%</span></p>
+                              </div>
+                              <div className="sc-gEvEer sc-eqUAAy gjRtJv fgprtA">
+                                <button className="sc-gEvEer eWXwvT">Connect wallet</button>
+                              </div>
+                            </div>
+                            <div className="sc-gEvEer ipETLm">
+                              <h4 fontFamily="gilroy" color="text" fontSize="18px" fontWeight="600" className="sc-gEvEer jVEjPV">Pool Information</h4>
+                              <div className="sc-gEvEer sc-eqUAAy bjmCVl fgprtA">
+                                <div className="sc-gEvEer sc-eqUAAy fEQVqC fgprtA">
+                                  <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
+                                    <p className="sc-gEvEer kpVmdW">Matchmaker Fee:</p>
+                                    <p fontWeight="500" className="sc-gEvEer cFqvxQ">0.95 ADA</p>
+                                  </div>
+                                  <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
+                                    <p className="sc-gEvEer kpVmdW">Locked ADA:</p>
+                                    <p fontWeight="500" className="sc-gEvEer cFqvxQ">206,330</p>
+                                  </div>
+                                  <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
+                                    <p className="sc-gEvEer kpVmdW">Locked OPT:</p>
+                                    <p fontWeight="500" className="sc-gEvEer cFqvxQ">4,660,990</p>
+                                  </div>
+                                </div>
+                                <div className="sc-gEvEer sc-eqUAAy fEQVqC fgprtA">
+                                  <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
+                                    <p className="sc-gEvEer kpVmdW">UTxO Deposit:</p>
+                                    <p fontWeight="500" className="sc-gEvEer cFqvxQ">2 ₳</p>
+                                  </div>
+                                  <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
+                                    <p className="sc-gEvEer kpVmdW">Trading Fee:</p>
+                                    <p fontWeight="500" className="sc-gEvEer cFqvxQ">0.30&nbsp;%</p>
+                                  </div>
+                                  <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
+                                    <p className="sc-gEvEer kpVmdW">Trading Fee APR:</p>
+                                    <p fontWeight="500" className="sc-gEvEer cFqvxQ">0.69&nbsp;%</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    )}
+                  </>
                 ))}
               </tbody>
             </table>
