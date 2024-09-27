@@ -503,7 +503,7 @@ const Markets = () => {
                     zIndex: -1,
                   }}
                 ></iframe>
-                <button type="button" value="0" className="sc-fxwrCY lcFNFd">
+                <button type="button" className="sc-fxwrCY lcFNFd">
                   1
                 </button>
                 <button type="button" value="1" className="sc-fxwrCY bqoKix">

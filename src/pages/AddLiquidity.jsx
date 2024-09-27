@@ -164,7 +164,7 @@ const AddLiquidity = () => {
                                             step="0.000001"
                                             pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
                                             className="sc-gEvEer jdtVWs"
-                                            value="0"
+
                                         />
                                         <div className="sc-gEvEer fOGbbi">
                                             <div
@@ -218,7 +218,7 @@ const AddLiquidity = () => {
                                             step="0.000001"
                                             pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
                                             className="sc-gEvEer jdtVWs"
-                                            value="0"
+
                                         />
                                         <div className="sc-gEvEer fOGbbi">
                                             <div

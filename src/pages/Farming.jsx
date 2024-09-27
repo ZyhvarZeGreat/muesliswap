@@ -134,7 +134,7 @@ const Farming = () => {
                   <th
                     colSpan="1"
                     role="columnheader"
-                    className="sc-gEvEer iEcklH"
+                    className="sc-gEvEer hidden lg:table-cell iEcklH"
                   >
                     Total Rewards per Day
                     <span hidden="" className="sc-ddjGPC fRRtfN">
@@ -259,178 +259,197 @@ const Farming = () => {
 
                 {farmingPools.map((asset, index) => {
 
-                  return (<>
-                    <tr key={index} height="64px" role="row" className="sc-gEvEer hKoCKV">
-                      <td role="cell" className="sc-gEvEer fZHjpi">
-                        <a
-                          className="sc-iHbSHJ bwYSnM"
-                          href="/swap?base=.&amp;quote=2a80c713e0d518f84e0553957e3d581c9326cfc5931ea1f4dd0fb292.0014df107374616b65636f696e"
+                  return (
+                    <>
+                      <tr key={index} height="64px" role="row" className="sc-gEvEer hKoCKV">
+                        <td role="cell" className={cn("sc-gEvEer fZHjpi",
+                          openDropdowns.includes(index) && ' bg-[#f3f5fe]'
+                        )}
                         >
-                          <div
-                            className="LazyLoad is-visible"
-                            style={{ height: "32px", width: "59.2px" }}
+                          <a
+                            className="sc-iHbSHJ bwYSnM"
+                            href="/swap?base=.&amp;quote=2a80c713e0d518f84e0553957e3d581c9326cfc5931ea1f4dd0fb292.0014df107374616b65636f696e"
                           >
                             <div
-                              width="59.2px"
-                              height="32px"
-                              className="sc-cWSHoV dazaWi"
+                              className="LazyLoad is-visible"
+                              style={{ height: "32px", width: "59.2px" }}
                             >
-                              <img
-                                src={asset.pool.tokenB.image}
-                                crossOrigin="anonymous"
-                                alt="https://tokens.muesliswap.com/static/img/tokens/2a80c713e0d518f84e0553957e3d581c9326cfc5931ea1f4dd0fb292.0014df107374616b65636f696e_scaled_100.webp"
-                                className="sc-gEvEer ceiwSH"
-                              />
-                              <img
-                                src={Ada}
-                                crossOrigin="anonymous"
-                                alt=""
-                                className="sc-gEvEer gUHNA-d"
-                              />
-                            </div>
-                          </div>
-                          <div className="sc-gEvEer flex fLROuh">
-                            <div
-                              display="inline-block"
-                              className="sc-gEvEer cSVFGB"
-                            >
-                              {asset.pool.tokenB.symbol}
-                            </div>
-                            <div
-                              display="inline-block flex"
-                              className="sc-gEvEer kfkWNd"
-                            >
-                              /    {asset.pool.tokenA.symbol}
-                            </div>
-                          </div>
-                        </a>
-                      </td>
-                      <td role="cell" className="sc-gEvEer fZHjpi">
-                        <div className="sc-gEvEer jVsTBr">-</div>
-                      </td>
-                      <td role="cell" className="sc-gEvEer fZHjpi">
-                        <div className="sc-gEvEer sc-eqUAAy kQnNKG fgprtA">
-                          <div display="grid" className="sc-gEvEer gap-1  hoROyV">
-                            {asset.rewardTokens.map((token, i) => {
-                              return (
-                                <>
-                                  <div
-                                    key={i}
-                                    className="LazyLoad  is-visible"
-                                    style={{ height: "24px", width: "24px" }}
-                                  >
-                                    <img
-                                      src={token.rewardToken.image}
-                                      crossOrigin="anonymous"
-                                      alt="https://tokens.muesliswap.com/static/img/tokens/8f9c32977d2bacb87836b64f7811e99734c6368373958da20172afba.4d5949454c44_scaled_100.webp"
-                                      className="sc-gEvEer fFqlxh"
-                                    />
-                                  </div>
-                                  <div
-                                    className="sc-gEvEer chgUfk "
-                                  >
-                                    {(Number(token.rewardEmittedPerDay) / 1000000).toFixed()} {token.rewardToken.symbol}
-                                  </div>
-
-                                </>
-                              )
-                            })}
-                          </div>
-                        </div>
-                      </td>
-                      <td role="cell" className="sc-gEvEer fZHjpi">
-                        <div display="inline-block" className="sc-gEvEer cSVFGB">
-                          {(Number(asset.farmingApr) * 100).toFixed(1)}%
-                        </div>
-                      </td>
-                      <td role="cell" className="sc-gEvEer fZHjpi">
-                        <div display="inline-block" className="sc-gEvEer chgUfk">
-                          {(Number(asset.totalStaked) / 1000000).toFixed()} ₳
-                        </div>
-                      </td>
-                      <td role="cell" className="sc-gEvEer fZHjpi">
-                        <div onClick={() => {
-                          toggleDropdown(index)
-                        }} className="sc-gEvEer sc-eqUAAy egzmya fgprtA">
-                          <div
-                            color="inherit"
-                            fontWeight="semiBold"
-                            className="sc-gEvEer hHeQDs"
-
-                          >
-                            Details
-                          </div>
-                          <div className="sc-gEvEer kafyRl">
-                            <svg
-                              height="12"
-                              viewBox="0 0 7 12"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M.3 11.7a1 1 0 0 1 0-1.4l4.05-4.06a.33.33 0 0 0 0-.48L.29 1.71A1 1 0 1 1 1.71.29l4.05 4.06a2.33 2.33 0 0 1 0 3.3l-4.05 4.06a1 1 0 0 1-1.42 0z"
-                                fill="currentColor"
-                                fillRule="evenodd"
-                              ></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    {
-                      openDropdowns.includes(index) && (
-                        <tr className="sc-gEvEer py-4     items-center justify-center w-full dSOvFp">
-                          <td colSpan="6" className="">
-                            <div className="sc-gEvEer py-6 flex flex-col sm:flex-row sc-eqUAAy caqVIz fgprtA">
-                              <div className="sc-gEvEer ipETLm ">
-                                <h4 fontFamily="gilroy" color="text" fontSize="18px" fontWeight="600" className="sc-gEvEer  jVEjPV">Your Liquidity Position</h4>
-                                <div className="sc-gEvEer sc-eqUAAy gsUTSe  fgprtA">
-                                  <p className="sc-gEvEer hBexKU">0 <span style={{ fontSize: '16px' }}>₳</span></p>
-                                  <p className="sc-gEvEer bOSdkX">0 ADA <span className="sc-jnOGJG cLDdoA jQkNxn">50%</span></p>
-                                  <p className="sc-gEvEer bOSdkX">0 OPT <span className="sc-jnOGJG cLDdoA jQkNxn">50%</span></p>
-                                </div>
-                                <div className="sc-gEvEer sc-eqUAAy gjRtJv fgprtA">
-                                  <button className="sc-gEvEer eWXwvT">Connect wallet</button>
-                                </div>
-                              </div>
-                              <div className="sc-gEvEer gap-2  flex flex-col   ipETLm">
-                                <h4 fontFamily="gilroy" color="text" fontSize="18px" fontWeight="600" className="sc-gEvEer jVEjPV">Pool Information</h4>
-                                <div className="sc-gEvEer w-full p-0 m-0 sc-eqUAAy bjmCVl fgprtA">
-                                  <div className="sc-gEvEer sc-eqUAAy fEQVqC fgprtA">
-                                    <div className="sc-gEvEer sc-eqUAAy p-0 AbBwJ fgprtA">
-                                      <p className="sc-gEvEer kpVmdW">Matchmaker Fee:</p>
-                                      <p fontWeight="500" className="sc-gEvEer cFqvxQ">0.95 ADA</p>
-                                    </div>
-                                    <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
-                                      <p className="sc-gEvEer kpVmdW">Locked ADA:</p>
-                                      <p fontWeight="500" className="sc-gEvEer cFqvxQ">206,330</p>
-                                    </div>
-                                    <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
-                                      <p className="sc-gEvEer kpVmdW">Locked OPT:</p>
-                                      <p fontWeight="500" className="sc-gEvEer cFqvxQ">4,660,990</p>
-                                    </div>
-                                  </div>
-                                  <div className="sc-gEvEer sc-eqUAAy fEQVqC fgprtA">
-                                    <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
-                                      <p className="sc-gEvEer kpVmdW">UTxO Deposit:</p>
-                                      <p fontWeight="500" className="sc-gEvEer cFqvxQ">2 ₳</p>
-                                    </div>
-                                    <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
-                                      <p className="sc-gEvEer kpVmdW">Trading Fee:</p>
-                                      <p fontWeight="500" className="sc-gEvEer cFqvxQ">0.30&nbsp;%</p>
-                                    </div>
-                                    <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
-                                      <p className="sc-gEvEer kpVmdW">Trading Fee APR:</p>
-                                      <p fontWeight="500" className="sc-gEvEer cFqvxQ">0.69&nbsp;%</p>
-                                    </div>
-                                  </div>
-                                </div>
+                              <div
+                                width="59.2px"
+                                height="32px"
+                                className="sc-cWSHoV dazaWi"
+                              >
+                                <img
+                                  src={asset.pool.tokenB.image}
+                                  crossOrigin="anonymous"
+                                  alt="https://tokens.muesliswap.com/static/img/tokens/2a80c713e0d518f84e0553957e3d581c9326cfc5931ea1f4dd0fb292.0014df107374616b65636f696e_scaled_100.webp"
+                                  className="sc-gEvEer ceiwSH"
+                                />
+                                <img
+                                  src={Ada}
+                                  crossOrigin="anonymous"
+                                  alt=""
+                                  className="sc-gEvEer gUHNA-d"
+                                />
                               </div>
                             </div>
-                          </td>
-                        </tr>
-                      )
-                    }
-                  </>)
+                            <div className="sc-gEvEer flex fLROuh">
+                              <div
+                                display="inline-block"
+                                className="sc-gEvEer cSVFGB"
+                              >
+                                {asset.pool.tokenB.symbol}
+                              </div>
+                              <div
+                                display="inline-block flex"
+                                className="sc-gEvEer kfkWNd"
+                              >
+                                /    {asset.pool.tokenA.symbol}
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td role="cell" className={cn("sc-gEvEer fZHjpi",
+                          openDropdowns.includes(index) && ' bg-[#f3f5fe]'
+                        )}
+                        >
+                          <div className="sc-gEvEer jVsTBr">-</div>
+                        </td>
+                        <td role="cell" className={cn("sc-gEvEer hidden lg:flex  fZHjpi",
+                          openDropdowns.includes(index) && ' bg-[#f3f5fe]'
+                        )}
+                        >
+                          <div className="sc-gEvEer sc-eqUAAy kQnNKG fgprtA">
+                            <div display="grid" className="sc-gEvEer gap-1  hoROyV">
+                              {asset.rewardTokens.map((token, i) => {
+                                return (
+                                  <>
+                                    <div
+                                      key={i}
+                                      className="LazyLoad  is-visible"
+                                      style={{ height: "24px", width: "24px" }}
+                                    >
+                                      <img
+                                        src={token.rewardToken.image}
+                                        crossOrigin="anonymous"
+                                        alt="https://tokens.muesliswap.com/static/img/tokens/8f9c32977d2bacb87836b64f7811e99734c6368373958da20172afba.4d5949454c44_scaled_100.webp"
+                                        className="sc-gEvEer fFqlxh"
+                                      />
+                                    </div>
+                                    <div
+                                      className="sc-gEvEer chgUfk "
+                                    >
+                                      {(Number(token.rewardEmittedPerDay) / 1000000).toFixed()} {token.rewardToken.symbol}
+                                    </div>
+
+                                  </>
+                                )
+                              })}
+                            </div>
+                          </div>
+                        </td>
+                        <td role="cell" className={cn("sc-gEvEer fZHjpi",
+                          openDropdowns.includes(index) && ' bg-[#f3f5fe]'
+                        )}
+                        >
+                          <div display="inline-block" className="sc-gEvEer cSVFGB">
+                            {(Number(asset.farmingApr) * 100).toFixed(1)}%
+                          </div>
+                        </td>
+                        <td role="cell" className={cn("sc-gEvEer fZHjpi",
+                          openDropdowns.includes(index) && ' bg-[#f3f5fe]'
+                        )}
+                        >
+                          <div display="inline-block" className="sc-gEvEer chgUfk">
+                            {(Number(asset.totalStaked) / 1000000).toFixed()} ₳
+                          </div>
+                        </td>
+                        <td role="cell" className={cn("sc-gEvEer fZHjpi",
+                          openDropdowns.includes(index) && ' bg-[#f3f5fe]'
+                        )}
+                        >
+                          <div onClick={() => {
+                            toggleDropdown(index)
+                          }} className="sc-gEvEer  flex items-center justify-center sc-eqUAAy egzmya fgprtA">
+                            <div
+                              color="inherit"
+                              fontWeight="semiBold"
+                              className="sc-gEvEer hidden lg:block hHeQDs"
+
+                            >
+                              Details
+                            </div>
+                            <div className="sc-gEvEer  kafyRl">
+                              <svg
+                                height="12"
+                                viewBox="0 0 7 12"
+                                className="mx-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M.3 11.7a1 1 0 0 1 0-1.4l4.05-4.06a.33.33 0 0 0 0-.48L.29 1.71A1 1 0 1 1 1.71.29l4.05 4.06a2.33 2.33 0 0 1 0 3.3l-4.05 4.06a1 1 0 0 1-1.42 0z"
+                                  fill="currentColor"
+                                  fillRule="evenodd"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      {
+                        openDropdowns.includes(index) && (
+                          <tr className={cn("sc-gEvEer dSOvFp",
+                            openDropdowns.includes(index) && ' bg-[#f3f5fe]'
+                          )} >
+                            <td colSpan="6">
+                              <div className="sc-gEvEer p-3   flex flex-col lg:flex-row gap-4 ebhujK">
+                                <span name="stakeMore" className="sc-dSCuf p-3 bg-white rounded-lg w-full  lg:w-8/12  ">
+                                  <div width="100%" className="sc-gEvEer itSkMx">
+                                    <h4 fontFamily="gilroy" color="text" fontSize="18px" fontWeight="600" className="sc-gEvEer jVEjPV">Stake STK/ADA LP tokens</h4>
+                                    <div className="sc-gEvEer flex flex-col lg:flex-row sc-eqUAAy fsMeKA fgprtA">
+                                      <div width="100%" className="sc-gEvEer sc-eqUAAy gxEYNe fgprtA">
+                                        <div className="sc-gEvEer sc-eqUAAy kHqsj fgprtA">
+                                          <div fontSize="12px" fontFamily="inter" color="text" className="sc-gEvEer dweOPY">Balance: -</div>
+                                          <button disabled className="sc-gEvEer kLtOSu">MAX</button>
+                                        </div>
+                                        <input type="string" placeholder="0" inputMode="decimal" autoComplete="off" autoCorrect="off" spellCheck="false" minLength="1" maxLength="79" pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$" className="sc-gEvEer bOxyja" />
+                                        <button height="40px" disabled className="sc-gEvEer dEuKCj">Select a Hungry Cow</button>
+                                        <button disabled height="40px" className="sc-gEvEer dEuKCj">Stake</button>
+                                      </div>
+                                      <svg viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg" height="24px" m="50px 20px auto" color="main" className="sc-gEvEer rotate-90 lg:rotate-0 h-4 lg:h-auto uzYEF">
+                                        <path d="M7.71 11.72a1 1 0 0 1 0-1.42L11 7H1a1 1 0 0 1 0-2h10L7.71 1.71A1 1 0 1 1 9.12.3l4.3 4.3a2 2 0 0 1 .57 1.24L14 6a2 2 0 0 1-.59 1.4l-4.29 4.3a1 1 0 0 1-1.41.02z" fill="currentColor" fillRule="evenodd"></path>
+                                      </svg>
+                                      <div width="100%" className="sc-gEvEer  sc-eqUAAy  kpgxOl fgprtA">
+                                        <div className="sc-gEvEer sc-eqUAAy dpDhQl   fgprtA">
+                                          <p className="sc-gEvEer jVsTBr">Stake</p>
+                                          <p fontWeight="500" className="sc-gEvEer cwvpAF">0 LP tokens</p>
+                                        </div>
+                                        <div className="sc-gEvEer jlEBNW"></div>
+                                        <div className="sc-gEvEer sc-eqUAAy bnaciH justify-between lg:justify-center fgprtA">
+                                          <div className="sc-gEvEer hHuoiF">Nothing to stake?</div>
+                                          <button className="sc-gEvEer hetGKv">Add Liquidity</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </span>
+                                <span name="stakeInfo" className="sc-gEvEer rounded-lg p-3 w-full  lg:w-4/12 bg-white ">
+                                  <div width="100%" height="100%" className="sc-gEvEer sc-eqUAAy jHyGok fgprtA">
+                                    <h4 fontFamily="gilroy" color="text" fontSize="18px" fontWeight="600" width="min-content" className="sc-gEvEer jnBQpD">Pool&nbsp;Information</h4>
+                                    <div className="sc-gEvEer imKmWV">
+                                      Stake STK/ADA LP token to earn yield farming rewards! <br />
+                                      <br />
+                                      Use any of your HungryCows to get additional rewards according to the boosting factor!
+                                    </div>
+                                  </div>
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                        )
+                      }
+                    </>)
                 })}
 
               </tbody>

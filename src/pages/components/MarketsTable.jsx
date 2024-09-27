@@ -128,7 +128,7 @@ const MarketsTable = () => {
         </TableRow>
       </TableHeader>
       <TableBody className="bg-white">
-       
+
         <TableRow className="sc-gmPhUn FCgni">
           <TableCell className="sc-hRJfrW iUJzLW">
             <label className="sc-kAkpmW cRPsKG">
@@ -171,7 +171,7 @@ const MarketsTable = () => {
             <div color="grey500" className="sc-gEvEer bdDaQC">7.391E-4$</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
-            <div value="0" className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
+            <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
             <div value="2.2880112709918965" className="sc-uVWWZ lcUsoT">↑&nbsp;2.29%</div>
@@ -302,7 +302,7 @@ const MarketsTable = () => {
             <div color="grey500" className="sc-gEvEer bdDaQC">0.988$</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
-            <div value="0" className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
+            <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
             <div value="2.3916483232951258" className="sc-uVWWZ lcUsoT">↑&nbsp;2.39%</div>
@@ -369,10 +369,10 @@ const MarketsTable = () => {
             <p className="sc-gEvEer dSOvFp">-</p>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
-            <div value="0" className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
+            <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
-            <div value="0" className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
+            <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
             <p className="sc-gEvEer dSOvFp">4,936</p>
@@ -436,10 +436,10 @@ const MarketsTable = () => {
             <div color="grey500" className="sc-gEvEer bdDaQC">0.025$</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
-            <div value="0" className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
+            <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
-            <div value="0" className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
+            <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
             <p className="sc-gEvEer dSOvFp">1,581</p>
@@ -571,10 +571,10 @@ const MarketsTable = () => {
             <div color="grey500" className="sc-gEvEer bdDaQC">2.755E-6$</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
-            <div value="0" className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
+            <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
-            <div value="0" className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
+            <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
             <p className="sc-gEvEer dSOvFp">531</p>
@@ -638,7 +638,7 @@ const MarketsTable = () => {
             <div color="grey500" className="sc-gEvEer bdDaQC">0.013$</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
-            <div value="0" className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
+            <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
           <TableCell className="sc-hRJfrW iUJzLW">
             <div value="2.3218683704619103" className="sc-uVWWZ lcUsoT">↑&nbsp;2.32%</div>

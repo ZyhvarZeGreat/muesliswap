@@ -643,7 +643,7 @@ const Expert = () => {
                         minLength="1"
                         maxLength="79"
                         className="sc-jIGnZt gJNizO"
-                        value="0"
+
                       />
                       <button type="button" className="sc-fBdRDi eSYsPI">
                         <svg

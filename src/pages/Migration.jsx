@@ -316,7 +316,7 @@ const Migration = () => {
                         maxLength="79"
                         pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
                         className="sc-fxwrCY eQWxdg"
-                        value="0"
+
                       />
                     </div>
                   </div>

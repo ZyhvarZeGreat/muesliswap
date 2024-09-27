@@ -1,45 +1,9 @@
 import EarnTab from "./components/EarnTab";
 import "./Yield.css";
 import Milk from "../assets/muesliswap.86e5affdd1cbde9ed769.webp";
-import { useCallback, useEffect, useState } from "react";
-import { cn } from "../lib/utils";
+
 const Yield = () => {
-  const [yieldData, setYield] = useState([]);
-  const [openDropdowns, setOpenDropdowns] = useState([]);
 
-  const toggleDropdown = (index) => {
-    setOpenDropdowns(prevState => {
-      if (prevState.includes(index)) {
-        return prevState.filter(i => i !== index);
-      } else {
-        return [...prevState, index];
-      }
-    });
-  };
-  const getYield = useCallback(async () => {
-    try {
-      const response = await fetch('https://api.muesliswap.com/staking/myield-pools', {
-        method: 'GET',
-        headers: {},
-      });
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-
-      setYield(data.slice(0, 20));
-      console.log(data.slice(0, 20));
-    } catch (error) {
-      console.error("Error fetching assets:", error);
-      return [];
-    }
-  }, []);
-
-  useEffect(() => {
-    getYield();
-  }, [getYield]);
-
-  console.log(yieldData)
   return (
     <main className="sc-kOPcWz hierkx">
       <div className="sc-iHGNWf hQvJpi">
@@ -88,17 +52,17 @@ const Yield = () => {
         >
           Transform MYIELD
         </div>
-        <div className="sc-gEvEer sc-eqUAAy ggjVBz fgprtA">
+        <div className="sc-gEvEer sc-eqUAAy ggjVBz flex-col lg:flex-row fgprtA">
           <div className="sc-gEvEer sc-eqUAAy bJVedh fgprtA">
             <h2 className="sc-gEvEer iAqSOi">
               Step 1: Stake MYIELD, Earn MVOUCHER
             </h2>
             <div className="sc-gEvEer gNzGLv">
-              <span className="sc-dZoequ ehpgUz">
+              <span className="sc-dZoequ  ehpgUz">
                 Stake MYield for 30 days to transform into
                 <a
                   href="https://muesliswap.com/mvoucher/"
-                  className="sc-gEvEer jOwCyM"
+                  className="sc-gEvEer ml-1 jOwCyM"
                 >
                   MILK voucher (MVOUCHER)
                 </a>
@@ -142,7 +106,7 @@ const Yield = () => {
                       maxLength="79"
                       pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
                       className="sc-gEvEer bOxyja"
-                      value="0"
+
                     />
                   </div>
                   <svg
@@ -170,13 +134,13 @@ const Yield = () => {
                   >
                     Stake MYIELD
                   </button>
-                  <a className="sc-gEvEer iTuoGg" href="/swap/">
+                  <a className="sc-gEvEer flex items-center justify-center  iTuoGg" href="/swap/">
                     Buy MYIELD
                     <svg
                       height="12"
                       viewBox="0 0 7 12"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="sc-gEvEer dSOvFp"
+                      className="sc-gEvEer mt-1 dSOvFp"
                     >
                       <path
                         d="M.3 11.7a1 1 0 0 1 0-1.4l4.05-4.06a.33.33 0 0 0 0-.48L.29 1.71A1 1 0 1 1 1.71.29l4.05 4.06a2.33 2.33 0 0 1 0 3.3l-4.05 4.06a1 1 0 0 1-1.42 0z"
@@ -226,7 +190,7 @@ const Yield = () => {
                         maxLength="79"
                         pattern="^[0-9,0-9]*[.]?[0-9,0-9]*$"
                         className="sc-eZkCL bhPbUa"
-                        value="0"
+
                       />
                     </div>
                   </div>

@@ -3,6 +3,109 @@
     transform: rotate(180deg);
 }
 
+.fsMeKA {
+    box-sizing: border-box;
+    margin: 26px 0px 0px;
+    min-width: 0px;
+    flex-direction: row;
+}
+
+.gxEYNe {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.kpgxOl {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    justify-content: start;
+    width: 100%;
+}
+
+.bnaciH {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    column-gap: 20px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.uzYEF {
+    box-sizing: border-box;
+    min-width: 0px;
+    height: 24px;
+    margin: 50px 20px auto;
+    color: rgb(83, 70, 255);
+}
+
+.jHyGok {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.jnBQpD {
+    box-sizing: border-box;
+    margin: 0px 0px 24px;
+    min-width: 0px;
+    font-family: Gilroy, sans-serif;
+    color: rgb(12, 22, 41);
+    font-size: 18px;
+    font-weight: 600;
+    width: min-content;
+}
+
+.cgLywg {
+    grid-area: stakeInfo;
+}
+
+.lbXcUT {
+    grid-area: stakeMore;
+}
+
+.efyEXa {
+    box-sizing: border-box;
+    min-width: 0px;
+    grid-template-areas: "stakeMore stakeInfo";
+    grid-template-columns: 1fr 0.6fr;
+    grid-template-rows: auto auto;
+    width: 100%;
+    background-color: rgb(243, 245, 254);
+    display: grid;
+    margin: 0px;
+    gap: 16px;
+    border-radius: 0px 0px 16px 16px;
+    padding: 0px 16px 16px;
+}
+
+
+.imKmWV {
+    box-sizing: border-box;
+    margin: 0px 0px 16px;
+    min-width: 0px;
+    color: rgb(12, 22, 41);
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: calc(12.7179px + 0.17094vw);
+    letter-spacing: 0px;
+}
+
 .dKyMbx {
     transition: 200ms;
     transform: rotate(0deg);
