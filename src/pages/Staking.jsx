@@ -1,7 +1,45 @@
 import EarnTab from "./components/EarnTab";
 import "./Staking.css";
 import Milk from "../assets/afbe91c0b44b3040e360057bf8354ead8c49c4979ae6ab7c4fbdc9eb.4d494c4b7632_scaled_100.webp";
+import { useCallback, useEffect, useState } from "react";
+import { cn } from "../lib/utils";
 const Staking = () => {
+  const [staking, setStaking] = useState([]);
+  const [openDropdowns, setOpenDropdowns] = useState([]);
+
+  const toggleDropdown = (index) => {
+    setOpenDropdowns(prevState => {
+      if (prevState.includes(index)) {
+        return prevState.filter(i => i !== index);
+      } else {
+        return [...prevState, index];
+      }
+    });
+  };
+  const getStaking = useCallback(async () => {
+    try {
+      const response = await fetch('https://api.muesliswap.com/staking/token-pools', {
+        method: 'GET',
+        headers: {},
+      });
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+
+      setStaking(data.slice(0, 20));
+      console.log(data.slice(0, 20));
+    } catch (error) {
+      console.error("Error fetching assets:", error);
+      return [];
+    }
+  }, []);
+
+  useEffect(() => {
+    getStaking();
+  }, [getStaking]);
+
+  console.log(staking)
   return (
     <main className="sc-kOPcWz hierkx">
       <div className="sc-iHGNWf hQvJpi">

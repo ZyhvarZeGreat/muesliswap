@@ -3,6 +3,7 @@ import "./Liquidity.css";
 import Ada from "../assets/ada.webp";
 import { Link } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
+import { cn } from "../lib/utils";
 
 const Liquidity = () => {
   const [liquidityPools, setLiquidityPools] = useState([]);
@@ -826,7 +827,7 @@ const Liquidity = () => {
                     colSpan="1"
                     role="columnheader"
                     title="Toggle SortBy"
-                    className="sc-gEvEer hhHPem"
+                    className="sc-gEvEer hidden sm:block hhHPem"
                     style={{ cursor: "pointer" }}
                   >
                     Volume 24h
@@ -853,7 +854,7 @@ const Liquidity = () => {
                     className="sc-gEvEer hhHPem"
                     style={{ cursor: "pointer" }}
                   >
-                    <span className="sc-gEvEer dSOvFp">Liquidity APY</span>
+                    <span className="sc-gEvEer hidden sm:block  dSOvFp">Liquidity APY</span>
                     <div display="inline-flex" className="sc-gEvEer ebwaLP">
                       <svg
                         width="18"
@@ -924,8 +925,12 @@ const Liquidity = () => {
               <tbody role="rowgroup" className="sc-gEvEer  ">
                 {liquidityPools.map((asset, index) => (
                   <>
-                    <tr key={index} role="row" className="sc-gEvEer gFEUUI  ">
-                      <td role="cell" className="sc-gEvEer faiYBU ">
+                    <tr key={index} role="row" className={cn("sc-gEvEer gFEUUI",
+
+                    )}>
+                      <td role="cell" className={cn("sc-gEvEer faiYBU",
+                        openDropdowns.includes(index) && ' bg-[#eff2f8]'
+                      )} >
                         <a
                           className="sc-iHbSHJ px-4 bwYSnM"
                           href="/swap?base=.&amp;quote=afbe91c0b44b3040e360057bf8354ead8c49c4979ae6ab7c4fbdc9eb.4d494c4b7632"
@@ -975,33 +980,45 @@ const Liquidity = () => {
                           </div>
                         </a>
                       </td>
-                      <td role="cell" className="sc-gEvEer faiYBU">
-                        <div color="text" className="sc-gEvEer VQoKn">
+                      <td role="cell" className={cn("sc-gEvEer faiYBU",
+                        openDropdowns.includes(index) && ' bg-[#eff2f8]'
+                      )}>
+                        <div color="text" className={cn("sc-gEvEer faiYBU",
+                          openDropdowns.includes(index) && ' bg-[#eff2f8]'
+                        )}>
                           {(Number(asset.tokenB.priceAda) / 1000000).toFixed(1)} ADA
                         </div>
                       </td>
-                      <td role="cell" className="sc-gEvEer faiYBU">
+                      <td role="cell" className={cn("sc-gEvEer  faiYBU",
+                        openDropdowns.includes(index) && '  bg-[#eff2f8]'
+                      )}>
                         <div className="sc-gEvEer jVsTBr">{(Number(asset.lpToken.amount) / 1000000).toFixed(1).toLocaleString()}₳</div>
                         <p className="sc-gEvEer jLfEph">~{((Number(asset.lpToken.amount) / 1000000) * 0.3).toFixed(1).toLocaleString()} $</p>
                       </td>
-                      <td role="cell" className="sc-gEvEer faiYBU">
-                        <div className="sc-gEvEer jVsTBr">{(Number(asset.volume24h)).toFixed().toLocaleString()} ₳</div>
+                      <td role="cell" className={cn("sc-gEvEer hidden sm:block faiYBU",
+                        openDropdowns.includes(index) && ' bg-[#eff2f8]'
+                      )}>
+                        <div className="sc-gEvEer  jVsTBr">{(Number(asset.volume24h)).toFixed().toLocaleString()} ₳</div>
                         <p className="sc-gEvEer jLfEph">~{(Number(asset.volume24h) * 0.3).toFixed().toLocaleString()} $</p>
                       </td>
-                      <td role="cell" className="sc-gEvEer faiYBU">
-                        <div color="text" className="sc-gEvEer VQoKn">
+                      <td role="cell" className={cn("sc-gEvEer faiYBU",
+                        openDropdowns.includes(index) && ' bg-[#eff2f8]'
+                      )}>
+                        <div color="text" className="sc-gEvEer hidden sm:block VQoKn">
                           {asset.liquidityApy.toFixed(1)} %
                         </div>
                       </td>
-                      <td role="cell" className="sc-gEvEer faiYBU">
+                      <td role="cell" className={cn("sc-gEvEer faiYBU",
+                        openDropdowns.includes(index) && ' bg-[#eff2f8]  border-none  '
+                      )}>
                         <div
-                         onClick={() => toggleDropdown(index)}
-                         className="sc-gEvEer sc-eqUAAy gYGjHl fgprtA">
+                          onClick={() => toggleDropdown(index)}
+                          className="sc-gEvEer sc-eqUAAy gYGjHl fgprtA">
                           <div
                             color="inherit"
                             fontWeight="semiBold"
-                            className="sc-gEvEer hcJuDx"
-                           
+                            className="sc-gEvEer hidden sm:block hcJuDx"
+
                           >
                             Details
                           </div>
@@ -1020,59 +1037,61 @@ const Liquidity = () => {
                           </div>
                         </div>
                       </td>
-                    </tr>
-                    {openDropdowns.includes(index) && (
-                      <tr className="sc-gEvEer dSOvFp">
-                        <td colSpan="6">
-                          <div className="sc-gEvEer sc-eqUAAy caqVIz fgprtA">
-                            <div className="sc-gEvEer ipETLm">
-                              <h4 fontFamily="gilroy" color="text" fontSize="18px" fontWeight="600" className="sc-gEvEer jVEjPV">Your Liquidity Position</h4>
-                              <div className="sc-gEvEer sc-eqUAAy gsUTSe fgprtA">
-                                <p className="sc-gEvEer hBexKU">0 <span style={{ fontSize: '16px' }}>₳</span></p>
-                                <p className="sc-gEvEer bOSdkX">0 ADA <span className="sc-jnOGJG jQkNxn">50%</span></p>
-                                <p className="sc-gEvEer bOSdkX">0 OPT <span className="sc-jnOGJG jQkNxn">50%</span></p>
-                              </div>
-                              <div className="sc-gEvEer sc-eqUAAy gjRtJv fgprtA">
-                                <button className="sc-gEvEer eWXwvT">Connect wallet</button>
-                              </div>
-                            </div>
-                            <div className="sc-gEvEer ipETLm">
-                              <h4 fontFamily="gilroy" color="text" fontSize="18px" fontWeight="600" className="sc-gEvEer jVEjPV">Pool Information</h4>
-                              <div className="sc-gEvEer sc-eqUAAy bjmCVl fgprtA">
-                                <div className="sc-gEvEer sc-eqUAAy fEQVqC fgprtA">
-                                  <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
-                                    <p className="sc-gEvEer kpVmdW">Matchmaker Fee:</p>
-                                    <p fontWeight="500" className="sc-gEvEer cFqvxQ">0.95 ADA</p>
-                                  </div>
-                                  <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
-                                    <p className="sc-gEvEer kpVmdW">Locked ADA:</p>
-                                    <p fontWeight="500" className="sc-gEvEer cFqvxQ">206,330</p>
-                                  </div>
-                                  <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
-                                    <p className="sc-gEvEer kpVmdW">Locked OPT:</p>
-                                    <p fontWeight="500" className="sc-gEvEer cFqvxQ">4,660,990</p>
-                                  </div>
+                    </tr >
+                    {
+                      openDropdowns.includes(index) && (
+                        <tr className="sc-gEvEer py-4     items-center justify-center w-full dSOvFp">
+                          <td colSpan="6" className="">
+                            <div className="sc-gEvEer py-6 flex flex-col sm:flex-row sc-eqUAAy caqVIz fgprtA">
+                              <div className="sc-gEvEer ipETLm ">
+                                <h4 fontFamily="gilroy" color="text" fontSize="18px" fontWeight="600" className="sc-gEvEer  jVEjPV">Your Liquidity Position</h4>
+                                <div className="sc-gEvEer sc-eqUAAy gsUTSe  fgprtA">
+                                  <p className="sc-gEvEer hBexKU">0 <span style={{ fontSize: '16px' }}>₳</span></p>
+                                  <p className="sc-gEvEer bOSdkX">0 ADA <span className="sc-jnOGJG cLDdoA jQkNxn">50%</span></p>
+                                  <p className="sc-gEvEer bOSdkX">0 OPT <span className="sc-jnOGJG cLDdoA jQkNxn">50%</span></p>
                                 </div>
-                                <div className="sc-gEvEer sc-eqUAAy fEQVqC fgprtA">
-                                  <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
-                                    <p className="sc-gEvEer kpVmdW">UTxO Deposit:</p>
-                                    <p fontWeight="500" className="sc-gEvEer cFqvxQ">2 ₳</p>
-                                  </div>
-                                  <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
-                                    <p className="sc-gEvEer kpVmdW">Trading Fee:</p>
-                                    <p fontWeight="500" className="sc-gEvEer cFqvxQ">0.30&nbsp;%</p>
-                                  </div>
-                                  <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
-                                    <p className="sc-gEvEer kpVmdW">Trading Fee APR:</p>
-                                    <p fontWeight="500" className="sc-gEvEer cFqvxQ">0.69&nbsp;%</p>
-                                  </div>
+                                <div className="sc-gEvEer sc-eqUAAy gjRtJv fgprtA">
+                                  <button className="sc-gEvEer eWXwvT">Connect wallet</button>
                                 </div>
                               </div>
+                              <div className="sc-gEvEer gap-2  flex flex-col   ipETLm">
+                                <h4 fontFamily="gilroy" color="text" fontSize="18px" fontWeight="600" className="sc-gEvEer jVEjPV">Pool Information</h4>
+                                <div className="sc-gEvEer w-full p-0 m-0 sc-eqUAAy bjmCVl fgprtA">
+                                  <div className="sc-gEvEer sc-eqUAAy fEQVqC fgprtA">
+                                    <div className="sc-gEvEer sc-eqUAAy p-0 AbBwJ fgprtA">
+                                      <p className="sc-gEvEer kpVmdW">Matchmaker Fee:</p>
+                                      <p fontWeight="500" className="sc-gEvEer cFqvxQ">0.95 ADA</p>
+                                    </div>
+                                    <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
+                                      <p className="sc-gEvEer kpVmdW">Locked ADA:</p>
+                                      <p fontWeight="500" className="sc-gEvEer cFqvxQ">206,330</p>
+                                    </div>
+                                    <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
+                                      <p className="sc-gEvEer kpVmdW">Locked OPT:</p>
+                                      <p fontWeight="500" className="sc-gEvEer cFqvxQ">4,660,990</p>
+                                    </div>
+                                  </div>
+                                  <div className="sc-gEvEer sc-eqUAAy fEQVqC fgprtA">
+                                    <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
+                                      <p className="sc-gEvEer kpVmdW">UTxO Deposit:</p>
+                                      <p fontWeight="500" className="sc-gEvEer cFqvxQ">2 ₳</p>
+                                    </div>
+                                    <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
+                                      <p className="sc-gEvEer kpVmdW">Trading Fee:</p>
+                                      <p fontWeight="500" className="sc-gEvEer cFqvxQ">0.30&nbsp;%</p>
+                                    </div>
+                                    <div className="sc-gEvEer sc-eqUAAy AbBwJ fgprtA">
+                                      <p className="sc-gEvEer kpVmdW">Trading Fee APR:</p>
+                                      <p fontWeight="500" className="sc-gEvEer cFqvxQ">0.69&nbsp;%</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </td>
-                      </tr>
-                    )}
+                          </td>
+                        </tr>
+                      )
+                    }
                   </>
                 ))}
               </tbody>
@@ -1080,7 +1099,7 @@ const Liquidity = () => {
           </div>
         </div>
       </div>
-    </main>
+    </main >
   );
 };
 

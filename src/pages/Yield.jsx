@@ -1,7 +1,45 @@
 import EarnTab from "./components/EarnTab";
 import "./Yield.css";
 import Milk from "../assets/muesliswap.86e5affdd1cbde9ed769.webp";
+import { useCallback, useEffect, useState } from "react";
+import { cn } from "../lib/utils";
 const Yield = () => {
+  const [yieldData, setYield] = useState([]);
+  const [openDropdowns, setOpenDropdowns] = useState([]);
+
+  const toggleDropdown = (index) => {
+    setOpenDropdowns(prevState => {
+      if (prevState.includes(index)) {
+        return prevState.filter(i => i !== index);
+      } else {
+        return [...prevState, index];
+      }
+    });
+  };
+  const getYield = useCallback(async () => {
+    try {
+      const response = await fetch('https://api.muesliswap.com/staking/myield-pools', {
+        method: 'GET',
+        headers: {},
+      });
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+
+      setYield(data.slice(0, 20));
+      console.log(data.slice(0, 20));
+    } catch (error) {
+      console.error("Error fetching assets:", error);
+      return [];
+    }
+  }, []);
+
+  useEffect(() => {
+    getYield();
+  }, [getYield]);
+
+  console.log(yieldData)
   return (
     <main className="sc-kOPcWz hierkx">
       <div className="sc-iHGNWf hQvJpi">
@@ -70,7 +108,7 @@ const Yield = () => {
                 className="sc-dZoequ ehpgUz"
                 style={{ marginTop: "13px", fontWeight: 600 }}
               >
-                Staking ratio 100 MYield = 1 MILK voucher
+                Yield ratio 100 MYield = 1 MILK voucher
               </span>
               <div width="100%" className="sc-gEvEer fOzfof">
                 <div className="sc-gEvEer sc-eqUAAy hCOMjc fgprtA">

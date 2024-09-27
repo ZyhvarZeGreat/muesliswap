@@ -3,6 +3,136 @@
     transform: rotate(180deg);
 }
 
+.jVEjPV {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    font-family: Gilroy, sans-serif;
+    color: rgb(12, 22, 41);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.gjRtJv {
+    box-sizing: border-box;
+    min-width: 0px;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px -8px;
+}
+
+.AbBwJ {
+    box-sizing: border-box;
+    min-width: 0px;
+    margin: 5px 20px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+
+.gsUTSe {
+    box-sizing: border-box;
+    min-width: 0px;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 16px -20px;
+}
+
+.fEQVqC {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.bOSdkX {
+    box-sizing: border-box;
+    min-width: 0px;
+    color: rgb(12, 22, 41);
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 14px;
+    font-size: 14px;
+    letter-spacing: 0px;
+    margin: 0px 20px;
+}
+
+.cLDdoA {
+    background: rgb(223, 221, 255);
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: rgb(83, 70, 255);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.hBexKU {
+    box-sizing: border-box;
+    min-width: 0px;
+    color: rgb(12, 22, 41);
+    font-weight: 600;
+    font-family: Gilroy, sans-serif;
+    font-size: calc(19.0769px + 0.25641vw);
+    line-height: 1.16;
+    letter-spacing: 0px;
+    margin: 0px 20px;
+}
+
+.kpVmdW {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    color: rgb(12, 22, 41);
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 14px;
+    font-size: 14px;
+    letter-spacing: 0px;
+}
+
+.cFqvxQ {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    color: rgb(12, 22, 41);
+    font-family: Inter, sans-serif;
+    line-height: 14px;
+    font-size: 14px;
+    letter-spacing: 0px;
+    font-weight: 500;
+}
+
+
+.ipETLm {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.caqVIz {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    border-radius: 0px 0px 16px 16px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    padding: 0px 16px 16px;
+    gap: 16px;
+    background-color: rgb(239, 242, 248);
+}
+
 .cyoWIZ {
     box-sizing: border-box;
     min-width: 0px;
