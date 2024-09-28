@@ -675,6 +675,7 @@ const Home = () => {
                     </div>
                   </div>
                   <ConnectWallet
+                    text='Connect Wallet'
                     width='full'
                     walletBalance={walletBalance}
                     setWalletBalance={setWalletBalance}

@@ -300,7 +300,7 @@ const Navbar = () => {
           {state.isWalletConnected === true ? (
             <Dropdown disconnect={disconnectWallet} />
           ) : (
-            <ConnectWallet />
+            <ConnectWallet width='' />
           )}
           <MobileNav />
           <CurrencyDropdown />

@@ -309,7 +309,7 @@ const ConnectWallet = (props) => {
     <Dialog>
       <DialogTrigger className="w-full">
         <div className="sc-gEvEer eLaKli w-full">
-          <button className={`sc-gEvEer eWXwvT ${props.width} lg:${props.width}`}>
+          <button className={`sc-gEvEer eWXwvT ${props.width ? `w-${props.width}` : 'w-full'}  `}>
             {props.text ? props.text : ' Connect wallet'}
           </button>
         </div>

@@ -279,14 +279,14 @@ const Staking = () => {
                   <th
                     colSpan="1"
                     role="columnheader"
-                    className="sc-gEvEer eVeTFp"
+                    className="sc-gEvEer  text-end eVeTFp"
                   >
                     Rewards per MILK
                   </th>
                   <th
                     colSpan="1"
                     role="columnheader"
-                    className="sc-gEvEer hidden sm:table-cell  eVeTFp"
+                    className="sc-gEvEer hidden lg:table-cell  eVeTFp"
                   >
                     Pool Size
                   </th>
@@ -356,7 +356,7 @@ const Staking = () => {
                   <td role="cell" className="sc-gEvEer hidden lg:table-cell dJITOL">
                     <div className="sc-gEvEer jVsTBr">40K LIFI</div>
                   </td>
-                  <td role="cell" className="sc-gEvEer hidden sm:table-cell dJITOL">
+                  <td role="cell" className="sc-gEvEer hidden lg:table-cell dJITOL">
                     <div className="sc-gEvEer jVsTBr">324.3K MILK</div>
                   </td>
                   <td role="cell" className="sc-gEvEer  hidden lg:table-cell  dJITOL">
@@ -373,11 +373,11 @@ const Staking = () => {
                     </div>
                   </td>
                   <td role="cell" className="sc-gEvEer  dJITOL">
-                    <div className="sc-gEvEer sc-eqUAAy gYGjHl fgprtA">
+                    <div onClick={() => {
+                      setOpenDropdown(!openDropdown)
+                    }} className="sc-gEvEer sc-eqUAAy  gYGjHl fgprtA">
                       <div
-                        onClick={() => {
-                          setOpenDropdown(!openDropdown)
-                        }}
+
                         color="inherit"
                         fontWeight="semiBold"
                         className="sc-gEvEer hidden lg:block hcJuDx"
@@ -597,11 +597,11 @@ const Staking = () => {
                     </div>
                   </td>
                   <td role="cell" className="sc-gEvEer dJITOL">
-                    <div className="sc-gEvEer sc-eqUAAy gYGjHl fgprtA">
+                    <div onClick={() => {
+                      setOpenDropdown1(!openDropdown1)
+                    }} className="sc-gEvEer sc-eqUAAy gYGjHl fgprtA">
                       <div
-                        onClick={() => {
-                          setOpenDropdown1(!openDropdown1)
-                        }}
+
                         color="inherit"
                         fontWeight="semiBold"
                         className="sc-gEvEer hidden lg:block hcJuDx"

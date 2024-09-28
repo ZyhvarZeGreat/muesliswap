@@ -908,12 +908,12 @@ const Liquidity = () => {
                           {asset.liquidityApy.toFixed(1)} %
                         </div>
                       </td>
-                      <td role="cell" className={cn("sc-gEvEer   faiYBU",
+                      <td role="cell" className={cn("sc-gEvEer flex    faiYBU",
                         openDropdowns.includes(index) && ' bg-[#eff2f8]  border-none  '
                       )}>
                         <div
                           onClick={() => toggleDropdown(index)}
-                          className="sc-gEvEer sc-eqUAAy gYGjHl fgprtA">
+                          className="sc-gEvEer sc-eqUAAy  gYGjHl fgprtA">
                           <div
                             color="inherit"
                             fontWeight="semiBold"
@@ -922,10 +922,11 @@ const Liquidity = () => {
                           >
                             Details
                           </div>
-                          <div className="sc-gEvEer eXsOiX">
+                          <div className="sc-gEvEer  eXsOiX">
                             <svg
                               height="12"
                               viewBox="0 0 7 12"
+
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
