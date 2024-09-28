@@ -336,7 +336,7 @@ const Markets = () => {
                 <input
                   placeholder="Search token by name"
                   className="sc-gEvEer jdxaSg"
-                  value=""
+
                 />
                 <svg
                   width="24px"

@@ -782,6 +782,30 @@ const Liquidity = () => {
                     className="sc-gEvEer hhHPem"
                     style={{ cursor: "pointer" }}
                   >
+                    Liquidity Range
+                    <span hidden="" className="sc-ddjGPC fRRtfN">
+                      <div className="sc-aXZVg dKyMbx">
+                        <svg
+                          width="10"
+                          height="6"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z"
+                            fill="currentColor"
+                            fillRule="evenodd"
+                          ></path>
+                        </svg>
+                      </div>
+                    </span>
+                  </th>
+                  <th
+                    colSpan="1"
+                    role="columnheader"
+                    title="Toggle SortBy"
+                    className="sc-gEvEer hhHPem"
+                    style={{ cursor: "pointer" }}
+                  >
                     Price
                     <span hidden="" className="sc-ddjGPC fRRtfN">
                       <div className="sc-aXZVg dKyMbx">
@@ -827,7 +851,7 @@ const Liquidity = () => {
                     colSpan="1"
                     role="columnheader"
                     title="Toggle SortBy"
-                    className="sc-gEvEer hidden sm:block hhHPem"
+                    className="sc-gEvEer hhHPem"
                     style={{ cursor: "pointer" }}
                   >
                     Volume 24h
@@ -854,7 +878,7 @@ const Liquidity = () => {
                     className="sc-gEvEer hhHPem"
                     style={{ cursor: "pointer" }}
                   >
-                    <span className="sc-gEvEer hidden sm:block  dSOvFp">Liquidity APY</span>
+                    <span className="sc-gEvEer dSOvFp">Liquidity APY</span>
                     <div display="inline-flex" className="sc-gEvEer ebwaLP">
                       <svg
                         width="18"

@@ -12,9 +12,9 @@ import img from '../../assets/ada.webp'
 const MarketsTable = () => {
   return (
     <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead className="sc-gFAWRd itlcvQ">
+      <TableHeader >
+        <TableRow className="font-gilroy font-semibold">
+          <TableHead className="sc-gFAWRd font-semibold itlcvQ">
             <span hidden className="sc-ddjGPC fRRtfN">
               <div className="sc-aXZVg jrzA-dM">
                 <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +27,7 @@ const MarketsTable = () => {
               </div>
             </span>
           </TableHead>
-          <TableHead className="sc-gFAWRd itlcvQ">
+          <TableHead className="sc-gFAWRd font-semibold  text-center itlcvQ">
             Name
             <span hidden className="sc-ddjGPC fRRtfN">
               <div className="sc-aXZVg jrzA-dM">
@@ -41,8 +41,8 @@ const MarketsTable = () => {
               </div>
             </span>
           </TableHead>
-          <TableHead className="sc-gFAWRd itlcvQ">
-            Price (img)
+          <TableHead className="sc-gFAWRd font-semibold  text-center itlcvQ">
+            Price
             <span hidden className="sc-ddjGPC fRRtfN">
               <div className="sc-aXZVg jrzA-dM">
                 <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
@@ -55,8 +55,8 @@ const MarketsTable = () => {
               </div>
             </span>
           </TableHead>
-          <TableHead className="sc-gFAWRd itlcvQ">
-            24h %
+          <TableHead className="sc-gFAWRd font-semibold  text-center itlcvQ">
+            24h
             <span hidden className="sc-ddjGPC fRRtfN">
               <div className="sc-aXZVg jrzA-dM">
                 <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
@@ -69,8 +69,8 @@ const MarketsTable = () => {
               </div>
             </span>
           </TableHead>
-          <TableHead className="sc-gFAWRd itlcvQ">
-            7d %
+          <TableHead className="sc-gFAWRd font-semibold text-center  itlcvQ">
+            7d
             <span hidden className="sc-ddjGPC fRRtfN">
               <div className="sc-aXZVg jrzA-dM">
                 <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
@@ -83,8 +83,8 @@ const MarketsTable = () => {
               </div>
             </span>
           </TableHead>
-          <TableHead className="sc-gFAWRd itlcvQ">
-            Volume 24h (img)
+          <TableHead className="sc-gFAWRd font-semibold text-center  itlcvQ">
+            Volume 24h
             <span className="sc-ddjGPC dtONNa">
               <div className="sc-aXZVg jrzA-dM">
                 <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
@@ -97,8 +97,8 @@ const MarketsTable = () => {
               </div>
             </span>
           </TableHead>
-          <TableHead className="sc-gFAWRd itlcvQ">
-            Market Cap (img)
+          <TableHead className="sc-gFAWRd font-semibold text-center  itlcvQ">
+            Market Cap
             <span hidden className="sc-ddjGPC fRRtfN">
               <div className="sc-aXZVg jrzA-dM">
                 <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
@@ -111,7 +111,7 @@ const MarketsTable = () => {
               </div>
             </span>
           </TableHead>
-          <TableHead className="sc-gFAWRd itlcvQ">
+          <TableHead className="sc-gFAWRd font-semibold text-center  itlcvQ">
             Last 10 Days
             <span hidden className="sc-ddjGPC fRRtfN">
               <div className="sc-aXZVg jrzA-dM">
@@ -130,7 +130,7 @@ const MarketsTable = () => {
       <TableBody className="bg-white">
 
         <TableRow className="sc-gmPhUn FCgni">
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <label className="sc-kAkpmW cRPsKG">
               <input type="checkbox" className="sc-cmaqmh iwhYbG" />
               <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -142,7 +142,7 @@ const MarketsTable = () => {
               </svg>
             </label>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <Link className="sc-iHbSHJ bwYSnM" to="/swap?base=.&quote=279c909f348e533da5808898f87f9a14bb2c3dfbbacccd631d927a3f.534e454b">
               <div className="LazyLoad is-visible" style={{ height: "32px", width: "59.2px" }}>
                 <div width="59.2px" height="32px" className="sc-cWSHoV dazaWi">
@@ -166,25 +166,25 @@ const MarketsTable = () => {
               <span className="sc-klVQfs bRcUix"> Meme </span>
             </Link>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW  text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">0.002091</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">7.391E-4$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div value="2.2880112709918965" className="sc-uVWWZ lcUsoT">↑&nbsp;2.29%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">6,832</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">2,415$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">155,000,882</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">54,787,387$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-gEvEer fiARsy">
               <canvas
                 height="48"
@@ -196,7 +196,7 @@ const MarketsTable = () => {
           </TableCell>
         </TableRow>
         <TableRow className="sc-gmPhUn FCgni">
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <label className="sc-kAkpmW cRPsKG">
               <input type="checkbox" className="sc-cmaqmh iwhYbG" />
               <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -208,7 +208,7 @@ const MarketsTable = () => {
               </svg>
             </label>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <Link className="sc-iHbSHJ bwYSnM" to="/swap?base=.&quote=f43a62fdc3965df486de8a0d32fe800963589c41b38946602a0dc535.41474958">
               <div className="LazyLoad is-visible" style={{ height: "32px", width: "59.2px" }}>
                 <div width="59.2px" height="32px" className="sc-cWSHoV dazaWi">
@@ -231,25 +231,25 @@ const MarketsTable = () => {
               <span className="sc-klVQfs bRcUix"> Other </span>
             </Link>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">1.943124</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">0.687$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div value="-0.40867356055985793" className="sc-uVWWZ ejrJPX">↓&nbsp;0.41%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div value="13.56304569713469" className="sc-uVWWZ lcUsoT">↑&nbsp;13.56%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">6,244</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">2,207$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">1,006,177,474</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">355,648,521$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-gEvEer fiARsy">
               <canvas
                 height="48"
@@ -261,7 +261,7 @@ const MarketsTable = () => {
           </TableCell>
         </TableRow>
         <TableRow className="sc-gmPhUn FCgni">
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <label className="sc-kAkpmW cRPsKG">
               <input type="checkbox" className="sc-cmaqmh iwhYbG" />
               <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -273,7 +273,7 @@ const MarketsTable = () => {
               </svg>
             </label>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <Link className="sc-iHbSHJ bwYSnM" to="/swap?base=.&quote=8db269c3ec630e06ae29f74bc39edd1f87c819f1056206e879a1cd61.446a65644d6963726f555344">
               <div className="LazyLoad is-visible" style={{ height: "32px", width: "59.2px" }}>
                 <div width="59.2px" height="32px" className="sc-cWSHoV dazaWi">
@@ -297,25 +297,25 @@ const MarketsTable = () => {
               <span className="sc-klVQfs bRcUix"> DeFi </span>
             </Link>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">2.794819</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">0.988$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div value="2.3916483232951258" className="sc-uVWWZ lcUsoT">↑&nbsp;2.39%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">5,460</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">1,930$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">7,160,083</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">2,530,839$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-gEvEer fiARsy">
               <canvas
                 height="48"
@@ -327,7 +327,7 @@ const MarketsTable = () => {
           </TableCell>
         </TableRow>
         <TableRow className="sc-gmPhUn FCgni">
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <label className="sc-kAkpmW cRPsKG">
               <input type="checkbox" className="sc-cmaqmh iwhYbG" />
               <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -339,7 +339,7 @@ const MarketsTable = () => {
               </svg>
             </label>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <Link
               className="sc-iHbSHJ bwYSnM"
               to="/swap?base=.&quote=92776616f1f32c65a173392e4410a3d8c39dcf6ef768c73af164779c.4d79555344"
@@ -365,23 +365,23 @@ const MarketsTable = () => {
               <span className="sc-klVQfs bRcUix"> DeFi </span>
             </Link>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">-</p>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">4,936</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">1,745$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">-</p>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-gEvEer fiARsy">
               <canvas
                 height="48"
@@ -393,7 +393,7 @@ const MarketsTable = () => {
           </TableCell>
         </TableRow>
         <TableRow className="sc-gmPhUn FCgni">
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <label className="sc-kAkpmW cRPsKG">
               <input type="checkbox" className="sc-cmaqmh iwhYbG" />
               <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -405,7 +405,7 @@ const MarketsTable = () => {
               </svg>
             </label>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <Link
               className="sc-iHbSHJ bwYSnM"
               to="/swap?base=.&quote=b6a7467ea1deb012808ef4e87b5ff371e85f7142d7b356a40d9b42a0.436f726e75636f70696173205b76696120436861696e506f72742e696f5d"
@@ -431,25 +431,25 @@ const MarketsTable = () => {
               <span className="sc-klVQfs bRcUix"> Other </span>
             </Link>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">0.070054</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">0.025$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">1,581</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">559$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">64,092,344</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">22,654,400$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-gEvEer fiARsy">
               <canvas
                 height="48"
@@ -461,7 +461,7 @@ const MarketsTable = () => {
           </TableCell>
         </TableRow>
         <TableRow className="sc-gmPhUn FCgni">
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <label className="sc-kAkpmW cRPsKG">
               <input type="checkbox" className="sc-cmaqmh iwhYbG" />
               <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -473,7 +473,7 @@ const MarketsTable = () => {
               </svg>
             </label>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <Link
               className="sc-iHbSHJ bwYSnM"
               to="/swap?base=.&quote=edfd7a1d77bcb8b884c474bdc92a16002d1fb720e454fa6e99344479.4e5458"
@@ -498,25 +498,25 @@ const MarketsTable = () => {
               <span className="sc-klVQfs cErbak">Verified</span>
             </Link>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">0.09295</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">0.033$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div value="1.2097806073788409" className="sc-uVWWZ lcUsoT">↑&nbsp;1.21%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div value="5.423489120883174" className="sc-uVWWZ lcUsoT">↑&nbsp;5.42%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">1,300</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">460$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">61,780,269</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">21,837,163$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-gEvEer fiARsy">
               <canvas
                 height="48"
@@ -528,7 +528,7 @@ const MarketsTable = () => {
           </TableCell>
         </TableRow>
         <TableRow className="sc-gmPhUn FCgni">
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <label className="sc-kAkpmW cRPsKG">
               <input type="checkbox" className="sc-cmaqmh iwhYbG" />
               <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -540,7 +540,7 @@ const MarketsTable = () => {
               </svg>
             </label>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <Link
               className="sc-iHbSHJ bwYSnM"
               to="/swap?base=.&quote=7507734918533b3b896241b4704f3d4ce805256b01da6fcede430436.42616279534e454b"
@@ -566,25 +566,25 @@ const MarketsTable = () => {
               <span className="sc-klVQfs bRcUix"> Meme </span>
             </Link>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">0.000008</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">2.755E-6$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">531</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">188$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">583,983</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">206,418$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-gEvEer fiARsy">
               <canvas
                 height="48"
@@ -596,7 +596,7 @@ const MarketsTable = () => {
           </TableCell>
         </TableRow>
         <TableRow className="sc-gmPhUn FCgni">
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <label className="sc-kAkpmW cRPsKG">
               <input type="checkbox" className="sc-cmaqmh iwhYbG" />
               <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -608,7 +608,7 @@ const MarketsTable = () => {
               </svg>
             </label>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <Link
               className="sc-iHbSHJ bwYSnM"
               to="/swap?base=.&quote=a2944573e99d2ed3055b808eaa264f0bf119e01fc6b18863067c63e4.4d454c44"
@@ -633,25 +633,25 @@ const MarketsTable = () => {
               <span className="sc-klVQfs cErbak">Verified</span>
             </Link>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">0.036328</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">0.013$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-uVWWZ eJsMUQ">&nbsp;0%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div value="2.3218683704619103" className="sc-uVWWZ lcUsoT">↑&nbsp;2.32%</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">440</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">156$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <p className="sc-gEvEer dSOvFp">44,663,193</p>
             <div color="grey500" className="sc-gEvEer bdDaQC">15,786,876$</div>
           </TableCell>
-          <TableCell className="sc-hRJfrW iUJzLW">
+          <TableCell className="sc-hRJfrW text-center  iUJzLW">
             <div className="sc-gEvEer fiARsy">
               <canvas
                 height="48"

@@ -3,6 +3,24 @@
     transform: rotate(180deg);
 }
 
+.cCJcoR {
+    box-sizing: border-box;
+    margin: 20px 0px 0px;
+    min-width: 0px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.eTDyuK {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    border-spacing: 0px;
+    padding: 16px 16px 0px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
 .jbDUGx {
     box-sizing: border-box;
     margin: 0px;
