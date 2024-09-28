@@ -150,7 +150,7 @@ const AssetPopup = (props) => {
                   placeholder="Search tokens"
                   className="sc-JrDLc focus-within:outline-none focus:outline-none z-20 bg-transparent border border-[#5364ff] py-2 rounded-full px-8  w-[303px] "
                 />
-                <div className="sc-fjvvzt px-2 flex top-0 top-0 items-center justify-between w-full absolute jXmKLn">
+                <div className="sc-fjvvzt px-2 flex h-full top-0 items-center justify-between w-full absolute jXmKLn">
                   <svg
                     width="24"
                     height="24"
@@ -226,7 +226,7 @@ const AssetPopup = (props) => {
                   className="flex items-start flex-col g w-full"
                   style={{ height: "1.57229e+06px", width: "100%" }}
                 >
-                  {adaOnly && adaOnly.map((asset, i) => {
+                  {state.isWalletConnected && adaOnly && adaOnly.map((asset, i) => {
                     return (
                       <DialogClose className="w-full" key={i}>
                         <button
@@ -288,7 +288,7 @@ const AssetPopup = (props) => {
                       </DialogClose>
                     )
                   })}
-                  {filteredAssets &&
+                  {state.isWalletConnected && filteredAssets &&
                     filteredAssets?.map((asset, i) => {
                       return (
                         <DialogClose className="w-full" key={i}>

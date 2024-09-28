@@ -148,7 +148,7 @@ const BottomAssetPopup = (props) => {
                   placeholder="Search tokens"
                   className="sc-JrDLc focus-within:outline-none focus:outline-none z-20 bg-transparent border border-[#5364ff] py-2 rounded-full px-8  w-[303px] "
                 />
-                <div className="sc-fjvvzt px-2 flex bottom-0 top-0 items-center justify-between w-full absolute jXmKLn">
+                <div className="sc-fjvvzt  px-2 flex bottom-0 top-0 items-center justify-between w-full absolute jXmKLn">
                   <svg
                     width="24"
                     height="24"
@@ -156,7 +156,7 @@ const BottomAssetPopup = (props) => {
                   >
                     <path
                       d="m19.7 18.3-3.09-3.1a7 7 0 1 0-1.41 1.41l3.1 3.1a1 1 0 1 0 1.4-1.41ZM11.04 16a4.98 4.98 0 1 1 0-9.96 4.98 4.98 0 0 1 0 9.96Z"
-                      fill="currentColor"
+                      fill="#333"
                       fillRule="evenodd"
                     ></path>
                   </svg>
