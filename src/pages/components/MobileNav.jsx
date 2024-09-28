@@ -273,32 +273,44 @@ const MobileNav = () => {
                 to="/markets"
                 className="sc-gFqAkR border rounded-lg p-3 mb-4 kmtpjP"
               >
-                <SheetClose>Markets</SheetClose>
+                <SheetClose className="w-full flex items-start">Markets</SheetClose>
               </Link>
               <Link
                 to="/swap"
                 aria-current="page"
                 className="sc-gFqAkR border rounded-lg p-3 mb-4 kmtpjP active"
               >
-                Swap
+                <SheetClose className="w-full flex items-start">
+
+                  Swap
+                </SheetClose>
               </Link>
               <Link
                 to="/earn/liquidity"
                 className="sc-gFqAkR border rounded-lg p-3 mb-4 kmtpjP"
               >
-                Earn
+                <SheetClose className="w-full flex items-start">
+
+                  Earn
+                </SheetClose>
               </Link>
               <Link
                 to="/watchlist?tab=all"
                 className="sc-gFqAkR border rounded-lg p-3 mb-4 kmtpjP"
               >
-                Watchlist
+                <SheetClose className="w-full flex items-start">
+
+                  Watchlist
+                </SheetClose>
               </Link>
               <Link
                 to="/token-migration"
                 className="sc-gFqAkR border rounded-lg p-3 mb-4 kmtpjP"
               >
-                MILKv2
+                <SheetClose className="w-full flex items-start">
+
+                  MILKv2
+                </SheetClose>
               </Link>
               <div className="sc-gEvEer flex flex-col dSOvFp">
                 <div

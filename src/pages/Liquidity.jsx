@@ -154,7 +154,7 @@ const Liquidity = () => {
                     colSpan="1"
                     role="columnheader"
                     title="Toggle SortBy"
-                    className="sc-gEvEer hhHPem"
+                    className="sc-gEvEer hidden lg:table-cell hhHPem"
                     style={{ cursor: "pointer" }}
                   >
                     Liquidity Range
@@ -202,7 +202,7 @@ const Liquidity = () => {
                     colSpan="1"
                     role="columnheader"
                     title="Toggle SortBy"
-                    className="sc-gEvEer hhHPem"
+                    className="sc-gEvEer hidden lg:table-cell hhHPem"
                     style={{ cursor: "pointer" }}
                   >
                     Liquidity Locked
@@ -226,7 +226,7 @@ const Liquidity = () => {
                     colSpan="1"
                     role="columnheader"
                     title="Toggle SortBy"
-                    className="sc-gEvEer hhHPem"
+                    className="sc-gEvEer hidden lg:table-cell hhHPem"
                     style={{ cursor: "pointer" }}
                   >
                     Volume 24h
@@ -374,7 +374,7 @@ const Liquidity = () => {
                       </div>
                     </a>
                   </td>
-                  <td role="cell" className="sc-gEvEer  faiYBU">
+                  <td role="cell" className="sc-gEvEer hidden lg:table-cell  faiYBU">
                     <div className="sc-gEvEer sc-eqUAAy iRguQF fgprtA">
                       <div display="grid" className="sc-gEvEer ihaJeT">
                         <div className="sc-gEvEer hoppPw">from:</div>
@@ -389,13 +389,13 @@ const Liquidity = () => {
                       1.02 ADA
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer  faiYBU">
+                  <td role="cell" className="sc-gEvEer hidden lg:table-cell  faiYBU">
                     <div className="sc-gEvEer jVsTBr">249,331 ₳</div>
-                    <p className="sc-gEvEer jLfEph">~87,878 $</p>
+                    <p className="sc-gEvEer   jLfEph">~87,878 $</p>
                   </td>
-                  <td role="cell" className="sc-gEvEer  faiYBU">
+                  <td role="cell" className="sc-gEvEer hidden lg:table-cell   faiYBU">
                     <div className="sc-gEvEer jVsTBr">0 ₳</div>
-                    <p className="sc-gEvEer jLfEph"></p>
+                    <p className="sc-gEvEer   jLfEph"></p>
                   </td>
                   <td role="cell" className="sc-gEvEer  faiYBU">
                     <div color="text" className="sc-gEvEer VQoKn">
@@ -407,7 +407,7 @@ const Liquidity = () => {
                       <div
                         color="inherit"
                         fontWeight="semiBold"
-                        className="sc-gEvEer hcJuDx"
+                        className="sc-gEvEer  hidden lg:table-cell  hcJuDx"
                       >
                         Details
                       </div>
@@ -479,7 +479,7 @@ const Liquidity = () => {
                       </div>
                     </a>
                   </td>
-                  <td role="cell" className="sc-gEvEer  faiYBU">
+                  <td role="cell" className="sc-gEvEer hidden lg:table-cell    faiYBU">
                     <div className="sc-gEvEer sc-eqUAAy iRguQF fgprtA">
                       <div display="grid" className="sc-gEvEer ihaJeT">
                         <div className="sc-gEvEer hoppPw">from:</div>
@@ -494,13 +494,13 @@ const Liquidity = () => {
                       2.84 ADA
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer  faiYBU">
+                  <td role="cell" className="sc-gEvEer hidden lg:table-cell   faiYBU">
                     <div className="sc-gEvEer jVsTBr">169,390 ₳</div>
-                    <p className="sc-gEvEer jLfEph">~59,702 $</p>
+                    <p className="sc-gEvEer   jLfEph">~59,702 $</p>
                   </td>
-                  <td role="cell" className="sc-gEvEer  faiYBU">
+                  <td role="cell" className="sc-gEvEer hidden lg:table-cell   faiYBU">
                     <div className="sc-gEvEer jVsTBr">0 ₳</div>
-                    <p className="sc-gEvEer jLfEph"></p>
+                    <p className="sc-gEvEer   jLfEph"></p>
                   </td>
                   <td role="cell" className="sc-gEvEer  faiYBU">
                     <div color="text" className="sc-gEvEer VQoKn">
@@ -512,7 +512,7 @@ const Liquidity = () => {
                       <div
                         color="inherit"
                         fontWeight="semiBold"
-                        className="sc-gEvEer hcJuDx"
+                        className="sc-gEvEer  hidden lg:table-cell  hcJuDx"
                       >
                         Details
                       </div>
@@ -584,7 +584,7 @@ const Liquidity = () => {
                       </div>
                     </a>
                   </td>
-                  <td role="cell" className="sc-gEvEer  faiYBU">
+                  <td role="cell" className="sc-gEvEer hidden lg:table-cell  faiYBU">
                     <div className="sc-gEvEer sc-eqUAAy iRguQF fgprtA">
                       <div display="grid" className="sc-gEvEer ihaJeT">
                         <div className="sc-gEvEer hoppPw">from:</div>
@@ -599,13 +599,13 @@ const Liquidity = () => {
                       0.95 DJED
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer  faiYBU">
+                  <td role="cell" className="sc-gEvEer hidden lg:table-cell  faiYBU">
                     <div className="sc-gEvEer jVsTBr">25,560 ₳</div>
-                    <p className="sc-gEvEer jLfEph">~9,009 $</p>
+                    <p className="sc-gEvEer   jLfEph">~9,009 $</p>
                   </td>
-                  <td role="cell" className="sc-gEvEer  faiYBU">
+                  <td role="cell" className="sc-gEvEer hidden lg:table-cell   faiYBU">
                     <div className="sc-gEvEer jVsTBr">0 ₳</div>
-                    <p className="sc-gEvEer jLfEph"></p>
+                    <p className="sc-gEvEer   jLfEph"></p>
                   </td>
                   <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer jVsTBr"></div>
@@ -615,7 +615,7 @@ const Liquidity = () => {
                       <div
                         color="inherit"
                         fontWeight="semiBold"
-                        className="sc-gEvEer hcJuDx"
+                        className="sc-gEvEer  hidden lg:table-cell  hcJuDx"
                       >
                         Details
                       </div>
@@ -687,7 +687,7 @@ const Liquidity = () => {
                       </div>
                     </a>
                   </td>
-                  <td role="cell" className="sc-gEvEer  faiYBU">
+                  <td role="cell" className="sc-gEvEer  hidden lg:table-cell  faiYBU">
                     <div className="sc-gEvEer sc-eqUAAy iRguQF fgprtA">
                       <div display="grid" className="sc-gEvEer ihaJeT">
                         <div className="sc-gEvEer hoppPw">from:</div>
@@ -702,13 +702,13 @@ const Liquidity = () => {
                       0.03 ADA
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer  faiYBU">
+                  <td role="cell" className="sc-gEvEer hidden lg:table-cell   faiYBU">
                     <div className="sc-gEvEer jVsTBr">4,128 ₳</div>
-                    <p className="sc-gEvEer jLfEph">~1,455 $</p>
+                    <p className="sc-gEvEer   jLfEph">~1,455 $</p>
                   </td>
-                  <td role="cell" className="sc-gEvEer  faiYBU">
+                  <td role="cell" className="sc-gEvEer hidden lg:table-cell   faiYBU">
                     <div className="sc-gEvEer jVsTBr">0 ₳</div>
-                    <p className="sc-gEvEer jLfEph"></p>
+                    <p className="sc-gEvEer   jLfEph"></p>
                   </td>
                   <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer jVsTBr"></div>
@@ -718,7 +718,7 @@ const Liquidity = () => {
                       <div
                         color="inherit"
                         fontWeight="semiBold"
-                        className="sc-gEvEer hcJuDx"
+                        className="sc-gEvEer  hidden lg:table-cell  hcJuDx"
                       >
                         Details
                       </div>

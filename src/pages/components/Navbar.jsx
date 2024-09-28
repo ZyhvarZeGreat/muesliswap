@@ -8,6 +8,7 @@ import MilkBowl from "../../assets/afbe91c0b44b3040e360057bf8354ead8c49c4979ae6a
 import useStore from "../store/store";
 import CurrencyDropdown from "./CurrencyDropdown";
 import NavDropdown from "./NavDropdown";
+
 const Navbar = () => {
   const setState = useStore((state) => state.setState);
   const { state } = useStore();
@@ -263,6 +264,7 @@ const Navbar = () => {
             aria-current="page"
           >
             Swap
+
           </Link>
           <Link
             to="/earn/liquidity"
