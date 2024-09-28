@@ -5,6 +5,8 @@ import ConnectWallet from "./components/ConnectWallet";
 import img from "../assets/muesliswap.86e5affdd1cbde9ed769.webp";
 import useStore from "./store/store";
 import { useNavigate } from "react-router-dom";
+import { cn } from "../lib/utils";
+import SettingsPopup from "./components/SettingsPopup";
 const Home = () => {
   const [topInputValue, setTopInputValue] = useState(null);
   const [bottomInputValue, setBottomInputValue] = useState(null);
@@ -14,6 +16,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [buyValue, setBuyValue] = useState("")
   const [sellValue, setSellValue] = useState("")
+  const [activeTab, setActiveTab] = useState(false)
   const navigate = useNavigate()
   console.log(topInputValue)
   const getAllPossibleAssets = useCallback(async () => {
@@ -77,12 +80,15 @@ const Home = () => {
                     width="100%"
                     className="sc-gEvEer sc-eqUAAy lkKqPm fgprtA"
                   >
-                    <nav className="sc-gEvEer jTZppj">
+                    <nav className="sc-gEvEer relative jTZppj">
                       <ul
                         width="fit-content"
                         className="sc-gEvEer sc-eqUAAy hqwCPJ fgprtA"
                       >
                         <li
+                          onClick={() => {
+                            setActiveTab(false)
+                          }}
                           id="selector-tab-0-1726992618004"
                           className="sc-gEvEer ikUdpz"
                         >
@@ -100,48 +106,38 @@ const Home = () => {
                           </button>
                         </li>
                         <li
+
                           id="selector-tab-1-1726992618004"
                           className="sc-gEvEer fRIgFc"
                         >
                           <button
+                            onClick={() => {
+                              setActiveTab(true)
+                            }}
                             height="fit-content"
                             width="fit-content"
                             className="sc-gEvEer brOJcM"
                           >
                             <div
                               height="32px"
-                              className="sc-gEvEer sc-eqUAAy jVfJTA fgprtA"
+                              className={"sc-gEvEer sc-eqUAAy jVfJTA fgprtA"}
                             >
-                              <div className="sc-gEvEer hGNUub">Limit</div>
+                              <div className={cn("sc-gEvEer hGNUub",
+                                activeTab ? 'text-[#5364ff]' : 'text-current'
+                              )} >Limit</div>
                             </div>
                           </button>
                         </li>
                       </ul>
-                      <div className="sc-gEvEer bosMzF"></div>
+                      <div className={cn("sc-gEvEer  top-1.5 mr-2  bottom-0 left-0  w-1/2  bosMzF",
+                        activeTab ? 'translate-x-[67px]  w-[44px]  ' : 'translate-x-0 ml-2 '
+                      )}></div>
                       <div
                         id="selector-tab-underline-reference-1726992618004"
                         className="sc-gEvEer xgTHf"
                       ></div>
                     </nav>
-                    <button type="button" className="sc-ktJbId bfFreC">
-                      <svg
-                        width="18"
-                        height="14"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g
-                          transform="translate(-11 -13)"
-                          fill="none"
-                          fillRule="evenodd"
-                        >
-                          <rect width="40" height="40" rx="12"></rect>
-                          <path
-                            d="M28 15h-3.18A3 3 0 0 0 22 13a3 3 0 0 0-2.82 2H12a1 1 0 0 0-1 .98V16a1 1 0 0 0 1 1h7.18A3 3 0 0 0 22 19a3 3 0 0 0 2.82-2H28a1 1 0 0 0 1-.98V16a1 1 0 0 0-.98-1H28Zm-6 2a1 1 0 0 1 0-2 1 1 0 0 1 0 2Zm6 6h-7.18A3 3 0 0 0 18 21a3 3 0 0 0-2.82 2H12a1 1 0 0 0-1 .98V24a1 1 0 0 0 1 1h3.18A3 3 0 0 0 18 27a3 3 0 0 0 2.82-2H28a1 1 0 0 0 1-.98V24a1 1 0 0 0-.98-1H28Zm-10 2a1 1 0 0 1 0-2 1 1 0 0 1 0 2Z"
-                            fill="currentColor"
-                          ></path>
-                        </g>
-                      </svg>
-                    </button>
+                    <SettingsPopup />
                   </div>
                   <div className="sc-gEvEer sc-eqUAAy eLudzR fgprtA">
                     <div width="100%" className="sc-gEvEer w-full  fzYVaO">

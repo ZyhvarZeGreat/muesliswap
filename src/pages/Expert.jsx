@@ -5,9 +5,9 @@ const Expert = () => {
   return (
     <main className="sc-kOPcWz hierkx">
       <div className="sc-iHGNWf hQvJpi" >
-        <div width="100%" className="sc-gEvEer sc-eqUAAy jZjBnu fgprtA">
-          <div className="sc-gEvEer sc-eqUAAy SSLcu fgprtA">
-            <div width="100%" className="sc-gEvEer sc-eqUAAy jGlsIL fgprtA">
+        <div width="100%" className="sc-gEvEer flex p-4 flex-col w-full items-start gap-4 lg:flex-row  sc-eqUAAy jZjBnu fgprtA">
+          <div className="sc-gEvEer w-full sc-eqUAAy SSLcu fgprtA">
+            <div width="100%" className="sc-gEvEer w-full flex items-start sc-eqUAAy jGlsIL fgprtA">
               <div className="sc-gEvEer sc-eqUAAy iRguQF fgprtA">
                 <div
                   className="LazyLoad is-visible"
@@ -141,7 +141,7 @@ const Expert = () => {
               </svg>
             </a>
           </div>
-          <div className="sc-gEvEer sc-eqUAAy keRjdV fgprtA">
+          <div className="sc-gEvEer w-full mx-auto lg:m-0 lg:w-auto sc-eqUAAy keRjdV fgprtA">
             <div className="sc-gEvEer sc-eqUAAy djBuFm fgprtA">
               <span color="grey500" className="sc-gEvEer fkobnZ">
                 24h Change
@@ -250,9 +250,9 @@ const Expert = () => {
             </nav>
           </div>
         </div>
-        <div className="sc-gEvEer eeSdIW">
-          <div className="sc-gEvEer sc-eqUAAy kWiUKf fgprtA"></div>
-          <div width="100%" className="sc-gEvEer sc-eqUAAy hCNrlK fgprtA">
+        <div className="sc-gEvEer gap-y-6 grid grid-cols-12 mx-auto max-w-7xl eeSdIW">
+          <div className="sc-gEvEer h-[50vh] lg:h-auto sc-eqUAAy col-span-12 lg:col-span-8 kWiUKf fgprtA"></div>
+          <div width="100%" className="sc-gEvEer mx-auto col-start-2 col-end-12   lg:col-span-4 sc-eqUAAy hCNrlK fgprtA">
             <div width="100%" className="sc-gEvEer sc-eqUAAy jiukso fgprtA">
               <div width="100%" className="sc-gEvEer sc-eqUAAy lkKqPm fgprtA">
                 <nav className="sc-gEvEer jTZppj">
@@ -838,7 +838,38 @@ const Expert = () => {
               </button>
             </div>
           </div>
-          <div className="sc-gEvEer sc-eqUAAy eLLJdL fgprtA">
+          <div width="100%" className="sc-gEvEer col-span-12 lg:hidden bg-white ciDLWF">
+            <div className="sc-gEvEer sc-eqUAAy cYKcpv fgprtA">
+              <button className="sc-gEvEer jTQAvD"><span className="sc-gEvEer dBNtLD">buy order</span></button>
+              <button className="sc-gEvEer kblnMD"><span className="sc-gEvEer dBNtLD">sell order</span></button>
+              <button className="sc-gEvEer kblnMD"><span className="sc-gEvEer dBNtLD">trades</span></button>
+            </div>
+            <div className="sc-gEvEer gNSGqH">
+              <div width="100%" className="sc-gEvEer sc-eqUAAy cJVncF fgprtA">
+                <div width="100%" className="sc-gEvEer sc-eqUAAy Bnhtd fgprtA">
+                  <p className="sc-gEvEer hHuoiF">Buy Orders</p>
+                  <p className="sc-gEvEer hHuoiF"><span color="green" className="sc-gEvEer cCifDR">↑</span>0.9643</p>
+                </div>
+                <div className="sc-gEvEer iBcYPh">
+                  <table role="table" className="sc-gEvEer jQkWRn">
+                    <thead className="sc-gEvEer fKsuKy">
+                      <tr role="row">
+                        <th colSpan="1" role="columnheader" className="sc-gEvEer iWJpuv">Price (MILK)</th>
+                        <th colSpan="1" role="columnheader" className="sc-gEvEer iWJpuv">Amount MILK</th>
+                        <th colSpan="1" role="columnheader" className="sc-gEvEer iWJpuv">Total ₳</th>
+                      </tr>
+                    </thead>
+                    <tbody role="rowgroup" className="sc-gEvEer eUgFaS">
+                      <tr height="32px" role="row" className="sc-gEvEer jpNpYK">
+                        <td role="cell" className="sc-gEvEer fqaS"><span color="green" title="0.96430090">0.9643</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="sc-gEvEer sc-eqUAAy hidden lg:flex  col-start-2 col-end-12  lg:col-span-8 eLLJdL fgprtA">
             <div width="100%" className="sc-gEvEer sc-eqUAAy cJVncF fgprtA">
               <div width="100%" className="sc-gEvEer sc-eqUAAy Bnhtd fgprtA">
                 <p className="sc-gEvEer hHuoiF">Buy Orders</p>
@@ -920,7 +951,7 @@ const Expert = () => {
               </div>
             </div>
           </div>
-          <div className="sc-gEvEer fUICuC">
+          <div className="sc-gEvEer fUICuC hidden lg:block  lg:col-span-4">
             <div className="sc-gEvEer gPFhKu">
               <p className="sc-gEvEer hHuoiF">Trades</p>
             </div>
@@ -961,7 +992,7 @@ const Expert = () => {
               </table>
             </div>
           </div>
-          <div width="100%" className="sc-gEvEer eyaezH">
+          <div width="100%" className="sc-gEvEer col-span-12 lg:block  lg:col-span-12 eyaezH">
             <div className="sc-gEvEer sc-eqUAAy eQrmMj fgprtA">
               <div className="sc-gEvEer ebiZDV">
                 <p className="sc-gEvEer HmSgl">Open Orders</p>
