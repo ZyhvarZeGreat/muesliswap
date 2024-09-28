@@ -310,7 +310,7 @@ const Farming = () => {
                           </a>
                         </td>
                         <td role="cell" className={cn("sc-gEvEer fZHjpi",
-                          openDropdowns.includes(index) && ' bg-[#f3f5fe]'
+                          openDropdowns.includes(index) && 'bg-[#f3f5fe]'
                         )}
                         >
                           <div className="sc-gEvEer jVsTBr">-</div>
@@ -374,7 +374,7 @@ const Farming = () => {
                             <div
                               color="inherit"
                               fontWeight="semiBold"
-                              className="sc-gEvEer hidden lg:block hHeQDs"
+                              className="sc-gEvEer hidden lg:table-cell hHeQDs"
 
                             >
                               Details

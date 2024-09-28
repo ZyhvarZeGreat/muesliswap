@@ -134,7 +134,7 @@ const Liquidity = () => {
                     className="sc-gEvEer hhHPem"
                   >
                     Pair Name
-                    <span hidden="" className="sc-ddjGPC fRRtfN">
+                    <span className="sc-ddjGPC fRRtfN">
                       <div className="sc-aXZVg dKyMbx">
                         <svg
                           width="10"
@@ -158,7 +158,7 @@ const Liquidity = () => {
                     style={{ cursor: "pointer" }}
                   >
                     Liquidity Range
-                    <span hidden="" className="sc-ddjGPC fRRtfN">
+                    <span className="sc-ddjGPC fRRtfN">
                       <div className="sc-aXZVg dKyMbx">
                         <svg
                           width="10"
@@ -182,7 +182,7 @@ const Liquidity = () => {
                     style={{ cursor: "pointer" }}
                   >
                     Price
-                    <span hidden="" className="sc-ddjGPC fRRtfN">
+                    <span className="sc-ddjGPC fRRtfN">
                       <div className="sc-aXZVg dKyMbx">
                         <svg
                           width="10"
@@ -230,7 +230,7 @@ const Liquidity = () => {
                     style={{ cursor: "pointer" }}
                   >
                     Volume 24h
-                    <span hidden="" className="sc-ddjGPC fRRtfN">
+                    <span className="sc-ddjGPC fRRtfN">
                       <div className="sc-aXZVg dKyMbx">
                         <svg
                           width="10"
@@ -254,7 +254,7 @@ const Liquidity = () => {
                     style={{ cursor: "pointer" }}
                   >
                     <span className="sc-gEvEer dSOvFp">Liquidity APY</span>
-                    <div display="inline-flex" className="sc-gEvEer ebwaLP">
+                    <div className="sc-gEvEer ebwaLP">
                       <svg
                         width="18"
                         height="18"
@@ -282,7 +282,7 @@ const Liquidity = () => {
                         </div>
                       </div>
                     </div>
-                    <span hidden="" className="sc-ddjGPC fRRtfN">
+                    <span className="sc-ddjGPC fRRtfN">
                       <div className="sc-aXZVg dKyMbx">
                         <svg
                           width="10"
@@ -303,7 +303,7 @@ const Liquidity = () => {
                     role="columnheader"
                     className="sc-gEvEer hhHPem"
                   >
-                    <span hidden="" className="sc-ddjGPC fRRtfN">
+                    <span className="sc-ddjGPC fRRtfN">
                       <div className="sc-aXZVg dKyMbx">
                         <svg
                           width="10"
@@ -323,7 +323,7 @@ const Liquidity = () => {
               </thead>
               <tbody role="rowgroup" className="sc-gEvEer px-4 eUgFaS">
                 <tr role="row" className="sc-gEvEer gFEUUI ">
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <a
                       className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=8db269c3ec630e06ae29f74bc39edd1f87c819f1056206e879a1cd61.5368656e4d6963726f555344"
@@ -374,7 +374,7 @@ const Liquidity = () => {
                       </div>
                     </a>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer sc-eqUAAy iRguQF fgprtA">
                       <div display="grid" className="sc-gEvEer ihaJeT">
                         <div className="sc-gEvEer hoppPw">from:</div>
@@ -384,25 +384,25 @@ const Liquidity = () => {
                       </div>
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div color="text" className="sc-gEvEer VQoKn">
                       1.02 ADA
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer jVsTBr">249,331 ₳</div>
                     <p className="sc-gEvEer jLfEph">~87,878 $</p>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer jVsTBr">0 ₳</div>
                     <p className="sc-gEvEer jLfEph"></p>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div color="text" className="sc-gEvEer VQoKn">
                       0.13 %
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer sc-eqUAAy gYGjHl fgprtA">
                       <div
                         color="inherit"
@@ -428,7 +428,7 @@ const Liquidity = () => {
                   </td>
                 </tr>
                 <tr role="row" className="sc-gEvEer gFEUUI ">
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <a
                       className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=8db269c3ec630e06ae29f74bc39edd1f87c819f1056206e879a1cd61.446a65644d6963726f555344"
@@ -479,7 +479,7 @@ const Liquidity = () => {
                       </div>
                     </a>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer sc-eqUAAy iRguQF fgprtA">
                       <div display="grid" className="sc-gEvEer ihaJeT">
                         <div className="sc-gEvEer hoppPw">from:</div>
@@ -489,25 +489,25 @@ const Liquidity = () => {
                       </div>
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div color="text" className="sc-gEvEer VQoKn">
                       2.84 ADA
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer jVsTBr">169,390 ₳</div>
                     <p className="sc-gEvEer jLfEph">~59,702 $</p>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer jVsTBr">0 ₳</div>
                     <p className="sc-gEvEer jLfEph"></p>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div color="text" className="sc-gEvEer VQoKn">
                       1.62 %
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer sc-eqUAAy gYGjHl fgprtA">
                       <div
                         color="inherit"
@@ -533,7 +533,7 @@ const Liquidity = () => {
                   </td>
                 </tr>
                 <tr role="row" className="sc-gEvEer gFEUUI ">
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <a
                       className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=8db269c3ec630e06ae29f74bc39edd1f87c819f1056206e879a1cd61.446a65644d6963726f555344&amp;quote=f66d78b4a3cb3d37afa0ec36461e51ecbde00f26c8f0a68f94b69880.69555344"
@@ -584,7 +584,7 @@ const Liquidity = () => {
                       </div>
                     </a>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer sc-eqUAAy iRguQF fgprtA">
                       <div display="grid" className="sc-gEvEer ihaJeT">
                         <div className="sc-gEvEer hoppPw">from:</div>
@@ -594,23 +594,23 @@ const Liquidity = () => {
                       </div>
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div color="text" className="sc-gEvEer VQoKn">
                       0.95 DJED
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer jVsTBr">25,560 ₳</div>
                     <p className="sc-gEvEer jLfEph">~9,009 $</p>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer jVsTBr">0 ₳</div>
                     <p className="sc-gEvEer jLfEph"></p>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer jVsTBr"></div>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer sc-eqUAAy gYGjHl fgprtA">
                       <div
                         color="inherit"
@@ -636,7 +636,7 @@ const Liquidity = () => {
                   </td>
                 </tr>
                 <tr role="row" className="sc-gEvEer gFEUUI ">
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <a
                       className="sc-iHbSHJ px-4 bwYSnM"
                       href="/swap?base=.&amp;quote=94cbb4fcbcaa2975779f273b263eb3b5f24a9951e446d6dc4c135864.52455655"
@@ -687,7 +687,7 @@ const Liquidity = () => {
                       </div>
                     </a>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer sc-eqUAAy iRguQF fgprtA">
                       <div display="grid" className="sc-gEvEer ihaJeT">
                         <div className="sc-gEvEer hoppPw">from:</div>
@@ -697,23 +697,23 @@ const Liquidity = () => {
                       </div>
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div color="text" className="sc-gEvEer VQoKn">
                       0.03 ADA
                     </div>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer jVsTBr">4,128 ₳</div>
                     <p className="sc-gEvEer jLfEph">~1,455 $</p>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer jVsTBr">0 ₳</div>
                     <p className="sc-gEvEer jLfEph"></p>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer jVsTBr"></div>
                   </td>
-                  <td role="cell" className="sc-gEvEer faiYBU">
+                  <td role="cell" className="sc-gEvEer  faiYBU">
                     <div className="sc-gEvEer sc-eqUAAy gYGjHl fgprtA">
                       <div
                         color="inherit"
@@ -753,206 +753,82 @@ const Liquidity = () => {
             <table role="table" className="sc-gEvEer gcfgxO">
               <thead className="sc-gEvEer fIMUDY">
                 <tr role="row">
-                  <th
-                    colSpan="1"
-                    role="columnheader"
-                    className="sc-gEvEer hhHPem"
-                  >
+                  <th colSpan="1" role="columnheader" className="sc-gEvEer hhHPem">
                     Pair Name
                     <span hidden="" className="sc-ddjGPC fRRtfN">
                       <div className="sc-aXZVg dKyMbx">
-                        <svg
-                          width="10"
-                          height="6"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z"
-                            fill="currentColor"
-                            fillRule="evenodd"
-                          ></path>
+                        <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z" fill="currentColor" fillRule="evenodd"></path>
                         </svg>
                       </div>
                     </span>
                   </th>
-                  <th
-                    colSpan="1"
-                    role="columnheader"
-                    title="Toggle SortBy"
-                    className="sc-gEvEer hhHPem"
-                    style={{ cursor: "pointer" }}
-                  >
-                    Liquidity Range
-                    <span hidden="" className="sc-ddjGPC fRRtfN">
-                      <div className="sc-aXZVg dKyMbx">
-                        <svg
-                          width="10"
-                          height="6"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z"
-                            fill="currentColor"
-                            fillRule="evenodd"
-                          ></path>
-                        </svg>
-                      </div>
-                    </span>
-                  </th>
-                  <th
-                    colSpan="1"
-                    role="columnheader"
-                    title="Toggle SortBy"
-                    className="sc-gEvEer hhHPem"
-                    style={{ cursor: "pointer" }}
-                  >
+                  <th colSpan="1" role="columnheader" title="Toggle SortBy" className="sc-gEvEer hhHPem" style={{ cursor: "pointer" }}>
                     Price
                     <span hidden="" className="sc-ddjGPC fRRtfN">
                       <div className="sc-aXZVg dKyMbx">
-                        <svg
-                          width="10"
-                          height="6"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z"
-                            fill="currentColor"
-                            fillRule="evenodd"
-                          ></path>
+                        <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z" fill="currentColor" fillRule="evenodd"></path>
                         </svg>
                       </div>
                     </span>
                   </th>
-                  <th
-                    colSpan="1"
-                    role="columnheader"
-                    title="Toggle SortBy"
-                    className="sc-gEvEer hhHPem"
-                    style={{ cursor: "pointer" }}
-                  >
+                  <th colSpan="1" role="columnheader" title="Toggle SortBy" className="sc-gEvEer hidden sm:table-cell text-center hhHPem" style={{ cursor: "pointer" }}>
                     Liquidity Locked
                     <span className="sc-ddjGPC dtONNa">
                       <div className="sc-aXZVg jrzA-dM">
-                        <svg
-                          width="10"
-                          height="6"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z"
-                            fill="currentColor"
-                            fillRule="evenodd"
-                          ></path>
+                        <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z" fill="currentColor" fillRule="evenodd"></path>
                         </svg>
                       </div>
                     </span>
                   </th>
-                  <th
-                    colSpan="1"
-                    role="columnheader"
-                    title="Toggle SortBy"
-                    className="sc-gEvEer hhHPem"
-                    style={{ cursor: "pointer" }}
-                  >
+                  <th colSpan="1" role="columnheader" title="Toggle SortBy" className="sc-gEvEer hidden md:table-cell text-center hhHPem" style={{ cursor: "pointer" }}>
                     Volume 24h
                     <span hidden="" className="sc-ddjGPC fRRtfN">
                       <div className="sc-aXZVg dKyMbx">
-                        <svg
-                          width="10"
-                          height="6"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z"
-                            fill="currentColor"
-                            fillRule="evenodd"
-                          ></path>
+                        <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z" fill="currentColor" fillRule="evenodd"></path>
                         </svg>
                       </div>
                     </span>
                   </th>
-                  <th
-                    colSpan="1"
-                    role="columnheader"
-                    title="Toggle SortBy"
-                    className="sc-gEvEer hhHPem"
-                    style={{ cursor: "pointer" }}
-                  >
+                  <th colSpan="1" role="columnheader" title="Toggle SortBy" className="sc-gEvEer text-center hhHPem" style={{ cursor: "pointer" }}>
                     <span className="sc-gEvEer dSOvFp">Liquidity APY</span>
-                    <div display="inline-flex" className="sc-gEvEer ebwaLP">
-                      <svg
-                        width="18"
-                        height="18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        color="grey500"
-                        style={{ marginLeft: "2px" }}
-                        className="sc-gEvEer dIjCGl"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M9 1.5a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15ZM9 3a6 6 0 1 0 0 12A6 6 0 0 0 9 3Zm0 9a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Zm0-7.5a2.618 2.618 0 0 1 .887 5.086l-.137.044v.87a.75.75 0 0 1-1.495.088L8.25 10.5V9a.75.75 0 0 1 .663-.745L9 8.25a1.125 1.125 0 1 0-1.12-1.233l-.005.108a.75.75 0 0 1-1.5 0A2.625 2.625 0 0 1 9 4.5Z"
-                          fill="currentColor"
-                        ></path>
+                    <div className="sc-gEvEer ebwaLP" style={{ display: "inline-flex" }}>
+                      <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" color="grey500" className="sc-gEvEer dIjCGl" style={{ marginLeft: "2px" }}>
+                        <path fillRule="evenodd" clipRule="evenodd" d="M9 1.5a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15ZM9 3a6 6 0 1 0 0 12A6 6 0 0 0 9 3Zm0 9a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Zm0-7.5a2.618 2.618 0 0 1 .887 5.086l-.137.044v.87a.75.75 0 0 1-1.495.088L8.25 10.5V9a.75.75 0 0 1 .663-.745L9 8.25a1.125 1.125 0 1 0-1.12-1.233l-.005.108a.75.75 0 0 1-1.5 0A2.625 2.625 0 0 1 9 4.5Z" fill="currentColor"></path>
                       </svg>
-                      <div
-                        className="sc-fxwrCY dGwCMf"
-                        style={{ transform: "translate(-14px, -100%)" }}
-                      >
-                        <div className="sc-gEvEer bcvAXg">
-                          This is an estimate calculated using current trading
-                          volume, and may not correspond to realized gains or
-                          losses.
-                        </div>
+                      <div className="sc-fxwrCY dGwCMf" style={{ transform: "translate(-14px, -100%)" }}>
+                        <div className="sc-gEvEer bcvAXg">This is an estimate calculated using current trading volume, and may not correspond to realized gains or losses.</div>
                       </div>
                     </div>
                     <span hidden="" className="sc-ddjGPC fRRtfN">
                       <div className="sc-aXZVg dKyMbx">
-                        <svg
-                          width="10"
-                          height="6"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z"
-                            fill="currentColor"
-                            fillRule="evenodd"
-                          ></path>
+                        <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z" fill="currentColor" fillRule="evenodd"></path>
                         </svg>
                       </div>
                     </span>
                   </th>
-                  <th
-                    colSpan="1"
-                    role="columnheader"
-                    className="sc-gEvEer hhHPem"
-                  >
+                  <th colSpan="1" role="columnheader" className="sc-gEvEer hhHPem">
                     <span hidden="" className="sc-ddjGPC fRRtfN">
                       <div className="sc-aXZVg dKyMbx">
-                        <svg
-                          width="10"
-                          height="6"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z"
-                            fill="currentColor"
-                            fillRule="evenodd"
-                          ></path>
+                        <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M.76 6h8.48a.76.76 0 0 0 .7-.5.81.81 0 0 0-.17-.85L5.54.23A.74.74 0 0 0 5 0a.74.74 0 0 0-.54.23L.22 4.65a.81.81 0 0 0-.16.86.76.76 0 0 0 .7.49Z" fill="currentColor" fillRule="evenodd"></path>
                         </svg>
                       </div>
                     </span>
                   </th>
                 </tr>
               </thead>
-              <tbody role="rowgroup" className="sc-gEvEer  ">
+              <tbody role="rowgroup" className="sc-gEvEer text-[14px]  ">
                 {liquidityPools.map((asset, index) => (
                   <>
                     <tr key={index} role="row" className={cn("sc-gEvEer gFEUUI",
 
                     )}>
-                      <td role="cell" className={cn("sc-gEvEer faiYBU",
+                      <td role="cell" className={cn("sc-gEvEer  faiYBU",
                         openDropdowns.includes(index) && ' bg-[#eff2f8]'
                       )} >
                         <a
@@ -981,7 +857,7 @@ const Liquidity = () => {
                               />
                             </div>
                           </div>
-                          <div className="sc-gEvEer fLROuh">
+                          <div className="sc-gEvEer text-center   fLROuh">
                             <p
                               display="inline-block"
                               fontFamily="inter"
@@ -1004,35 +880,35 @@ const Liquidity = () => {
                           </div>
                         </a>
                       </td>
-                      <td role="cell" className={cn("sc-gEvEer faiYBU",
+                      <td role="cell" className={cn("sc-gEvEer  faiYBU",
                         openDropdowns.includes(index) && ' bg-[#eff2f8]'
                       )}>
-                        <div color="text" className={cn("sc-gEvEer faiYBU",
+                        <div color="text" className={cn("sc-gEvEer text-center  flex items-center justify-center  faiYBU",
                           openDropdowns.includes(index) && ' bg-[#eff2f8]'
                         )}>
-                          {(Number(asset.tokenB.priceAda) / 1000000).toFixed(1)} ADA
+                          {(Number(asset.tokenB.priceAda) / 1000000).toFixed(2)} ADA
                         </div>
                       </td>
-                      <td role="cell" className={cn("sc-gEvEer  faiYBU",
-                        openDropdowns.includes(index) && '  bg-[#eff2f8]'
+                      <td role="cell" className={cn("sc-gEvEer text-center hidden sm:table-cell   faiYBU",
+                        openDropdowns.includes(index) && 'bg-[#eff2f8]'
                       )}>
-                        <div className="sc-gEvEer jVsTBr">{(Number(asset.lpToken.amount) / 1000000).toFixed(1).toLocaleString()}₳</div>
-                        <p className="sc-gEvEer jLfEph">~{((Number(asset.lpToken.amount) / 1000000) * 0.3).toFixed(1).toLocaleString()} $</p>
+                        <div className="sc-gEvEer  text-sm jVsTBr">{(Number(asset.lpToken.amount) / 1000000).toFixed(1).toLocaleString()}₳</div>
+
                       </td>
-                      <td role="cell" className={cn("sc-gEvEer hidden sm:block faiYBU",
+                      <td role="cell" className={cn("sc-gEvEer text-center hidden md:table-cell faiYBU",
                         openDropdowns.includes(index) && ' bg-[#eff2f8]'
                       )}>
-                        <div className="sc-gEvEer  jVsTBr">{(Number(asset.volume24h)).toFixed().toLocaleString()} ₳</div>
-                        <p className="sc-gEvEer jLfEph">~{(Number(asset.volume24h) * 0.3).toFixed().toLocaleString()} $</p>
+                        <div className="sc-gEvEer   text-sm jVsTBr">{(Number(asset.volume24h)).toFixed().toLocaleString()} ₳</div>
+
                       </td>
-                      <td role="cell" className={cn("sc-gEvEer faiYBU",
+                      <td role="cell" className={cn("sc-gEvEer  text-center text-sm  faiYBU",
                         openDropdowns.includes(index) && ' bg-[#eff2f8]'
                       )}>
-                        <div color="text" className="sc-gEvEer hidden sm:block VQoKn">
+                        <div color="text" className="sc-gEvEer  VQoKn">
                           {asset.liquidityApy.toFixed(1)} %
                         </div>
                       </td>
-                      <td role="cell" className={cn("sc-gEvEer faiYBU",
+                      <td role="cell" className={cn("sc-gEvEer   faiYBU",
                         openDropdowns.includes(index) && ' bg-[#eff2f8]  border-none  '
                       )}>
                         <div
@@ -1041,7 +917,7 @@ const Liquidity = () => {
                           <div
                             color="inherit"
                             fontWeight="semiBold"
-                            className="sc-gEvEer hidden sm:block hcJuDx"
+                            className="sc-gEvEer hidden md:block  hcJuDx"
 
                           >
                             Details
@@ -1065,8 +941,8 @@ const Liquidity = () => {
                     {
                       openDropdowns.includes(index) && (
                         <tr className="sc-gEvEer py-4     items-center justify-center w-full dSOvFp">
-                          <td colSpan="6" className="">
-                            <div className="sc-gEvEer py-6 flex flex-col sm:flex-row sc-eqUAAy caqVIz fgprtA">
+                          <td colSpan="6" >
+                            <div className="sc-gEvEer py-6 flex flex-col lg:flex-row sc-eqUAAy caqVIz fgprtA">
                               <div className="sc-gEvEer ipETLm ">
                                 <h4 fontFamily="gilroy" color="text" fontSize="18px" fontWeight="600" className="sc-gEvEer  jVEjPV">Your Liquidity Position</h4>
                                 <div className="sc-gEvEer sc-eqUAAy gsUTSe  fgprtA">
