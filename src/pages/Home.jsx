@@ -44,6 +44,13 @@ const Home = () => {
     getAllPossibleAssets();
   }, [getAllPossibleAssets]);
 
+  const handleSellValueChange = (e) => {
+    setSellValue(e.target.value);
+  };
+
+  const handleBuyValueChange = (e) => {
+    setBuyValue(e.target.value);
+  };
   // console.log(totalAssets);
   return (
     <div>
@@ -199,9 +206,13 @@ const Home = () => {
                         />
                         <div className="sc-gEvEer sc-eqUAAy bmYucd fgprtA">
                           <input
+                            onChange={(e) => {
+                              setBuyValue(e.target.value)
+                            }}
                             type="string"
                             placeholder="0"
                             inputMode="decimal"
+                            max={topInputValue && Number((topInputValue.quantity) / 1000000).toFixed(2)}
                             autoComplete="off"
                             autoCorrect="off"
                             spellCheck="false"
@@ -300,12 +311,15 @@ const Home = () => {
                         />
                         <div className="sc-gEvEer sc-eqUAAy bmYucd fgprtA">
                           <input
+                            onChange={(e) => {
+                              setSellValue(e.target.value)
+                            }}
                             type="numeric"
                             placeholder="0"
                             inputMode="decimal"
                             autoComplete="off"
                             autoCorrect="off"
-
+                            max={bottomInputValue && Number((bottomInputValue.quantity) / 1000000).toFixed(2)}
                             spellCheck="false"
                             minLength="1"
                             maxLength="79"
@@ -671,6 +685,7 @@ const Home = () => {
                     </div>
                   </div>
                   <ConnectWallet
+                    custom_text='Swap Instantly'
                     text='Connect Wallet'
                     width='full'
                     walletBalance={walletBalance}

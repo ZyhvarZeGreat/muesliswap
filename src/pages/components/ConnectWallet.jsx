@@ -167,6 +167,9 @@ const ConnectWallet = (props) => {
     }
   };
 
+
+
+
   const getWalletAssets = async (api) => {
     if (!api) return;
     console.log(api);
@@ -205,6 +208,8 @@ const ConnectWallet = (props) => {
           const name = Buffer.from(assetName.name()).toString("utf-8");
           const unit = `${policyIdHex}.${name}`;
           const assetId = `${policyIdHex}${assetNameHex}`;
+          const price = await getTokenPrice(name)
+          console.log(price)
           assets.push({
             unit,
             quantity,
@@ -310,7 +315,7 @@ const ConnectWallet = (props) => {
       <DialogTrigger className="w-full">
         <div className="sc-gEvEer eLaKli w-full">
           <button className={`sc-gEvEer eWXwvT ${props.width ? `w-${props.width}` : 'w-full'}  `}>
-            {props.text ? props.text : ' Connect wallet'}
+            {props.text ? `${state.isWalletConnected ? props.custom_text : props.text}` : 'Connect wallet'}
           </button>
         </div>
       </DialogTrigger>
