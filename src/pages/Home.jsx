@@ -7,18 +7,21 @@ import useStore from "./store/store";
 import { useNavigate } from "react-router-dom";
 import { cn } from "../lib/utils";
 import SettingsPopup from "./components/SettingsPopup";
+import ConfirmTrade from "./components/ConfirmTrade";
+import axios from "axios";
 const Home = () => {
   const [topInputValue, setTopInputValue] = useState(null);
   const [bottomInputValue, setBottomInputValue] = useState(null);
   const { state } = useStore();
   const [totalAssets, setTotalAssets] = useState();
+
   const [walletBalance, setWalletBalance] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [buyValue, setBuyValue] = useState("")
-  const [sellValue, setSellValue] = useState("")
-  const [activeTab, setActiveTab] = useState(false)
-  const navigate = useNavigate()
-  console.log(topInputValue)
+  const [buyValue, setBuyValue] = useState("");
+  const [sellValue, setSellValue] = useState("");
+  const [activeTab, setActiveTab] = useState(false);
+  const navigate = useNavigate();
+  console.log(topInputValue);
   const getAllPossibleAssets = useCallback(async () => {
     try {
       const response = await fetch("https://api.muesliswap.com/list", {
@@ -40,16 +43,74 @@ const Home = () => {
     }
   }, []);
 
+  const getTokenPrice = async (name) => {
+    console.log(name);
+    const id = name.toLowerCase();
+    try {
+      const response = await axios.get(
+        `https://api.coingecko.com/api/v3/simple/price?ids=${id}&vs_currencies=usd`,
+        {
+          headers: {
+            accept: "application/json",
+            "x-cg-demo-api-key": "CG-YqW9nsT8UL3259noMc3Tkzah",
+          },
+        }
+      );
+
+      console.log(id);
+      const price = response.data[id]?.usd;
+      console.log(price);
+
+      return price;
+    } catch (error) {
+      console.error("Error fetching token price:", error);
+    }
+  };
+
   useEffect(() => {
     getAllPossibleAssets();
   }, [getAllPossibleAssets]);
 
-  const handleSellValueChange = (e) => {
-    setSellValue(e.target.value);
-  };
+  useEffect(() => {
+    if (
+      topInputValue &&
+      !topInputValue.price &&
+      bottomInputValue &&
+      !bottomInputValue.price
+    ) {
+      console.log(bottomInputValue);
+      const fetchPrice = async () => {
+        const TopPrice = await getTokenPrice(topInputValue.name);
+        const BottomPrice = await getTokenPrice(bottomInputValue.name);
+        setTopInputValue((prev) => ({ ...prev, price: TopPrice }));
+        setBottomInputValue((prev) => ({ ...prev, price: BottomPrice }));
+      };
+      fetchPrice();
+    }
+  }, [topInputValue, bottomInputValue]);
 
   const handleBuyValueChange = (e) => {
-    setBuyValue(e.target.value);
+    const value = e.target.value;
+    setBuyValue(value);
+    if (topInputValue && topInputValue.price) {
+      const sellAmount = (
+        (parseFloat(value) * topInputValue.price) /
+        bottomInputValue.askPrice
+      ).toFixed(6);
+      setSellValue(sellAmount);
+    }
+  };
+
+  const handleSellValueChange = (e) => {
+    const value = e.target.value;
+    setSellValue(value);
+    if (bottomInputValue && bottomInputValue.askPrice) {
+      const buyAmount = (
+        (parseFloat(value) * bottomInputValue.askPrice) /
+        topInputValue.price
+      ).toFixed(6);
+      setBuyValue(buyAmount);
+    }
   };
   // console.log(totalAssets);
   return (
@@ -94,7 +155,7 @@ const Home = () => {
                       >
                         <li
                           onClick={() => {
-                            setActiveTab(false)
+                            setActiveTab(false);
                           }}
                           id="selector-tab-0-1726992618004"
                           className="sc-gEvEer ikUdpz"
@@ -113,13 +174,12 @@ const Home = () => {
                           </button>
                         </li>
                         <li
-
                           id="selector-tab-1-1726992618004"
                           className="sc-gEvEer fRIgFc"
                         >
                           <button
                             onClick={() => {
-                              setActiveTab(true)
+                              setActiveTab(true);
                             }}
                             height="fit-content"
                             width="fit-content"
@@ -129,16 +189,26 @@ const Home = () => {
                               height="32px"
                               className={"sc-gEvEer sc-eqUAAy jVfJTA fgprtA"}
                             >
-                              <div className={cn("sc-gEvEer hGNUub",
-                                activeTab ? 'text-[#5364ff]' : 'text-current'
-                              )} >Limit</div>
+                              <div
+                                className={cn(
+                                  "sc-gEvEer hGNUub",
+                                  activeTab ? "text-[#5364ff]" : "text-current"
+                                )}
+                              >
+                                Limit
+                              </div>
                             </div>
                           </button>
                         </li>
                       </ul>
-                      <div className={cn("sc-gEvEer  top-1.5 mr-2  bottom-0 left-0  w-1/2  bosMzF",
-                        activeTab ? 'translate-x-[67px]  w-[44px]  ' : 'translate-x-0 ml-2 '
-                      )}></div>
+                      <div
+                        className={cn(
+                          "sc-gEvEer  top-1.5 mr-2  bottom-0 left-0  w-1/2  bosMzF",
+                          activeTab
+                            ? "translate-x-[67px]  w-[44px]  "
+                            : "translate-x-0 ml-2 "
+                        )}
+                      ></div>
                       <div
                         id="selector-tab-underline-reference-1726992618004"
                         className="sc-gEvEer xgTHf"
@@ -164,12 +234,19 @@ const Home = () => {
                                 fontWeight="500"
                                 className="sc-gEvEer p-0 dsiPeK"
                               >
-                                {topInputValue && Number(topInputValue.quantity) / 1000000}
+                                {topInputValue &&
+                                  Number(topInputValue.quantity) / 1000000}
                               </span>
                             </p>
                             <button
                               onClick={() => {
-                                topInputValue && setBuyValue((Number((topInputValue.quantity) / 1000000) * 0.1).toFixed(2))
+                                topInputValue &&
+                                  setBuyValue(
+                                    (
+                                      Number(topInputValue.quantity / 1000000) *
+                                      0.1
+                                    ).toFixed(2)
+                                  );
                               }}
                               color="main"
                               className="sc-gEvEer bg-[#dfddff] text-[#5346ff] rounded-md  h-[18px] w-[35.02px] jYQNMQ"
@@ -178,7 +255,13 @@ const Home = () => {
                             </button>
                             <button
                               onClick={() => {
-                                topInputValue && setBuyValue((Number((topInputValue.quantity) / 1000000) * 0.75).toFixed(2))
+                                topInputValue &&
+                                  setBuyValue(
+                                    (
+                                      Number(topInputValue.quantity / 1000000) *
+                                      0.75
+                                    ).toFixed(2)
+                                  );
                               }}
                               color="main"
                               className="sc-gEvEer bg-[#dfddff] text-[#5346ff] rounded-md  h-[18px] w-[35.02px] jYQNMQ"
@@ -187,7 +270,12 @@ const Home = () => {
                             </button>
                             <button
                               onClick={() => {
-                                topInputValue && setBuyValue((Number(topInputValue.quantity) / 1000000).toFixed(2))
+                                topInputValue &&
+                                  setBuyValue(
+                                    (
+                                      Number(topInputValue.quantity) / 1000000
+                                    ).toFixed(2)
+                                  );
                               }}
                               color="main"
                               className="sc-gEvEer bg-[#dfddff] text-[#5346ff] rounded-md  h-[18px] w-[35.02px] jYQNMQ"
@@ -206,13 +294,16 @@ const Home = () => {
                         />
                         <div className="sc-gEvEer sc-eqUAAy bmYucd fgprtA">
                           <input
-                            onChange={(e) => {
-                              setBuyValue(e.target.value)
-                            }}
+                            onChange={handleBuyValueChange}
                             type="string"
                             placeholder="0"
                             inputMode="decimal"
-                            max={topInputValue && Number((topInputValue.quantity) / 1000000).toFixed(2)}
+                            max={
+                              topInputValue &&
+                              Number(topInputValue.quantity / 1000000).toFixed(
+                                2
+                              )
+                            }
                             autoComplete="off"
                             autoCorrect="off"
                             spellCheck="false"
@@ -252,7 +343,10 @@ const Home = () => {
                         ></path>
                       </svg>
                     </div>
-                    <div width="100%" className="sc-gEvEer  w-full mt-4  fzYVaO">
+                    <div
+                      width="100%"
+                      className="sc-gEvEer  w-full mt-4  fzYVaO"
+                    >
                       <div className="sc-gEvEer sc-eqUAAy gWGqxJ w-full fgprtA">
                         <p fontSize="12px" className="sc-gEvEer gkVEcg">
                           You get
@@ -269,12 +363,19 @@ const Home = () => {
                                 fontWeight="500"
                                 className="sc-gEvEer p-0 dsiPeK"
                               >
-                                {bottomInputValue && Number(bottomInputValue.quantity) / 1000000}
+                                {bottomInputValue &&
+                                  Number(bottomInputValue.quantity) / 1000000}
                               </span>
                             </p>
                             <button
                               onClick={() => {
-                                bottomInputValue && setSellValue(Number(((bottomInputValue.quantity) / 1000000) * 0.1).toFixed(2))
+                                bottomInputValue &&
+                                  setSellValue(
+                                    Number(
+                                      (bottomInputValue.quantity / 1000000) *
+                                        0.1
+                                    ).toFixed(2)
+                                  );
                               }}
                               color="main"
                               className="sc-gEvEer bg-[#dfddff] text-[#5346ff] rounded-md  h-[18px] w-[35.02px] jYQNMQ"
@@ -283,7 +384,13 @@ const Home = () => {
                             </button>
                             <button
                               onClick={() => {
-                                bottomInputValue && setSellValue(Number(((bottomInputValue.quantity) / 1000000) * 0.75).toFixed(2))
+                                bottomInputValue &&
+                                  setSellValue(
+                                    Number(
+                                      (bottomInputValue.quantity / 1000000) *
+                                        0.75
+                                    ).toFixed(2)
+                                  );
                               }}
                               color="main"
                               className="sc-gEvEer bg-[#dfddff] text-[#5346ff] rounded-md  h-[18px] w-[35.02px] jYQNMQ"
@@ -292,7 +399,12 @@ const Home = () => {
                             </button>
                             <button
                               onClick={() => {
-                                bottomInputValue && setSellValue(Number((bottomInputValue.quantity) / 1000000).toFixed(2))
+                                bottomInputValue &&
+                                  setSellValue(
+                                    Number(
+                                      bottomInputValue.quantity / 1000000
+                                    ).toFixed(2)
+                                  );
                               }}
                               color="main"
                               className="sc-gEvEer bg-[#dfddff] text-[#5346ff] rounded-md  h-[18px] w-[35.02px] jYQNMQ"
@@ -311,15 +423,18 @@ const Home = () => {
                         />
                         <div className="sc-gEvEer sc-eqUAAy bmYucd fgprtA">
                           <input
-                            onChange={(e) => {
-                              setSellValue(e.target.value)
-                            }}
+                            onChange={handleSellValueChange}
                             type="numeric"
                             placeholder="0"
                             inputMode="decimal"
                             autoComplete="off"
                             autoCorrect="off"
-                            max={bottomInputValue && Number((bottomInputValue.quantity) / 1000000).toFixed(2)}
+                            max={
+                              bottomInputValue &&
+                              Number(
+                                bottomInputValue.quantity / 1000000
+                              ).toFixed(2)
+                            }
                             spellCheck="false"
                             minLength="1"
                             maxLength="79"
@@ -517,7 +632,7 @@ const Home = () => {
                           className="sc-gEvEer sc-eqUAAy koLDOl fgprtA"
                         >
                           <div className="sc-gEvEer hUUmgk">
-                            Price:
+                            Price:{topInputValue && topInputValue.price}
                             <span className="sc-ibQAlb buTpPT">
                               <span>-</span>
                               <div
@@ -684,19 +799,28 @@ const Home = () => {
                       </span>
                     </div>
                   </div>
-                  <ConnectWallet
-                    custom_text='Swap Instantly'
-                    text='Connect Wallet'
-                    width='full'
-                    walletBalance={walletBalance}
-                    setWalletBalance={setWalletBalance}
-                  />
+                  {state.isWalletConnected &&
+                  topInputValue &&
+                  bottomInputValue ? (
+                    <ConfirmTrade
+                      topInputValue={topInputValue}
+                      bottomInputValue={bottomInputValue}
+                    />
+                  ) : (
+                    <ConnectWallet
+                      custom_text="Swap Instantly"
+                      text="Connect Wallet"
+                      width="full"
+                      walletBalance={walletBalance}
+                      setWalletBalance={setWalletBalance}
+                    />
+                  )}
                 </div>
                 <div className="sc-gEvEer flex flex-col items-center justify-center sc-eqUAAy eFyWOq fgprtA">
                   <div width="90%" className="sc-gEvEer gyzkDw"></div>
                   <button
                     onClick={() => {
-                      navigate('/expert')
+                      navigate("/expert");
                     }}
                     width="98%"
                     className="sc-gEvEer flex items-center justify-center dkqKlv"
