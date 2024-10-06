@@ -21,7 +21,7 @@ const Home = () => {
   const [sellValue, setSellValue] = useState("");
   const [activeTab, setActiveTab] = useState(false);
   const navigate = useNavigate();
-  console.log(topInputValue);
+
   const getAllPossibleAssets = useCallback(async () => {
     try {
       const response = await fetch("https://api.muesliswap.com/list", {
@@ -45,7 +45,12 @@ const Home = () => {
 
   const getTokenPrice = async (name) => {
     console.log(name);
-    const id = name.toLowerCase();
+    let id = name.toLowerCase();
+    if (name === "Ada") {
+      id = "cardano";
+    } else if (name === "Min") {
+      id = "minswap";
+    }
     try {
       const response = await axios.get(
         `https://api.coingecko.com/api/v3/simple/price?ids=${id}&vs_currencies=usd`,
@@ -87,7 +92,7 @@ const Home = () => {
       };
       fetchPrice();
     }
-  }, [topInputValue, bottomInputValue]);
+  }, []);
 
   const handleBuyValueChange = (e) => {
     const value = e.target.value;

